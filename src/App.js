@@ -16,7 +16,6 @@ function App() {
           rel="noopener noreferrer"
         >
           React
-          Bára a Eliška
         </a>
       </header>
     </div>
