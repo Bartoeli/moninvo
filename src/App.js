@@ -16,7 +16,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-          Bára sem přišla po větvi "Bára".
+          Bára sem přišla po větvi "Bára". Už to vidíme?
         </a>
       </header>
     </div>
