@@ -15,8 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
-          Bára sem přišla po větvi "Bára". Už to vidíme?
+          React
         </a>
       </header>
     </div>
