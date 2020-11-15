@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          React + Moninvo
+          React
           Bára a Eliška
         </a>
       </header>
