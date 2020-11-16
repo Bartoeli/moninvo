@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavBar} from "./NavBar.jsx"
 import {Profile} from "./Profile.jsx"
-import "./header.css"
+import "./Header.css"
 
 export const Header = () => {
   return(
