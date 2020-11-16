@@ -1,4 +1,4 @@
-const { LandingPage } = require("./pages/LandingPage");
+import { LandingPage } from "./pages/LandingPage";
 
 function App() {
   return (
