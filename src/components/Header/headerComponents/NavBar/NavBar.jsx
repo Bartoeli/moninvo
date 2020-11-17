@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuItem } from './MenuItem/MenuItem.jsx';
+import { MenuItem } from '../MenuItem/MenuItem.jsx';
 
 export const NavBar = () => {
   const [menuOpened, setMenuOpened] = useState(false);

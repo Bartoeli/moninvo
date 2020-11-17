@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar } from './headerComponents/NavBar.jsx';
+import { NavBar } from './headerComponents/NavBar/NavBar.jsx';
 import { Profile } from './headerComponents/Profile/Profile.jsx';
 import './header.css';
 
