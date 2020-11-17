@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { SectionText } from './SectionText/SectionText';
+import { SectionText } from './SectionText/SectionText.jsx';
 
 export const HeroSection = () => {
   return (
