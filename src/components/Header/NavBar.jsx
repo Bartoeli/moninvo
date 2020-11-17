@@ -5,20 +5,29 @@ export const NavBar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
   const handleSelectItem = () => {
-    setMenuOpened(false);
+    setMenuOpened(!menuOpened);
   };
 
   return (
-    <nav className={menuOpened ? 'menu' : 'menu--closed'}>
+    <nav>
       <button
-        className="menu__btn"
-        onClick={() => setMenuOpened(true)}
-      ></button>
-      <div className="menu__items">
-        <MenuItem text="Why section" onSelect={handleSelectItem} />
-        <MenuItem text="Ceník" onSelect={handleSelectItem} />
-        <MenuItem text="Kontakty" onSelect={handleSelectItem} />
-      </div>
+        className={menu ? 'hamburger hamburger--otevrene' : 'hamburger'}
+        aria-label="menu"
+        onClick={() => {
+          setMenuOpened(!menuOpened);
+        }}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      {setMenuOpened ? (
+        <ul className="menu__items">
+          <MenuItem text="Why section" onSelect={handleSelectItem} />
+          <MenuItem text="Ceník" onSelect={handleSelectItem} />
+          <MenuItem text="Kontakty" onSelect={handleSelectItem} />
+        </ul>
+      ) : null}
     </nav>
   );
 };
