@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuItem } from './MenuItem.jsx';
+import { MenuItem } from './MenuItem/MenuItem.jsx';
 
 export const NavBar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -11,7 +11,7 @@ export const NavBar = () => {
   return (
     <nav>
       <button
-        className={menu ? 'hamburger hamburger--otevrene' : 'hamburger'}
+        className={menuOpened ? 'hamburger hamburger--otevrene' : 'hamburger'}
         aria-label="menu"
         onClick={() => {
           setMenuOpened(!menuOpened);
