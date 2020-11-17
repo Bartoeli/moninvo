@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavBar } from './NavBar.jsx';
-import { Profile } from './Profile.jsx';
+import { NavBar } from './headerComponents/NavBar.jsx';
+import { Profile } from './headerComponents/Profile/Profile.jsx';
 import './header.css';
 
 export const Header = () => {
