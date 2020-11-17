@@ -1,3 +1,4 @@
+import React from 'react';
 import { LandingPage } from "./pages/LandingPage/LandingPage.jsx";
 
 function App() {
