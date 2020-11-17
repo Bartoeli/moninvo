@@ -1,5 +1,13 @@
 import React from 'react';
+import './style.css';
+import { SectionText } from './SectionText/SectionText';
 
 export const HeroSection = () => {
-  return <section>HeroSection</section>;
+  return (
+    <>
+      <div className="hero-section">
+        <SectionText />
+      </div>
+    </>
+  );
 };
