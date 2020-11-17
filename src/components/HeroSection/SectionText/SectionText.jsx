@@ -13,8 +13,11 @@ export const SectionText = () => {
   useEffect(changeText, [stavMotto]);
 
   return (
-    
-      <h1>KONTROLUJTE své náklady <br> {mottos[stavMotto]}</h1>
-    
+    <div className="section-text">
+      <h1>
+        KONTROLUJTE <br /> své náklady
+      </h1>
+      <h1 className="motto">{mottos[stavMotto]}</h1>
+    </div>
   );
 };

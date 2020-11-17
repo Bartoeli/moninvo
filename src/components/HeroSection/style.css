@@ -25,3 +25,18 @@ Extra large devices:
   background-size: cover;
   background-attachment: fixed;
 }
+
+.section-text {
+  color: white;
+  padding: 50px 30px;
+  line-height: 300%;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.motto {
+  margin: 30px 0px;
+  color: aquamarine;
+}
