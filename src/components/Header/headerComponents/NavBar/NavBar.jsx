@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MenuItem } from '../MenuItem/MenuItem.jsx';
+import "./navbar.css"
 
 export const NavBar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -9,7 +10,7 @@ export const NavBar = () => {
   };
 
   return (
-    <nav>
+    <>
       <button
         className={menuOpened ? 'hamburger hamburger--otevrene' : 'hamburger'}
         aria-label="menu"
@@ -21,13 +22,13 @@ export const NavBar = () => {
         <span></span>
         <span></span>
       </button>
-      {setMenuOpened ? (
+      {menuOpened ? (
         <ul className="menu__items">
-          <MenuItem text="Why section" onSelect={handleSelectItem} />
+          <MenuItem text="Proč Moninvo?" onSelect={handleSelectItem} />
           <MenuItem text="Ceník" onSelect={handleSelectItem} />
           <MenuItem text="Kontakty" onSelect={handleSelectItem} />
         </ul>
       ) : null}
-    </nav>
+      </>
   );
 };
