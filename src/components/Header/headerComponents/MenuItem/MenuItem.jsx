@@ -3,8 +3,8 @@ import "./menuItem.css"
 
 export const MenuItem = (props) => {
   return (
-    <li>
-      <a href="#" className="menu-item" onClick={() => props.onSelect()}>
+    <li className="menu-item">
+      <a href="#" className="menu-url" onClick={() => props.onSelect()}>
         {props.text}
       </a>
     </li>
