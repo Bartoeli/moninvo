@@ -1,7 +1,18 @@
 /*
-Blue: #3333ff
+Blue: #242F72
 Pink: #BC73AD
 Black: #0f0f0f
 Purple/grey: #61688F
 White: #ffffff
 */
+
+.secondaryBtn {
+  background-color: #BC73AD;
+  color: #ffffff;
+  text-transform: lowercase;
+  padding: 7px;
+  margin: 3px;
+  border-radius: 4px;
+  width: 150px;
+  border: none;
+}
