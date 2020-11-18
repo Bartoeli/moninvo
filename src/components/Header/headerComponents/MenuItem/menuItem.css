@@ -1,6 +1,12 @@
+/*
+Blue: #3333ff
+Pink: #BC73AD
+Black: #0f0f0f
+Purple/grey: #61688F
+White: #ffffff
+*/
 
 .menu__items {
-  padding: 1rem;
-  margin-top: 0.75rem;
+  margin-top: 2rem;
   position: relative;
 }

@@ -1,5 +1,38 @@
+/*
+Blue: #3333ff
+Pink: #BC73AD
+Black: #0f0f0f
+Purple/grey: #61688F
+White: #ffffff
+*/
+
 .profile {
-  order: -1;
-  display: flex;
+  display: block;
+  background-image: url('../../../../Images/Icons/User.svg');
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position:relative;
+}
+
+.profileItems {
+  position: absolute;
+  right: 5px;
+  top: 60px;
+  display:flex;
   flex-direction: column;
+}
+
+.profile--opened {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+.profileBtn{
+  margin:5px;
+  padding: 5px;
+  width: 100px;
 }

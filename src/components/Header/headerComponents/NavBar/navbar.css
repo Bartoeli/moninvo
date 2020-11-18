@@ -1,3 +1,5 @@
+
+
 .hamburger {
 	display: block;
 	width: 40px;
@@ -10,12 +12,18 @@
 .hamburger span {
 	position: absolute;
 	top: calc(50% - 2px);
-	left: 0;
-	right: 0;
+	left: 5px;
+	right: 0px;
 	height: 4px;
-	background-color: currentColor;
+	background-color:#BC73AD;
 	transition-property: opacity, transform;
 	transition-duration: 0.2s;
+}
+
+.hamburger--opened {
+	position: absolute;
+	left: 10px;
+	padding-bottom: 5px;
 }
 
 .hamburger span:nth-child(1) {
@@ -26,14 +34,14 @@
 	transform: translateY(250%);
 }
 
-.hamburger--otevrene span:nth-child(2) {
+.hamburger--opened span:nth-child(2) {
 	opacity: 0;
 }
 
-.hamburger--otevrene span:nth-child(1) {
+.hamburger--opened span:nth-child(1) {
 	transform: rotate(45deg);
 }
 
-.hamburger--otevrene span:nth-child(3) {
+.hamburger--opened span:nth-child(3) {
 	transform: rotate(-45deg);
 }

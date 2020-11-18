@@ -1,11 +1,22 @@
-import React from 'react';
-import "./profile.css"
+import React, { useState } from 'react';
+import './profile.css';
 
 export const Profile = () => {
+  const [profileOpened, setProfileOpened] = useState(false);
   return (
-    <div className="profile">
-      <button className="profileBtn">Přihlásit</button>
-      <button className="profileBtn">Registrovat</button>
-    </div>
+    <>
+      <button
+        className={
+          profileOpened ? 'profile profile--opened' : 'profile'
+        }
+        onClick={() => {
+          setProfileOpened(!profileOpened);
+        }}
+      ></button>
+      {profileOpened ? <div className="profileItems">
+        <button className="profileBtn">Přihlásit</button>
+        <button className="profileBtn">Registrovat</button>
+      </div> : null}
+    </>
   );
 };

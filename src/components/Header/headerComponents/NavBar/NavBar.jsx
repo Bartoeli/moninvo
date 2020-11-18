@@ -10,9 +10,9 @@ export const NavBar = () => {
   };
 
   return (
-    <>
+    <nav>
       <button
-        className={menuOpened ? 'hamburger hamburger--otevrene' : 'hamburger'}
+        className={menuOpened ? 'hamburger hamburger--opened' : 'hamburger'}
         aria-label="menu"
         onClick={() => {
           setMenuOpened(!menuOpened);
@@ -29,6 +29,6 @@ export const NavBar = () => {
           <MenuItem text="Kontakty" onSelect={handleSelectItem} />
         </ul>
       ) : null}
-    </>
+      </nav>
   );
 };
