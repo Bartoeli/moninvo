@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MenuItem } from '../MenuItem/MenuItem.jsx';
-import "./navbar.css"
+import './navbar.css';
 
 export const NavBar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -29,6 +29,6 @@ export const NavBar = () => {
           <MenuItem text="Kontakty" onSelect={handleSelectItem} />
         </ul>
       ) : null}
-      </>
+    </>
   );
 };
