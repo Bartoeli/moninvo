@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './sectionText.css';
 
 export const SectionText = () => {
   const mottos = ['JEDNODUŠE', 'PŘEHLEDNĚ', 'EFEKTIVNĚ'];
@@ -14,10 +15,13 @@ export const SectionText = () => {
 
   return (
     <div className="section-text">
-      <h1>
-        KONTROLUJTE <br /> své náklady
-      </h1>
-      <h1 className="motto">{mottos[stavMotto]}</h1>
+      <div className="titles">
+        <h1>
+          Kontrolujte <br /> své náklady
+        </h1>
+        <h1 className="motto">{mottos[stavMotto]}</h1>
+      </div>
+      <div className="picture"></div>
     </div>
   );
 };
