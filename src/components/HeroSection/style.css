@@ -28,5 +28,68 @@ White: #ffffff
 }
 
 .primary {
-  margin: 0px auto;
+  margin: 10px auto;
+  margin-left: 32px;
+}
+
+.left {
+  height: 100%;
+}
+
+.right {
+  display: none;
+}
+
+.blobik {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .hero-section {
+    height: 60vh;
+  }
+
+  .primary {
+    margin-left: 96px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    display: block;
+    /* background-image: url(../../Images/HomePage/hero-01.svg);
+    background-repeat: no-repeat;
+    background-position: left center; */
+    background-size: 80%;
+    width: 50%;
+    position: relative;
+  }
+
+  img {
+    width: 80%;
+    margin-top: 170px;
+  }
+
+  .blobik {
+    display: block;
+    height: 550px;
+    width: 470px;
+    background-image: url(../../Images/HomePage/blob.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 120%;
+    position: absolute;
+    right: 0px;
+    bottom: -150px;
+  }
 }
