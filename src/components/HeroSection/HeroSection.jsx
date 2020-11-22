@@ -1,14 +1,14 @@
 import React from 'react';
 import './style.css';
 import { SectionText } from './SectionText/SectionText.jsx';
-import { Button } from './Button/Button.jsx';
+import { PrimaryBtn } from '../Buttons/PrimaryBtn/PrimaryBtn.jsx';
 
 export const HeroSection = () => {
   return (
     <>
       <div className="hero-section">
         <SectionText />
-        <Button />
+        <PrimaryBtn className="primary" textBtn="Vyzkoušet" />
       </div>
     </>
   );
