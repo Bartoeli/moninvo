@@ -1,0 +1,17 @@
+.blob {
+  height: 33.3%;
+  background-image: url(../../../Images/HomePage/pink-blob-turn.svg);
+  background-position: 50% 100%;
+  background-size: 200%;
+}
+
+@media screen and (min-width: 576px) {
+  .ilustration {
+    display: none;
+  }
+
+  .blob {
+    height: 15%;
+    background-position: 50% 98%;
+  }
+}

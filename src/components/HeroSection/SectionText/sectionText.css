@@ -1,0 +1,36 @@
+.section-text {
+  color: #242f72;
+  padding: 8px 32px 8px 32px;
+  line-height: 300%;
+  height: 33.3%;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.motto {
+  margin: 16px 0px 0px 0px;
+  color: #bc73ad;
+}
+
+.picture {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .section-text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .titles {
+    width: 50%;
+  }
+
+  .picture {
+    display: flex;
+    width: 50%;
+    background-image: url(../../../Images/HomePage/hero-01.svg);
+  }
+}

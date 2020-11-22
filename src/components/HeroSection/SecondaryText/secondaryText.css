@@ -1,0 +1,12 @@
+.paragraph {
+  color: #61688f;
+  margin: 8px 32px 32px 32px;
+}
+
+@media screen and (min-width: 576px) {
+  .paragraph {
+    max-width: 80vw;
+    margin: 8px auto;
+    margin-bottom: 32px;
+  }
+}
