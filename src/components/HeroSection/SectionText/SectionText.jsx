@@ -15,9 +15,9 @@ export const SectionText = () => {
 
   return (
     <div className="section-text">
-      <div>
+      <div className="titles">
         <h1>
-          KONTROLUJTE <br /> své náklady
+          Kontrolujte <br /> své náklady
         </h1>
         <h1 className="motto">{mottos[stavMotto]}</h1>
       </div>

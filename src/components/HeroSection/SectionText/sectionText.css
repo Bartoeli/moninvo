@@ -20,6 +20,7 @@ h1 {
 
 @media screen and (min-width: 576px) {
   .section-text {
+    padding: 8px 96px 8px 96px;
     display: flex;
     justify-content: space-between;
   }
@@ -29,8 +30,11 @@ h1 {
   }
 
   .picture {
-    display: flex;
+    display: block;
     width: 50%;
     background-image: url(../../../Images/HomePage/hero-01.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
   }
 }

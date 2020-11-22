@@ -5,6 +5,13 @@
   background-size: 200%;
 }
 
+.ilustration {
+  background-image: url(../../../Images/HomePage/hero-01.svg);
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 @media screen and (min-width: 576px) {
   .ilustration {
     display: none;
@@ -12,6 +19,7 @@
 
   .blob {
     height: 15%;
-    background-position: 50% 98%;
+    background-image: url(../../../Images/HomePage/blob.svg);
+    background-position: 65% 100%;
   }
 }
