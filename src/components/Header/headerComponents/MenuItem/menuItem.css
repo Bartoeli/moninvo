@@ -9,7 +9,7 @@ White: #ffffff
 .menu-items {
   display: flex;
   flex-direction: column;
-position: relative;
+  position: relative;
   top: 25px;
   right: 20px;
   padding: 0px;
@@ -28,4 +28,10 @@ position: relative;
   text-transform: uppercase;
   width: 100%;
   padding: 10px;
+}
+
+@media (min-width: 576px) {
+  .menu-url {
+    color: #242F72;
+  }
 }
