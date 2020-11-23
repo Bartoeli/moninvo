@@ -16,6 +16,7 @@ White: #ffffff
   border-radius: 4px;
   width: 215px;
   height: 48px;
+  cursor: pointer;
 }
 
 .secondary {
@@ -27,4 +28,5 @@ White: #ffffff
   border-radius: 4px;
   width: 215px;
   height: 48px;
+  cursor: pointer;
 }

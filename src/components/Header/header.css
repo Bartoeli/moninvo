@@ -14,14 +14,14 @@ Extra large devices:
 
 .header {
   padding: 10px;
-  background-color: #bc73ad;
+  background-color: #BC73AD;
 }
 
 .logo {
   display: none;
 }
 
-.navbar_profile {
+.navbar {
   display: flex;
   justify-content: space-between;
 }
