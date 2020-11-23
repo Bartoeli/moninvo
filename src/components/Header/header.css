@@ -15,13 +15,8 @@ Extra large devices:
 .header {
   padding: 10px;
   background-color: #BC73AD;
-}
-
-.logo {
-  display: none;
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
+  border: none;
 }
+
