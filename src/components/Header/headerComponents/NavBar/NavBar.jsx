@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { PrimaryBtn } from '../../../Buttons/PrimaryBtn/PrimaryBtn.jsx';
 import { MenuItem } from '../MenuItem/MenuItem.jsx';
 import './navbar.css';
 
@@ -27,8 +28,9 @@ export const NavBar = () => {
           <MenuItem text="Proč Moninvo?" onSelect={handleSelectItem} />
           <MenuItem text="Ceník" onSelect={handleSelectItem} />
           <MenuItem text="Kontakty" onSelect={handleSelectItem} />
+          <PrimaryBtn textBtn="Přihlásit / Registrovat" />
         </ul>
       ) : null}
-      </nav>
+    </nav>
   );
 };
