@@ -11,8 +11,8 @@
 .hamburger span {
   position: absolute;
   top: calc(50% - 2px);
-  left: 5px;
-  right: 0px;
+  right: 5px;
+  left: 0px;
   height: 4px;
   background-color: #ffffff;
   transition-property: opacity, transform;
@@ -21,7 +21,7 @@
 
 .hamburger--opened {
   position: absolute;
-  left: 10px;
+  right: 10px;
   padding-bottom: 5px;
 }
 
