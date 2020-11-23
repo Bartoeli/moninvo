@@ -8,6 +8,7 @@ White: #ffffff
 
 .menu-items {
   display: flex;
+  flex-direction: column;
   margin-top: 2rem;
   position: relative;
   top: 20px;
@@ -17,7 +18,7 @@ White: #ffffff
 
 .menu-url {
   text-decoration: none;
-  color: #242f72;
+  color: #ffffff;
   font-weight: 500;
 }
 

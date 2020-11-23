@@ -5,6 +5,7 @@
   position: relative;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .hamburger span {
@@ -38,8 +39,10 @@
 
 .hamburger--opened span:nth-child(1) {
   transform: rotate(45deg);
+  background-color: #242f72;
 }
 
 .hamburger--opened span:nth-child(3) {
   transform: rotate(-45deg);
+  background-color: #242f72;
 }

@@ -28,7 +28,7 @@ export const NavBar = () => {
           <MenuItem text="Proč Moninvo?" onSelect={handleSelectItem} />
           <MenuItem text="Ceník" onSelect={handleSelectItem} />
           <MenuItem text="Kontakty" onSelect={handleSelectItem} />
-          <PrimaryBtn textBtn="Přihlásit / Registrovat" />
+          <PrimaryBtn className = "secondary" textBtn="Přihlásit / Registrovat" />
         </ul>
       ) : null}
     </nav>
