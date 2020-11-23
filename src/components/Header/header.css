@@ -20,3 +20,10 @@ Extra large devices:
   border: none;
 }
 
+@media (min-width:576px) {
+  .header {
+    background-color: #ffffff;
+  }
+}
+
+
