@@ -72,10 +72,15 @@
   }
 }
 
-
 @media (min-width: 1030px) {
-.nav_desktop{
-  flex-basis:70%;
-  justify-content: center;
+  .nav_desktop {
+    flex-basis: 65%;
+    justify-content: center;
+  }
 }
+
+@media (min-width: 1200px) {
+  .nav_desktop {
+    flex-basis: 55%;
+  }
 }

@@ -54,7 +54,12 @@ White: #ffffff
     align-items: center;
   }
 
-  .menu-item{
-    padding:20px;
+  .menu-item {
+    padding: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .menu-item {
+    flex-grow: 1;
   }
 }
