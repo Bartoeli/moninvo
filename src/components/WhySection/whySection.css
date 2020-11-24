@@ -29,3 +29,5 @@ White: #ffffff
   left: 0px;
   top: 0;
 }
+
+@media (min-width: 576px) 

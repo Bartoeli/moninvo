@@ -31,13 +31,11 @@ White: #ffffff
   cursor: pointer;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .menu-url {
     color: #242f72;
   }
-}
 
-@media (min-width: 768px) {
   .menu-items {
     flex-direction: row;
     top: 0;

@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.logo_sm {
+.logo_s {
   width: 40px;
   height: 40px;
 }
@@ -12,20 +12,32 @@
   display: none;
 }
 
+.logo_l {
+  display: none;
+}
+
 @media (min-width: 576px) {
+  .logo_s {
+    display: none;
+  }
   .logo_m {
     display: inline;
     height: 40px;
     width: auto;
     justify-self: flex-start;
   }
-  .logo_sm {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {
   .logo_m {
+    display: none;
+  }
+
+  .logo_l {
+    display: inline;
+    height: 40px;
     margin: 25px;
+    width: auto;
+    justify-self: flex-start;
   }
 }

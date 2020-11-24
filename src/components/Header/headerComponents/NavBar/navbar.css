@@ -51,17 +51,6 @@
   background-color: #242f72;
 }
 
-@media (min-width: 576px) {
-  .hamburger span {
-    background-color: #bc73ad;
-  }
-
-  .hamburger--opened span:nth-child(1),
-  .hamburger--opened span:nth-child(3) {
-    background-color: #bc73ad;
-  }
-}
-
 @media (min-width: 768px) {
   .nav_mobil {
     display: none;
