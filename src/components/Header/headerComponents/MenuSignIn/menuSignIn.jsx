@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PrimaryBtn } from '../../../Buttons/PrimaryBtn/PrimaryBtn';
+import { PrimaryBtn } from '../../../Button/PrimaryBtn/PrimaryBtn';
 import './menuSignIn.css';
 
 export const MenuSignIn = () => {

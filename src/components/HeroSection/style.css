@@ -91,5 +91,6 @@ White: #ffffff
     position: absolute;
     right: 0px;
     bottom: -150px;
+    z-index: -1;
   }
 }
