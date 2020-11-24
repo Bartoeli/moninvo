@@ -1,3 +1,7 @@
+.nav_desktop {
+  display: none;
+}
+
 .hamburger {
   display: block;
   width: 40px;
@@ -59,7 +63,19 @@
 }
 
 @media (min-width: 768px) {
-  .hamburger{
-    display:none;
+  .nav_mobil {
+    display: none;
   }
+
+  .nav_desktop {
+    display: flex;
+  }
+}
+
+
+@media (min-width: 1030px) {
+.nav_desktop{
+  flex-basis:70%;
+  justify-content: center;
+}
 }

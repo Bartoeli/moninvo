@@ -24,3 +24,8 @@
   }
 }
 
+@media (min-width: 768px) {
+  .logo_m {
+    margin: 25px;
+  }
+}
