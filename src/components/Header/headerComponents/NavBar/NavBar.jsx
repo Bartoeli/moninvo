@@ -11,26 +11,37 @@ export const NavBar = () => {
   };
 
   return (
-    <nav>
-      <button
-        className={menuOpened ? 'hamburger hamburger--opened' : 'hamburger'}
-        aria-label="menu"
-        onClick={() => {
-          setMenuOpened(!menuOpened);
-        }}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      {menuOpened ? (
+    <>
+      <nav className="nav_mobil">
+        <button
+          className={menuOpened ? 'hamburger hamburger--opened' : 'hamburger'}
+          aria-label="menu"
+          onClick={() => {
+            setMenuOpened(!menuOpened);
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        {menuOpened ? (
+          <ul className="menu-items">
+            <MenuItem text="Proč Moninvo?" onSelect={handleSelectItem} />
+            <MenuItem text="Ceník" onSelect={handleSelectItem} />
+            <MenuItem text="Kontakty" onSelect={handleSelectItem} />
+            <MenuSignIn />
+          </ul>
+        ) : null}
+      </nav>
+
+      <nav className="nav_desktop">
         <ul className="menu-items">
           <MenuItem text="Proč Moninvo?" onSelect={handleSelectItem} />
           <MenuItem text="Ceník" onSelect={handleSelectItem} />
           <MenuItem text="Kontakty" onSelect={handleSelectItem} />
           <MenuSignIn />
         </ul>
-      ) : null}
-    </nav>
+      </nav>
+    </>
   );
 };

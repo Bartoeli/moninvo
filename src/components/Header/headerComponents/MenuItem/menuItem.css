@@ -28,10 +28,38 @@ White: #ffffff
   text-transform: uppercase;
   width: 100%;
   padding: 10px;
+  cursor: pointer;
 }
 
 @media (min-width: 576px) {
   .menu-url {
-    color: #242F72;
+    color: #242f72;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-items {
+    flex-direction: row;
+    top: 0;
+  }
+
+  .menu-item {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1030px) {
+  .menu-items {
+    flex-basis: 100%;
+    align-items: center;
+  }
+
+  .menu-item {
+    padding: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .menu-item {
+    flex-grow: 1;
   }
 }

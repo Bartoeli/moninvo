@@ -1,11 +1,25 @@
-.menu-signIn{
-color: #242F72;
-text-decoration: none;
-font-weight: 500;
+.menu-signInDesktop {
+  display: none;
+}
+
+.menu-signInMobil {
+  color: #242f72;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 @media (min-width: 576px) {
-  .menu-signIn {
-    color: #BC73AD;
+  .menu-signInMobil {
+    color: #bc73ad;
+  }
+}
+
+@media (min-width: 1030px) {
+  .menu-signInMobil {
+    display: none;
+  }
+
+  .menu-signInDesktop {
+    display: block;
   }
 }
