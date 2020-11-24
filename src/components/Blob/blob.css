@@ -1,0 +1,40 @@
+.justBlob {
+  background-image: url('../../Images/HomePage/blob.svg');
+  background-repeat: no-repeat;
+}
+
+.whyBlob {
+  display: block;
+  height: 100%;
+  width: 340px;
+  background-image: url('../../Images/HomePage/blob.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  z-index: -1;
+  position: absolute;
+  left: -160px;
+  top: 0px;
+  /*   border: 1px solid red;
+ */
+}
+
+@media (min-width: 340px) {
+  .whyBlob {
+    width: 300px;
+  }
+}
+
+@media (min-width: 576px) {
+  .whyBlob {
+    width: 330px;
+    background-size: 95%;
+    left: -140px;
+  }
+}
+
+@media (min-width: 768px) {
+  .whyBlob {
+    display: none;
+  }
+}

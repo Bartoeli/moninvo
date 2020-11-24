@@ -1,0 +1,57 @@
+/*
+Blue: #242F72
+Pink: #BC73AD
+Black: #0f0f0f
+Purple/grey: #61688F
+White: #ffffff
+*/
+
+.whyArgument {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0;
+}
+
+.whyIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.whyText {
+  color: #242f72;
+  font-weight: 500;
+  flex-basis: 80%;
+}
+
+@media (min-width: 768px) {
+  .whyArgument {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 30%;
+    margin: 16px;
+  }
+
+  .whyText {
+    text-align: center;
+    padding: 24px;
+  }
+
+  .whyIcon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1030px) {
+  .whyArgument {
+    flex: 1 1 30%;
+    margin: 24px;
+  }
+  .whyText {
+    color: #bc73ad;
+    text-transform: uppercase;
+    padding: 32px;
+  }
+}
