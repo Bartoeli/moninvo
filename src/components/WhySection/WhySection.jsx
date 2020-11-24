@@ -8,21 +8,24 @@ import './whySection.css';
 export const WhySection = () => {
   return (
     <section className="whySection">
-      <WhyArgument
-        iconSrc={Upload}
-        iconAlt="Ikona nahrávání"
-        whyText="Automatické čtení dat z faktur"
-      />
-      <WhyArgument
-        iconSrc={Time}
-        iconAlt="Ikona hodin"
-        whyText="Jednoduché ovládání"
-      />
-      <WhyArgument
-        iconSrc={Dashboard}
-        iconAlt="Ikona grafu"
-        whyText="Přehledné zobrazení výsledků"
-      />
+      <div className="whyBlob"></div>
+      <div className="whyArguments">
+        <WhyArgument
+          iconSrc={Upload}
+          iconAlt="Ikona nahrávání"
+          whyText="Automatické čtení dat z faktur"
+        />
+        <WhyArgument
+          iconSrc={Time}
+          iconAlt="Ikona hodin"
+          whyText="Jednoduché ovládání"
+        />
+        <WhyArgument
+          iconSrc={Dashboard}
+          iconAlt="Ikona grafu"
+          whyText="Přehledné zobrazení výsledků"
+        />
+      </div>
     </section>
   );
 };
