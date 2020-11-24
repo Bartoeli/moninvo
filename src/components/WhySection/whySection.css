@@ -5,10 +5,27 @@ Black: #0f0f0f
 Purple/grey: #61688F
 White: #ffffff
 */
+.whySectionDesktop {
+  display: none;
+}
 
-.whySection {
+.whySectionMobil {
   margin: 0 32px;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .whySectionMobil {
+    display: none;
+  }
+
+  .whySectionDesktop {
+    display: flex;
+    position: relative;
+    margin: 0 96px;
+    flex-direction: row;
+    flex-basis: 100%;
+  }
 }
