@@ -1,6 +1,5 @@
 .section-text {
   color: #242f72;
-  padding: 8px 32px 8px 32px;
   line-height: 300%;
 }
 
@@ -19,22 +18,22 @@ h1 {
 
 @media screen and (min-width: 576px) {
   .section-text {
-    padding: 8px 96px 8px 96px;
+    padding: 8px 0px;
     display: flex;
-    justify-content: space-between;
   }
 
   .titles {
-    width: 50%;
+    width: 40%;
   }
 
   .picture {
     display: block;
-    width: 50%;
+    width: 60%;
+    margin-left: 32px;
     background-image: url(../../../Images/HomePage/hero-01.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: right center;
+    background-position: left center;
   }
 }
 

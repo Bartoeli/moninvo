@@ -27,13 +27,9 @@ White: #ffffff
   height: 80vh;
 }
 
-.primary {
-  margin: 10px auto;
-  margin-left: 32px;
-}
-
 .left {
   height: 100%;
+  padding: 0px 32px;
 }
 
 .right {
@@ -49,8 +45,8 @@ White: #ffffff
     height: 60vh;
   }
 
-  .primary {
-    margin-left: 96px;
+  .left {
+    padding: 0px 64px;
   }
 }
 
@@ -83,7 +79,7 @@ White: #ffffff
   .blobik {
     display: block;
     height: 550px;
-    width: 470px;
+    width: 440px;
     background-image: url(../../Images/HomePage/blob.svg);
     background-repeat: no-repeat;
     background-position: 0% 0%;
