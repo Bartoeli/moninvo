@@ -14,6 +14,7 @@ White: #ffffff
   right: 20px;
   padding: 0px;
   max-width: 100%;
+  font-size: 14px;
 }
 
 .menu-url {
@@ -50,6 +51,7 @@ White: #ffffff
   .menu-items {
     flex-basis: 100%;
     align-items: center;
+    font-size: 16px;
   }
 
   .menu-item {

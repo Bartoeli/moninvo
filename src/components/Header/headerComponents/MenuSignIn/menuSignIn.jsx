@@ -4,14 +4,20 @@ import './menuSignIn.css';
 
 export const MenuSignIn = () => {
   return (
-    <>
+    <div className="signIn">
       <a className="menu-item menu-signInMobil" href="#">
-        Přihlásit / Registrovat
+        Přihlásit
+      </a>
+      <a className="menu-item menu-signInMobil" href="#">
+        Registrovat
+      </a>
+      <a className="menu-item  menu-signInDesktop" href="#">
+        Přihlásit
       </a>
       <PrimaryBtn
-        className="menu-signInDesktop primary"
-        textBtn="Přihlásit / Registrovat"
+        className="menu-signInDesktop secondary"
+        textBtn="Registrovat"
       />
-    </>
+    </div>
   );
 };
