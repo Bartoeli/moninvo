@@ -23,12 +23,12 @@ h1 {
   }
 
   .titles {
-    width: 40%;
+    width: 50%;
   }
 
   .picture {
     display: block;
-    width: 60%;
+    width: 50%;
     margin-left: 32px;
     background-image: url(../../../Images/HomePage/hero-01.svg);
     background-repeat: no-repeat;

@@ -16,3 +16,10 @@
     margin-right: 64px;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .paragraph {
+    padding-bottom: 64px;
+    margin-top: 32px;
+  }
+}

@@ -14,11 +14,15 @@ export const HeroSection = () => {
         <div className="left">
           <SectionText />
           <SecondaryText />
-          <PrimaryBtn className="primary" textBtn="Vyzkoušet" />
+          <PrimaryBtn
+            className="primary"
+            textBtn="Vyzkoušet"
+            onClick={() => {}}
+          />
         </div>
         <div className="right">
           <div className="blobik"></div>
-          <img src={image} alt="invoice ilustrace" />
+          <img className="ilustrace" src={image} alt="invoice ilustrace" />
         </div>
       </div>
     </>
