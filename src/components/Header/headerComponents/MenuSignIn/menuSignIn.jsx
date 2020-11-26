@@ -11,7 +11,7 @@ export const MenuSignIn = () => {
       <a className="menu-item menu-signInMobil" href="#">
         Registrovat
       </a>
-      <a className="menu-item  menu-signInDesktop" href="#">
+      <a className="menu-signInDesktop menu-item" href="#">
         Přihlásit
       </a>
       <PrimaryBtn
