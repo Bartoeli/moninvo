@@ -1,19 +1,18 @@
 .paragraph {
   color: #61688f;
-  margin: 32px;
+  padding-bottom: 32px;
+  margin-bottom: 0px;
 }
 
 @media screen and (min-width: 576px) {
   .paragraph {
     max-width: 70vw;
-    margin-top: 8px;
-    margin-bottom: 32px;
-    margin-left: 96px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .paragraph {
     font-size: 16px;
+    margin-right: 64px;
   }
 }
