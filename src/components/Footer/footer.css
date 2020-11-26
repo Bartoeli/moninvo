@@ -1,0 +1,81 @@
+.footer {
+  background-image: linear-gradient(
+      rgb(97, 104, 143, 0.9),
+      rgb(97, 104, 143, 0.9)
+    ),
+    url('../../Images/HomePage/mapa.png');
+  background-position: center center;
+}
+
+.flogo {
+  padding: 32px;
+}
+
+.logoObr {
+  width: 150px;
+}
+
+.kontakt {
+  padding-left: 32px;
+}
+
+.socky {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.socka {
+  margin-right: 16px;
+}
+
+.odkazy ul {
+  list-style-type: none;
+  padding-left: 32px;
+  margin-top: 48px;
+  margin-bottom: 0px;
+  padding-bottom: 16px;
+}
+
+.liOdkazy {
+  height: 1.5rem;
+}
+
+.podminky,
+.gdpr {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 576px) {
+  .footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .kontakt {
+    padding: 0px;
+  }
+
+  .odkazy ul {
+    margin: 0px;
+    margin-top: 16px;
+    padding: 0px;
+  }
+
+  .logoObr {
+    padding: 0px;
+    padding-top: 16px;
+  }
+
+  .flogo {
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 32px 96px;
+  }
+}
