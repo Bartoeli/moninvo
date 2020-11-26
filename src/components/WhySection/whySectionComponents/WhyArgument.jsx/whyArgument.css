@@ -35,12 +35,16 @@ White: #ffffff
   .whyText {
     text-align: center;
     padding: 24px;
+    font-size: 18px;
   }
 
   .whyIcon {
     flex-shrink: 0;
     width: 48px;
     height: 48px;
+  }
+  .whiteArgument .whyText {
+    color: #ffffff;
   }
 }
 
@@ -53,5 +57,23 @@ White: #ffffff
     color: #bc73ad;
     text-transform: uppercase;
     padding: 32px;
+    font-size: 20px;
+  }
+  .whyIcon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (min-width: 1548px) {
+  .whyIcon {
+    width: 64px;
+    height: 64px;
+  }
+  .whyText {
+    color: #bc73ad;
+    text-transform: uppercase;
+    padding: 32px;
+    font-size: 24px;
   }
 }

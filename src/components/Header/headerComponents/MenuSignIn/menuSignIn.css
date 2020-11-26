@@ -1,5 +1,6 @@
 .signIn {
   display: flex;
+  flex-direction: column;
 }
 
 .menu-signInDesktop {
@@ -15,6 +16,10 @@
 @media (min-width: 768px) {
   .menu-signInMobil {
     color: #bc73ad;
+  }
+
+  .signIn {
+    flex-direction: row;
   }
 }
 
@@ -35,5 +40,11 @@
     font-size: 16px;
     text-transform: uppercase;
     color: #242f72;
+  }
+}
+
+@media (min-width: 1200px) {
+  .secondary {
+    font-size: 18px;
   }
 }
