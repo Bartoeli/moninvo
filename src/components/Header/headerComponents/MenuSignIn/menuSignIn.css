@@ -1,3 +1,7 @@
+.signIn {
+  display: flex;
+}
+
 .menu-signInDesktop {
   display: none;
 }
@@ -21,5 +25,13 @@
 
   .menu-signInDesktop {
     display: block;
+    text-decoration: none;
+    color: #bc73ad;
+  }
+
+  .secondary {
+/*     font-family: 'IBM Plex Sans';
+ */    font-size: 16px;
+    text-transform: uppercase;
   }
 }
