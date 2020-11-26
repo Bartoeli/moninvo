@@ -32,6 +32,7 @@ export const WhySection = () => {
       </section>
       <section className="whySectionDesktop">
         <WhyArgument
+        className="whyArgument whiteArgument"
           iconSrc={Upload_grey}
           iconAlt="Ikona nahrávání"
           whyText="Automatické čtení dat z faktur"

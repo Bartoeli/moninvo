@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PrimaryBtn } from '../../../Button/PrimaryBtn/PrimaryBtn';
 import './menuSignIn.css';
 
@@ -17,6 +17,7 @@ export const MenuSignIn = () => {
       <PrimaryBtn
         className="menu-signInDesktop secondary"
         textBtn="Registrovat"
+        onClick={() => {}}
       />
     </div>
   );
