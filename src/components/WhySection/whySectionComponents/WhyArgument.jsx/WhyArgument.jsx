@@ -9,6 +9,7 @@ export const WhyArgument = (props) => {
     <div className={className}>
       <img className="whyIcon" src={props.iconSrc} alt={props.iconAlt} />
       <p className="whyText">{props.whyText}</p>
+      <p className="whyInfo">{props.whyInfo}</p>
     </div>
   );
 };

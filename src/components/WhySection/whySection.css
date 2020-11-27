@@ -5,11 +5,8 @@ Black: #0f0f0f
 Purple/grey: #61688F
 White: #ffffff
 */
-.whySectionDesktop {
-  display: none;
-}
 
-.whySectionMobil {
+.whySection {
   margin: 0 32px;
   display: flex;
   flex-direction: column;
@@ -17,14 +14,11 @@ White: #ffffff
 }
 
 @media (min-width: 768px) {
-  .whySectionMobil {
-    display: none;
-  }
-
-  .whySectionDesktop {
+  .whySection {
+    height: 45vh;
     display: flex;
     position: relative;
-    margin: 0 96px;
+    margin: 0px 96px;
     flex-direction: row;
     flex-basis: 100%;
   }

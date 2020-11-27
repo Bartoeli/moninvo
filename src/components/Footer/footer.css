@@ -5,6 +5,8 @@
     ),
     url('../../Images/HomePage/mapa.png');
   background-position: center center;
+  z-index: 30;
+  position: relative;
 }
 
 .flogo {
