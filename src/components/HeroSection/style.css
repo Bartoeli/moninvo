@@ -76,6 +76,8 @@ White: #ffffff
   .ilustrace {
     width: 80%;
     margin-top: 170px;
+    z-index: 50;
+    position: relative;
   }
 
   .blobik {
@@ -89,7 +91,7 @@ White: #ffffff
     position: absolute;
     right: 0px;
     bottom: -90px;
-    z-index: -1;
+    z-index: 10;
   }
 }
 

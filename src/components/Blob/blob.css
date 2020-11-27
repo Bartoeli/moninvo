@@ -6,17 +6,15 @@
 .whyBlob {
   display: block;
   height: 100%;
-  width: 340px;
+  width: 320px;
   background-image: url('../../Images/HomePage/blob.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  z-index: -1;
+  z-index: 20;
   position: absolute;
   left: -160px;
   top: 0px;
-  /*   border: 1px solid red;
- */
 }
 
 @media (min-width: 340px) {
@@ -42,45 +40,11 @@
     height: 140%;
     top: 10%;
     left: 10%;
-    z-index: -1;
+    z-index: 20;
     background-image: url('../../Images/HomePage/blob.svg');
     background-position: cover;
     background-repeat: no-repeat;
     background-size: 100%;
     transform: rotate(-20deg);
-  }
-}
-
-@media (min-width: 1030px) {
-  .whyBlob::before {
-    width: 140%;
-    height: 140%;
-    transform: rotate(-35deg);
-  }
-}
-
-@media (min-width: 1082px) {
-  .whyBlob::before {
-    overflow: visible;
-    content: '';
-    position: absolute;
-    width: 180%;
-    height: 180%;
-    top: -10%;
-    left: -20%;
-    z-index: -1;
-    background-image: url('../../Images/HomePage/blob.svg');
-    background-position: cover;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    transform: rotate(-25deg);
-  }
-}
-
-@media (min-width: 1548px) {
-  .whyBlob::before {
-    width: 210%;
-    height: 220%;
-    transform: rotate(-10deg);
   }
 }

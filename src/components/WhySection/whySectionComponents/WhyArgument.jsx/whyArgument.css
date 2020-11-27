@@ -10,6 +10,7 @@ White: #ffffff
   display: flex;
   justify-content: space-between;
   margin: 24px 0;
+  z-index: 50;
 }
 
 .whyIcon {
@@ -62,18 +63,5 @@ White: #ffffff
   .whyIcon {
     width: 56px;
     height: 56px;
-  }
-}
-
-@media (min-width: 1548px) {
-  .whyIcon {
-    width: 64px;
-    height: 64px;
-  }
-  .whyText {
-    color: #bc73ad;
-    text-transform: uppercase;
-    padding: 32px;
-    font-size: 24px;
   }
 }
