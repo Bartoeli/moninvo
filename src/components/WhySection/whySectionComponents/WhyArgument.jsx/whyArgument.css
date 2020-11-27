@@ -5,10 +5,15 @@ Black: #0f0f0f
 Purple/grey: #61688F
 White: #ffffff
 */
+p {
+  margin: 0;
+}
 
 .whyArgument {
   display: flex;
   justify-content: space-between;
+
+  align-items: start;
   margin: 24px 0;
   z-index: 50;
 }
@@ -19,33 +24,68 @@ White: #ffffff
 }
 
 .whyText {
+  font-size: 14px;
   color: #242f72;
   font-weight: 500;
-  flex-basis: 80%;
+  width: 150px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.whyInfo {
+  color: #242f72;
+  font-size: 14px;
+  font-weight: 300;
+  justify-self: baseline;
+}
+
+@media (min-width: 500px) {
+  .whyArgument {
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .whyIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .whyText {
+    font-size: 16px;
+    width: 170px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .whyInfo {
+    font-size: 16px;
+    width: 400px;
+  }
 }
 
 @media (min-width: 768px) {
   .whyArgument {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex: 1 0 30%;
-    margin: 16px;
+    margin: 24px;
   }
 
   .whyText {
-    text-align: center;
-    padding: 24px;
     font-size: 18px;
+    height: 56px;
+    padding: 24px 0;
   }
 
   .whyIcon {
     flex-shrink: 0;
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
   }
-  .whiteArgument .whyText {
-    color: #ffffff;
+
+  .whyInfo {
+    font-size: 16px;
   }
 }
 
@@ -55,13 +95,13 @@ White: #ffffff
     margin: 24px;
   }
   .whyText {
-    color: #bc73ad;
     text-transform: uppercase;
-    padding: 32px;
-    font-size: 20px;
+    font-size: 18px;
+    height: 64px;
   }
+
   .whyIcon {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
   }
 }
