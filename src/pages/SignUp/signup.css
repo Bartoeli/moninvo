@@ -1,7 +1,9 @@
 .registrace {
   font-family: 'IBM Plex Sans', sans-serif;
   width: 100%;
+  max-width: 576px;
   padding-bottom: 56px;
+  margin: 0px auto;
 }
 
 .bar {
