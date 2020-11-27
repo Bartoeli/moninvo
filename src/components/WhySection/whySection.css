@@ -11,15 +11,14 @@ White: #ffffff
   display: flex;
   flex-direction: column;
   position: relative;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
   .whySection {
     height: 45vh;
     display: flex;
-    position: relative;
     margin: 0px 96px;
     flex-direction: row;
-    flex-basis: 100%;
   }
 }
