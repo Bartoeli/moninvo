@@ -68,7 +68,7 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    flex: 1 0 30%;
+    flex: 0 0 30%;
     margin: 24px;
   }
 
