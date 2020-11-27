@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './inputcheck.css';
 
 export const InputCheck = (props) => {
-  const [checked, setChecked] = useState(false);
-
   return (
     <>
-      <label className="label">
+      <label className="label labelCheck">
         <input
+          className="checkbox"
           type="checkbox"
-          checked={checked}
-          onChange={(e) => setChecked(e.target.checked)}
+          checked={props.checked}
+          onChange={(e) => props.setChecked(e.target.checked)}
         />
         {props.text}
       </label>

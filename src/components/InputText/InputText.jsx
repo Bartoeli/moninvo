@@ -9,7 +9,8 @@ export const InputText = (props) => {
         <input
           className="textField"
           type={props.type}
-          placeholder={props.napoveda}
+          placeholder={props.placeholder}
+          onChange={(e) => props.setChanged(e.target.value)}
         />
       </label>
     </>
