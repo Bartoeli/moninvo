@@ -1,11 +1,16 @@
 import React from 'react';
+import './inputtext.css';
 
 export const InputText = (props) => {
   return (
     <>
-      <label>
+      <label className="label">
         {props.popis}
-        <input type={props.type} placeholder={props.napoveda} />
+        <input
+          className="textField"
+          type={props.type}
+          placeholder={props.napoveda}
+        />
       </label>
     </>
   );

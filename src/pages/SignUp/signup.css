@@ -1,0 +1,13 @@
+.registrace {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.h1reg {
+  text-align: center;
+  margin: 32px 0px;
+}
+
+.form {
+  width: 90%;
+  margin: 16px auto;
+}

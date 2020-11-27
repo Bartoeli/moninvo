@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import './inputcheck.css';
 
 export const InputCheck = (props) => {
   const [checked, setChecked] = useState(false);
 
   return (
     <>
-      <label>
+      <label className="label">
         <input
           type="checkbox"
           checked={checked}

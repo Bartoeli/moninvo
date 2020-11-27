@@ -10,8 +10,8 @@ export const SignUp = () => {
   return (
     <>
       <div className="registrace">
-        <h1>REGISTRACE</h1>
-        <form action="">
+        <h1 className="h1reg">REGISTRACE</h1>
+        <form action="" className="form">
           <InputText type="text" popis="Jméno" napoveda="Tomáš" />
           <InputText type="text" popis="Příjmení" napoveda="Čupr" />
           <InputText type="text" popis="Firma" napoveda="Rohlik.cz" />
