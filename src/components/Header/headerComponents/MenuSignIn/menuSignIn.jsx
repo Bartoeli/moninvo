@@ -1,24 +1,23 @@
 import React from 'react';
-import { PrimaryBtn } from '../../../Button/PrimaryBtn/PrimaryBtn';
+import { Link } from 'react-router-dom';
+
 import './menuSignIn.css';
 
 export const MenuSignIn = () => {
   return (
     <div className="signIn">
-      <a className="menu-item menu-signInMobil" href="#">
+      <Link to="/signin" className="menu-item menu-signInMobil">
         Přihlásit
-      </a>
-      <a className="menu-item menu-signInMobil" href="#">
+      </Link>
+      <Link to="/signup" className="menu-item menu-signInMobil">
         Registrovat
-      </a>
-      <a className="menu-signInDesktop menu-item" href="#">
+      </Link>
+      <Link to="/signin" className="menu-signInDesktop menu-item">
         Přihlásit
-      </a>
-      <PrimaryBtn
-        className="menu-signInDesktop secondary"
-        textBtn="Registrovat"
-        onClick={() => {}}
-      />
+      </Link>
+      <Link to="/signup" className="menu-signInDesktop menu-item">
+        Registrovat
+      </Link>
     </div>
   );
 };
