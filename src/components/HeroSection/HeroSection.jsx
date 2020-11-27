@@ -5,8 +5,11 @@ import { PrimaryBtn } from '../Button/PrimaryBtn/PrimaryBtn.jsx';
 import { HeroPicture } from './HeroPicture/HeroPicture.jsx';
 import { SecondaryText } from './SecondaryText/SecondaryText.jsx';
 import image from '../../Images/HomePage/hero-01.svg';
+import { useHistory } from 'react-router-dom';
 
 export const HeroSection = () => {
+  const { push } = useHistory();
+
   return (
     <>
       <div className="hero-section">
@@ -17,7 +20,7 @@ export const HeroSection = () => {
           <PrimaryBtn
             className="primary"
             textBtn="Vyzkoušet"
-            onClick={() => {}}
+            onClick={() => push('/signup')}
           />
         </div>
         <div className="right">
