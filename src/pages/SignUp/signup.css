@@ -1,13 +1,49 @@
 .registrace {
   font-family: 'IBM Plex Sans', sans-serif;
+  width: 100%;
+  padding-bottom: 56px;
+}
+
+.bar {
+  width: 100%;
+  height: 48px;
+  background-color: #bc73ad;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.regLogo {
+  height: 70%;
+  margin-left: 24px;
+}
+
+.domuBtn {
+  margin-right: 24px;
+}
+
+.domuBtn a {
+  color: #fffcff;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .h1reg {
   text-align: center;
   margin: 32px 0px;
+  color: #242f72;
 }
 
 .form {
   width: 90%;
   margin: 16px auto;
+}
+
+.regBtn {
+  margin-top: 32px;
+}
+
+.signBtn {
+  width: 90%;
+  margin: 0px auto;
 }
