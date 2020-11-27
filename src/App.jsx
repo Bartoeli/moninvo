@@ -4,6 +4,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { LandingPage } from './pages/LandingPage/LandingPage.jsx';
 import { SignUp } from './pages/SignUp/SignUp.jsx';
 import { SignIn } from './pages/SignIn/SignIn.jsx';
+import { Dashboard } from './pages/Dashboard/Dashboard.jsx';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         </Route>
         <Route path="/signin">
           <SignIn />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
         </Route>
         <Route path="/">
           <LandingPage />
