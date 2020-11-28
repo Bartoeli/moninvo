@@ -24,11 +24,9 @@ export const RossumProvider = (props) => {
       });
   }, []);
 
-  return useRossum() === null ? (
-    <div>Stránka se načítá</div>
-  ) : (
+  return (
     <RossumContext.Provider value={state}>
-      {props.children}
+      {state.token === null ? <div>Stránka se načítá</div> : props.children}
     </RossumContext.Provider>
   );
 };
