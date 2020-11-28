@@ -16,7 +16,7 @@ White: #ffffff
 
 @media (min-width: 768px) {
   .whySection {
-    height: 45vh;
+    height: 60vh;
     display: flex;
     margin: 0px 96px;
     flex-direction: row;

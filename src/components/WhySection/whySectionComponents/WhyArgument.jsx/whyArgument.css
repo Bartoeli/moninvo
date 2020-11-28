@@ -69,7 +69,7 @@ p {
     flex-direction: column;
     align-items: flex-start;
     margin: 24px;
-    flex-grow: 1;
+    flex: 1;
   }
 
   .whyText {
