@@ -22,6 +22,7 @@ export const HeroSection = () => {
               className="primary"
               textBtn="Vyzkoušet"
               onClick={() => push('/signup')}
+              type="button"
             />
           </div>
         </div>
