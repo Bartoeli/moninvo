@@ -5,6 +5,7 @@ import { LandingPage } from './pages/LandingPage/LandingPage.jsx';
 import { SignUp } from './pages/SignUp/SignUp.jsx';
 import { SignIn } from './pages/SignIn/SignIn.jsx';
 import { Dashboard } from './pages/Dashboard/Dashboard.jsx';
+import { UploadInvoice } from './pages/UploadInvoice/UploadInvoice.jsx';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Switch>
         <Route path="/signup">
           <SignUp />
+        </Route>
+        <Route path="/uploadinvoice">
+          <UploadInvoice />
         </Route>
         <Route path="/signin">
           <SignIn />
