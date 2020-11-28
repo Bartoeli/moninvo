@@ -1,6 +1,7 @@
 import React from 'react';
-import { RossumComponent } from '../../utils/Rossum/Rossum.jsx';
+import { useRossum } from '../../utils/Rossum/Rossum.jsx';
 
 export const Dashboard = () => {
-  console.log(<RossumComponent />);
+  console.log(useRossum());
+  return <h1>Tady bude super Dashboard!</h1>;
 };
