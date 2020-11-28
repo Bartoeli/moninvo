@@ -36,20 +36,22 @@ export const UploadInvoice = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <InputFile
-          text="Nahrát fakturu"
-          onChange={handleUpload}
-          accept=".pdf"
-        />
-        <div>
-          <PrimaryBtn
-            className="primary"
-            type="submit"
-            textBtn="nahrát fakturu"
+      <div className="uplForm">
+        <form onSubmit={handleSubmit}>
+          <InputFile
+            text="Nahrát fakturu"
+            onChange={handleUpload}
+            accept=".pdf"
           />
-        </div>
-      </form>
+          <div className="formBtn">
+            <PrimaryBtn
+              className="primary"
+              type="submit"
+              textBtn="nahrát fakturu"
+            />
+          </div>
+        </form>
+      </div>
     </>
   );
 };

@@ -8,6 +8,7 @@ export const InputFile = (props) => {
       <label>
         {props.text}
         <input
+          className="inpFile"
           type="file"
           value={undefined}
           onChange={props.onChange}
