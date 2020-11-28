@@ -14,7 +14,7 @@ p {
   justify-content: space-between;
   max-width: 100%;
 
-  align-items: start;
+  align-items: flex-start;
   margin: 24px 0;
   z-index: 50;
 }

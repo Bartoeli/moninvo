@@ -9,6 +9,7 @@ export const InputText = (props) => {
         <input
           className="textField"
           type={props.type}
+          value={props.value}
           placeholder={props.placeholder}
           onChange={(e) => props.setChanged(e.target.value)}
         />

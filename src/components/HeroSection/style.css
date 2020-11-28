@@ -63,6 +63,10 @@ White: #ffffff
     padding-left: 96px;
   }
 
+  .heroCta {
+    width: 80%;
+  }
+
   .right {
     display: block;
     /* background-image: url(../../Images/HomePage/hero-01.svg);

@@ -17,10 +17,6 @@ export const SignUp = () => {
   const [advert, setAdvert] = useState(true);
   const { push } = useHistory();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <>
       <div className="registrace">
@@ -36,24 +32,28 @@ export const SignUp = () => {
         <form action="" className="form">
           <InputText
             type="text"
+            value={username}
             popis="Uživatelské jméno"
             placeholder="Rohlik.cz"
             setChanged={setUsername}
           />
           <InputText
             type="email"
+            value={email}
             popis="E-mail"
             placeholder="tomas@rohlik.cz"
             setChanged={setEmail}
           />
           <InputText
             type="password"
+            value={passOne}
             popis="Heslo"
             placeholder="Minimálně 8 znaků"
             setChanged={setPassOne}
           />
           <InputText
             type="password"
+            value={passTwo}
             popis="Heslo znovu"
             placeholder="Stejné heslo pro kontrolu"
             setChanged={setPassTwo}
@@ -77,7 +77,7 @@ export const SignUp = () => {
             <PrimaryBtn
               className="primary"
               textBtn="Registrovat"
-              onSubmit={handleSubmit}
+              onClick={() => push('/dashboard')}
             />
           </div>
         </form>
@@ -85,7 +85,7 @@ export const SignUp = () => {
           <PrimaryBtn
             className="secondary"
             textBtn="Přihlásit se"
-            onClick={() => push('/')}
+            onClick={() => push('/signin')}
           />
         </div>
       </div>
