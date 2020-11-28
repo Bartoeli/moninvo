@@ -17,11 +17,13 @@ export const HeroSection = () => {
         <div className="left">
           <SectionText />
           <SecondaryText />
-          <PrimaryBtn
-            className="primary"
-            textBtn="Vyzkoušet"
-            onClick={() => push('/signup')}
-          />
+          <div className="heroCta">
+            <PrimaryBtn
+              className="primary"
+              textBtn="Vyzkoušet"
+              onClick={() => push('/signup')}
+            />
+          </div>
         </div>
         <div className="right">
           <div className="blobik"></div>

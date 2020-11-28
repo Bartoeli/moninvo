@@ -26,6 +26,7 @@ export const SignIn = () => {
         <form action="" className="form">
           <InputText
             type="text"
+            value={username}
             popis="Uživatelské jméno"
             placeholder="Rohlik.cz"
             setChanged={setUsername}
@@ -33,6 +34,7 @@ export const SignIn = () => {
 
           <InputText
             type="password"
+            value={passOne}
             popis="Heslo"
             placeholder="Minimálně 8 znaků"
             setChanged={setPassOne}
@@ -42,11 +44,11 @@ export const SignIn = () => {
             <PrimaryBtn
               className="primary"
               textBtn="Přihlásit se"
-              onSubmit={() => {}}
+              onClick={() => push('/dashboard')}
             />
           </div>
         </form>
-        <div className="regBtn">
+        <div className="pregBtn">
           <PrimaryBtn
             className="secondary"
             textBtn="Registrovat se"
