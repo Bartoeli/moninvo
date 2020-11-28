@@ -7,10 +7,13 @@ export const PrimaryBtn = (props) => {
 
   const typeBtn = typeof props.type !== 'undefined' ? props.type : 'button';
 
+  const onClick =
+    typeof props.onClick !== 'undefined' ? props.onClick : () => {};
+
   return (
     <button
       className={`button ${className}`}
-      onClick={() => props.onClick()}
+      onClick={() => onClick()}
       type={typeBtn}
     >
       {props.textBtn}
