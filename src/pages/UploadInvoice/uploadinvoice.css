@@ -1,0 +1,9 @@
+.uplForm {
+  font-family: 'IBM Plex Sans', sans-serif;
+  max-width: 576px;
+  margin: 0px auto;
+  display: flex;
+}
+
+.formBtn {
+}
