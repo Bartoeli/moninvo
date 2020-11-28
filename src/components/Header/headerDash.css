@@ -8,6 +8,22 @@ White: #ffffff
 
 .headerDashboard {
   padding: 10px;
-  background-color: #242F72;
+  background-color: #242f72;
   border: none;
+}
+
+.logo_wht_dash {
+  height: 40px;
+  width: auto;
+}
+@media (min-width: 576px) {
+  .logo_wht_dash {
+    height: 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo_wht_dash {
+    height: 50px;
+  }
 }
