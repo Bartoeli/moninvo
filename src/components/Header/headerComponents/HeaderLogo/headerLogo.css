@@ -3,24 +3,24 @@
   padding: 0;
 }
 
-.logo_s {
+.smallLogo_wht {
   width: 40px;
   height: 40px;
 }
 
-.logo_m {
+.bigLogo_wht {
   display: none;
 }
 
-.logo_l {
+.bigLogo_blu {
   display: none;
 }
 
 @media (min-width: 576px) {
-  .logo_s {
+  .smallLogo_wht {
     display: none;
   }
-  .logo_m {
+  .bigLogo_wht {
     display: inline;
     height: 40px;
     width: auto;
@@ -29,11 +29,11 @@
 }
 
 @media (min-width: 768px) {
-  .logo_m {
+  .bigLogo_wht {
     display: none;
   }
 
-  .logo_l {
+  .bigLogo_blu {
     display: inline;
     height: 40px;
     margin: 25px;

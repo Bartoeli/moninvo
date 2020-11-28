@@ -8,7 +8,7 @@ export const Dashboard = () => {
   return (
     <>
       <HeaderDash />
-      <h1>Tady bude super Dashboard!</h1>;
+      <h1>Tady bude super Dashboard!</h1>
       <ExportRossum />
     </>
   );
