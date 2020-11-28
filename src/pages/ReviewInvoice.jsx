@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import { useRossum } from '../utils/Rossum/Rossum.jsx';
 import { PrimaryBtn } from '../components/Button/PrimaryBtn/PrimaryBtn.jsx';
@@ -7,7 +6,6 @@ import { PrimaryBtn } from '../components/Button/PrimaryBtn/PrimaryBtn.jsx';
 export const RevInvoice = () => {
   const token = useRossum().token;
   const [data, setData] = useState([]);
-  const { push } = useHistory();
 
   useEffect(() => {
     fetch(
@@ -45,7 +43,9 @@ export const RevInvoice = () => {
       }),
     })
       .then((resp) => resp.json())
-      .then((json) => push(json.url));
+      .then((json) => {
+        window.location.href = json.url;
+      });
   };
 
   return (
