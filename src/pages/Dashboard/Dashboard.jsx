@@ -19,12 +19,12 @@ export const Dashboard = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-/*         console.log(data);
- */        console.log(parseInvoiceData(data.results[0]))
+        /*         console.log(data);
+         */ console.log(
+          data.results.map((invoice) => parseInvoiceData(invoice)),
+        );
       });
   }, []);
-
- 
 
   return (
     <>
