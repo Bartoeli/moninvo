@@ -24,7 +24,9 @@ export const RossumProvider = (props) => {
       });
   }, []);
 
-  return (
+  return useRossum() === null ? (
+    <div>Stránka se načítá</div>
+  ) : (
     <RossumContext.Provider value={state}>
       {props.children}
     </RossumContext.Provider>

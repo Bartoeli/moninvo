@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useRossum } from './Rossum';
 
 export const ExportRossum = () => {
-  const result = useRossum();
+  const result = useRossum().token;
 
   useEffect(() => {
     fetch(
@@ -21,5 +21,5 @@ export const ExportRossum = () => {
       });
   }, []);
 
-  return result.token;
+  return 'result';
 };
