@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useRossum } from '../../utils/Rossum/Rossum.jsx';
 import { HeaderDash } from '../../components/Header/HeaderDash.jsx';
-import { ExportRossum } from './ExportRossum.jsx';
+import { parseInvoiceData } from '../../utils/Rossum/parseInvoiceData.jsx';
 
 export const Dashboard = () => {
-  const result = useRossum().token;
+  const context = useRossum();
 
   useEffect(() => {
     fetch(
@@ -13,21 +13,23 @@ export const Dashboard = () => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `token ${result}`,
+          Authorization: `token ${context.token}`,
         },
       },
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+/*         console.log(data);
+ */        console.log(parseInvoiceData(data.results[0]))
       });
   }, []);
+
+ 
 
   return (
     <>
       <HeaderDash />
       <h1>Tady bude super Dashboard!</h1>
-      <ExportRossum />
     </>
   );
 };
