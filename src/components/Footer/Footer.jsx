@@ -13,9 +13,9 @@ export const Footer = () => {
           <p className="adresa">
             Rohanské Nábřeží 23 <br /> 180 00 Praha
           </p>
-          <ul className="socky">
+          {/* @TODO <ul className="socky">
             <li className="socka">
-              <a href="#">
+              <a href="https://www.facebook.com">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
@@ -28,7 +28,7 @@ export const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.linkedin.com">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
@@ -40,20 +40,16 @@ export const Footer = () => {
                 </svg>
               </a>
             </li>
-          </ul>
+          </ul> */}
           <p>© Moninvo, 2020</p>
         </div>
         <div className="odkazy">
           <ul>
             <li className="liOdkazy">
-              <a className="podminky" href="#">
-                Obchodní podmínky
-              </a>
+              <div className="podminky">Obchodní podmínky</div>
             </li>
             <li>
-              <a className="gdpr" href="#">
-                Zpracování osobních údajů
-              </a>
+              <div className="gdpr">Zpracování osobních údajů</div>
             </li>
           </ul>
         </div>
