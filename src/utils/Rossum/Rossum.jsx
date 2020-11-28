@@ -26,7 +26,7 @@ export const RossumProvider = (props) => {
 
   return (
     <RossumContext.Provider value={state}>
-      {props.children}
+      {state.token === null ? <div>Stránka se načítá</div> : props.children}
     </RossumContext.Provider>
   );
 };
