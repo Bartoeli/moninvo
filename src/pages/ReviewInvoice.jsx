@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import { useRossum } from '../utils/Rossum/Rossum.jsx';
 import { PrimaryBtn } from '../components/Button/PrimaryBtn/PrimaryBtn.jsx';
-import {Link} from "react-router-dom"
 
 export const RevInvoice = () => {
-  const result = useRossum().token;
+  const token = useRossum().token;
   const [data, setData] = useState([]);
+  const { push } = useHistory();
 
   useEffect(() => {
     fetch(
@@ -14,7 +16,7 @@ export const RevInvoice = () => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `token ${result}`,
+          Authorization: `token ${token}`,
         },
       },
     )
@@ -23,7 +25,7 @@ export const RevInvoice = () => {
         console.log(data);
         setData(data.results);
       });
-  }, [setData, result]);
+  }, [setData, token]);
 
   const getFileName = (item) => {
     const fileName = [item.document.file_name];
@@ -31,13 +33,19 @@ export const RevInvoice = () => {
   };
 
   const handleClick = (item) => {
-    fetch(`${item.url}/start_embedded`, 
-    {
+    fetch(`${item.url}/start_embedded`, {
       method: 'POST',
-      return_url: <Link to="/dashboard"></Link>
-      cancel_url: <Link to="/dashboard"></Link>
+      headers: {
+        Authorization: `Token ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        return_url: window.location.href,
+        cancel_url: window.location.href,
+      }),
     })
-
+      .then((resp) => resp.json())
+      .then((json) => push(json.url));
   };
 
   return (
