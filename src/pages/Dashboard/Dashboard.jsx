@@ -31,8 +31,8 @@ export const Dashboard = () => {
           return dtb
             .collection('faktury')
             .add(data)
-            .then(() => {
-              console.log('úspěch');
+            .then((firebaseData) => {
+              const fbID = firebaseData.id;
             });
         });
         fetch(
