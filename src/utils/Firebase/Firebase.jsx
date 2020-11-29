@@ -6,7 +6,7 @@ export const Firebase = () => {
   const [faktury, setFaktury] = useState([]);
 
   useEffect(() => {
-    dtb.collection('faktury').set((query) => {
+    dtb.collection('faktury').onSnapshot((query) => {
       setFaktury(
         query.docs.map((doc) => {
           const data = doc.data();

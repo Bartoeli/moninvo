@@ -47,6 +47,18 @@ export const Dashboard = () => {
       });
   }, [rossumContext]);
 
+  useEffect(() => {
+    dtb.collection('faktury').onSnapshot((query) => {
+      setSourceData(
+        query.docs.map((doc) => {
+          const data = doc.data();
+          data.id = doc.id;
+          return data;
+        }),
+      );
+    });
+  }, []);
+
   return (
     <>
       <HeaderDash />
