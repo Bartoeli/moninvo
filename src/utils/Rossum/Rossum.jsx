@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-const defaultValue = { token: null };
+const defaultValue = { token: null, queueId: 71919 };
 const RossumContext = createContext(defaultValue);
 export const useRossum = () => useContext(RossumContext);
 const credentials = {
@@ -20,7 +20,7 @@ export const RossumProvider = (props) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setState({ token: data.key });
+        setState((prevState) => ({ ...prevState, token: data.key }));
       });
   }, []);
 
