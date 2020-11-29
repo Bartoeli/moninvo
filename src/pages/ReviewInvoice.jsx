@@ -4,17 +4,17 @@ import { useRossum } from '../utils/Rossum/Rossum.jsx';
 import { PrimaryBtn } from '../components/Button/PrimaryBtn/PrimaryBtn.jsx';
 
 export const RevInvoice = () => {
-  const token = useRossum().token;
+  const rossumContext = useRossum();
   const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch(
-      'https://api.elis.rossum.ai/v1/queues/71919/export?format=json&status=to_review',
+      `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?format=json&status=to_review`,
       {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `token ${token}`,
+          Authorization: `token ${rossumContext.token}`,
         },
       },
     )
@@ -23,7 +23,7 @@ export const RevInvoice = () => {
         console.log(data);
         setData(data.results);
       });
-  }, [setData, token]);
+  }, [setData, rossumContext]);
 
   const getFileName = (item) => {
     const fileName = [item.document.file_name];
@@ -34,7 +34,7 @@ export const RevInvoice = () => {
     fetch(`${item.url}/start_embedded`, {
       method: 'POST',
       headers: {
-        Authorization: `Token ${token}`,
+        Authorization: `Token ${rossumContext.token}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({

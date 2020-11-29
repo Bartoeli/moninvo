@@ -42,8 +42,8 @@ p {
 
 @media (min-width: 500px) {
   .whyArgument {
-    align-items: start;
-    justify-content: space-between;
+align-items: start;
+ justify-content: space-between;
   }
 
   .whyIcon {
@@ -76,7 +76,6 @@ p {
     font-size: 18px;
     height: 56px;
     margin-top: 56px;
-    margin-bottom: 56px;
     flex-grow: 1;
   }
 

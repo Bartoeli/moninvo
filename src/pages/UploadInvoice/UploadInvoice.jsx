@@ -7,7 +7,7 @@ import { useRossum } from '../../utils/Rossum/Rossum.jsx';
 
 export const UploadInvoice = () => {
   const [file, setFile] = useState('');
-  const token = useRossum().token;
+  const rossumContext = useRossum();
 
   const handleUpload = (e) => {
     setFile(e.target.files[0]);
@@ -18,11 +18,14 @@ export const UploadInvoice = () => {
 
     formData.append('content', file);
 
-    fetch(`https://api.elis.rossum.ai/v1/queues/71919/upload/${file.name}`, {
-      method: 'POST',
-      body: formData,
-      headers: { Authorization: `Token ${token}` },
-    })
+    fetch(
+      `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/upload/${file.name}`,
+      {
+        method: 'POST',
+        body: formData,
+        headers: { Authorization: `Token ${rossumContext.token}` },
+      },
+    )
       .then((resp) => resp.json())
       .then((result) => {
         console.log('Success', result);

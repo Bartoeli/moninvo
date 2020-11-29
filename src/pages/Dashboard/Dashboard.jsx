@@ -4,27 +4,24 @@ import { HeaderDash } from '../../components/Header/HeaderDash.jsx';
 import { parseInvoiceData } from '../../utils/Rossum/parseInvoiceData.jsx';
 
 export const Dashboard = () => {
-  const context = useRossum();
+  const rossumContext = useRossum();
 
   useEffect(() => {
     fetch(
-      'https://api.elis.rossum.ai/v1/queues/71919/export?format=json&status=exported',
+      `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?format=json&status=exported`,
       {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `token ${context.token}`,
+          Authorization: `token ${rossumContext.token}`,
         },
       },
     )
       .then((response) => response.json())
       .then((data) => {
-        /*         console.log(data);
-         */ console.log(
-          data.results.map((invoice) => parseInvoiceData(invoice)),
-        );
+        console.log(data.results.map((invoice) => parseInvoiceData(invoice)));
       });
-  }, []);
+  }, [rossumContext]);
 
   return (
     <>
