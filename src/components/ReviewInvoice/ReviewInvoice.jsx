@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { LabelPage } from '../../pages/LabelPage/LabelPage.jsx';
 import { useRossum } from '../../utils/Rossum/Rossum.jsx';
 import { PrimaryBtn } from '../Button/PrimaryBtn/PrimaryBtn.jsx';
 
@@ -38,7 +38,7 @@ export const RevInvoice = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        return_url: window.location.href,
+        return_url: `${window.location.origin}/#/Dashboard/`,
         cancel_url: window.location.href,
       }),
     })
