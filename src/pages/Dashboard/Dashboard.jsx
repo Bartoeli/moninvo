@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRossum } from '../../utils/Rossum/Rossum.jsx';
 import { HeaderDash } from '../../components/Header/HeaderDash.jsx';
 import { parseInvoiceData } from '../../utils/Rossum/parseInvoiceData.jsx';
+import { Firebase } from '../../utils/Firebase/Firebase.jsx';
 import { MainTable } from '../../components/MainTable/MainTable.jsx';
 
 export const Dashboard = () => {
@@ -30,6 +31,7 @@ export const Dashboard = () => {
     <>
       <HeaderDash />
       <h1>Tady bude super Dashboard!</h1>
+      <Firebase />
       <MainTable data={sourceData} />
     </>
   );
