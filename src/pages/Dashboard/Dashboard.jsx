@@ -31,7 +31,7 @@ export const Dashboard = () => {
     <>
       <HeaderDash />
       <h1>Tady bude super Dashboard!</h1>
-      <Firebase />
+      {/* <Firebase /> */}
       <MainTable data={sourceData} />
     </>
   );
