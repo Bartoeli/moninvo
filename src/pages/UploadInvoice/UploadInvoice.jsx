@@ -4,6 +4,7 @@ import { InputFile } from '../../components/InputFile/InputFile.jsx';
 import './uploadinvoice.css';
 import { PrimaryBtn } from '../../components/Button/PrimaryBtn/PrimaryBtn.jsx';
 import { useRossum } from '../../utils/Rossum/Rossum.jsx';
+import { RevInvoice } from '../../components/ReviewInvoice/ReviewInvoice.jsx';
 
 export const UploadInvoice = () => {
   const [file, setFile] = useState('');
@@ -54,6 +55,9 @@ export const UploadInvoice = () => {
             />
           </div>
         </form>
+      </div>
+      <div className="revInvoice">
+        <RevInvoice />
       </div>
     </>
   );

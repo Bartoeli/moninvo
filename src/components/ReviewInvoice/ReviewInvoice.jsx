@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { useRossum } from '../utils/Rossum/Rossum.jsx';
-import { PrimaryBtn } from '../components/Button/PrimaryBtn/PrimaryBtn.jsx';
+import { useRossum } from '../../utils/Rossum/Rossum.jsx';
+import { PrimaryBtn } from '../Button/PrimaryBtn/PrimaryBtn.jsx';
 
 export const RevInvoice = () => {
   const rossumContext = useRossum();
