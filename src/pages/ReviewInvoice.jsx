@@ -23,7 +23,7 @@ export const RevInvoice = () => {
         console.log(data);
         setData(data.results);
       });
-  }, [setData, token]);
+  }, [setData, rossumContext]);
 
   const getFileName = (item) => {
     const fileName = [item.document.file_name];
@@ -34,7 +34,7 @@ export const RevInvoice = () => {
     fetch(`${item.url}/start_embedded`, {
       method: 'POST',
       headers: {
-        Authorization: `Token ${token}`,
+        Authorization: `Token ${rossumContext.token}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
