@@ -19,12 +19,9 @@ export const Dashboard = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        /*         console.log(data);
-         */ console.log(
-          data.results.map((invoice) => parseInvoiceData(invoice)),
-        );
+        console.log(data.results.map((invoice) => parseInvoiceData(invoice)));
       });
-  }, []);
+  }, [rossumContext]);
 
   return (
     <>
