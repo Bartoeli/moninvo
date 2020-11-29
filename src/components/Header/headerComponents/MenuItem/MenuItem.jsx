@@ -1,10 +1,14 @@
 import React from 'react';
-import "./menuItem.css"
+import './menuItem.css';
 
 export const MenuItem = (props) => {
   return (
     <li className="menu-item">
-      <a href="#" className="menu-url" onClick={() => props.onSelect()}>
+      <a
+        href={`#${props.id}`}
+        className="menu-url"
+        onClick={() => props.onSelect()}
+      >
         {props.text}
       </a>
     </li>
