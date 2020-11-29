@@ -11,7 +11,7 @@ export const Dashboard = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?format=json&status=exported`,
+      `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?format=json&status=confirmed`,
       {
         method: 'GET',
         headers: {
@@ -34,6 +34,16 @@ export const Dashboard = () => {
               console.log('úspěch');
             });
         });
+        fetch(
+          `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?status=confirmed&to_status=exported`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `token ${rossumContext.token}`,
+            },
+          },
+        );
       });
   }, [rossumContext]);
 
