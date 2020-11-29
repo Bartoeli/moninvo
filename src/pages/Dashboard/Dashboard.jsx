@@ -4,6 +4,7 @@ import { HeaderDash } from '../../components/Header/HeaderDash.jsx';
 import { parseInvoiceData } from '../../utils/Rossum/parseInvoiceData.jsx';
 import { Firebase } from '../../utils/Firebase/Firebase.jsx';
 import { MainTable } from '../../components/MainTable/MainTable.jsx';
+import { MainChart } from '../../components/MainChart/MainChart.jsx';
 
 export const Dashboard = () => {
   const rossumContext = useRossum();
@@ -32,6 +33,7 @@ export const Dashboard = () => {
       <HeaderDash />
       <h1>Tady bude super Dashboard!</h1>
       {/* <Firebase /> */}
+      <MainChart data={sourceData} />
       <MainTable data={sourceData} />
     </>
   );
