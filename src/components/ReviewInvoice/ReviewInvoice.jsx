@@ -38,7 +38,7 @@ export const RevInvoice = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        return_url: `http://localhost:3000/#/Dashboard/`, //musíme změnit pro netlify!!!
+        return_url: `${window.location.origin}/#/Dashboard/`,
         cancel_url: window.location.href,
       }),
     })
