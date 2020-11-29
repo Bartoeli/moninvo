@@ -1,4 +1,4 @@
-const keyList = ['amount_total', 'currency'];
+const keyList = ['amount_total', 'currency', 'invoice_id'];
 
 export const parseInvoiceData = (invoice) => {
   const contentInvoice = invoice.content.map((data) => {
