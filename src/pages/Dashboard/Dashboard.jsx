@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useRossum } from '../../utils/Rossum/Rossum.jsx';
 import { HeaderDash } from '../../components/Header/HeaderDash.jsx';
 import { parseInvoiceData } from '../../utils/Rossum/parseInvoiceData.jsx';
-import { Firebase } from '../../utils/Firebase/Firebase.jsx';
 import { MainTable } from '../../components/MainTable/MainTable.jsx';
+<<<<<<< HEAD
 import { MainChart } from '../../components/MainChart/MainChart.jsx';
+=======
+import { dtb } from '../../utils/Firebase/dtb';
+>>>>>>> develop
 
 export const Dashboard = () => {
   const rossumContext = useRossum();
@@ -12,7 +15,7 @@ export const Dashboard = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?format=json&status=exported`,
+      `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?format=json&status=confirmed`,
       {
         method: 'GET',
         headers: {
@@ -23,17 +26,52 @@ export const Dashboard = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.results.map((invoice) => parseInvoiceData(invoice)));
-        setSourceData(data.results.map((invoice) => parseInvoiceData(invoice)));
+        const parsedData = data.results.map((invoice) =>
+          parseInvoiceData(invoice),
+        );
+        setSourceData(parsedData);
+        parsedData.forEach(async (data) => {
+          return dtb
+            .collection('faktury')
+            .add(data)
+            .then(() => {
+              console.log('úspěch');
+            });
+        });
+        fetch(
+          `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?status=confirmed&to_status=exported`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `token ${rossumContext.token}`,
+            },
+          },
+        );
       });
   }, [rossumContext]);
+
+  useEffect(() => {
+    dtb.collection('faktury').onSnapshot((query) => {
+      setSourceData(
+        query.docs.map((doc) => {
+          const data = doc.data();
+          data.id = doc.id;
+          return data;
+        }),
+      );
+    });
+  }, []);
 
   return (
     <>
       <HeaderDash />
       <h1>Tady bude super Dashboard!</h1>
+<<<<<<< HEAD
       {/* <Firebase /> */}
       <MainChart data={sourceData} />
+=======
+>>>>>>> develop
       <MainTable data={sourceData} />
     </>
   );
