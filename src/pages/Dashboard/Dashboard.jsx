@@ -5,7 +5,7 @@ import { parseInvoiceData } from '../../utils/Rossum/parseInvoiceData.jsx';
 import { MainTable } from '../../components/MainTable/MainTable.jsx';
 import { MainChart } from '../../components/MainChart/MainChart.jsx';
 import { dtb } from '../../utils/Firebase/dtb';
-import { NavBarDash } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDash.jsx';
+import './dashboard.css';
 
 export const Dashboard = () => {
   const rossumContext = useRossum();
@@ -62,11 +62,10 @@ export const Dashboard = () => {
   }, []);
 
   return (
-    <>
+    <div className="dashboard">
       <HeaderDash />
-      <NavBarDash />
       <MainChart data={sourceData} />
       <MainTable data={sourceData} />
-    </>
+    </div>
   );
 };

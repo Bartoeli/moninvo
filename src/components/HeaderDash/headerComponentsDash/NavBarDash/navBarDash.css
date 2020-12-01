@@ -57,10 +57,8 @@ Extra large devices:
 
 .hamburger--opened_dash span:nth-child(1) {
   transform: rotate(45deg);
-  background-color: #242f72;
 }
 
 .hamburger--opened_dash span:nth-child(3) {
   transform: rotate(-45deg);
-  background-color: #242f72;
 }
