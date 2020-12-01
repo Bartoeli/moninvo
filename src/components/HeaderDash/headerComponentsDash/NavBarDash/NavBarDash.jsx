@@ -64,39 +64,6 @@ export const NavBarDash = () => {
           </ul>
         ) : null}
       </nav>
-
-      <nav className="navDash_desktop">
-        <ul className="menu-items_dash">
-          <MenuItemDash
-            iconSrc={Add_invoice}
-            iconAlt="Ikona přidání faktury"
-            id="AddInvoice"
-            text="Přidat fakturu"
-            onSelect={handleSelectDashItem}
-          />
-          <MenuItemDash
-            iconSrc={Edit}
-            iconAlt="Ikona tužky"
-            id="Edit"
-            text="Upravit data"
-            onSelect={handleSelectDashItem}
-          />
-          <MenuItemDash
-            iconSrc={Settings}
-            iconAlt="Ikona ozubených koleček"
-            id="Settings"
-            text="Nastavení"
-            onSelect={handleSelectDashItem}
-          />
-          <MenuItemDash
-            iconSrc={Dashboard_white}
-            iconAlt="Ikona grafu"
-            id="Dashboard"
-            text="Dashboard"
-            onSelect={handleSelectDashItem}
-          />
-        </ul>
-      </nav>
     </>
   );
 };

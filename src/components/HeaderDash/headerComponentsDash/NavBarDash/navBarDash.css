@@ -73,3 +73,9 @@ Extra large devices:
     flex-basis: 70%;
   }
 }
+
+@media (min-width: 768px) {
+  .navDash_mobil {
+    display: none;
+  }
+}

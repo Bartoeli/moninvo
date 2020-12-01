@@ -1,0 +1,28 @@
+/*
+Small devices:
+@media (min-width: 576px) { ... }
+
+Medium devices:
+@media (min-width: 768px) { ... }
+
+Large devices:
+@media (min-width: 992px) { ... }
+
+Extra large devices:
+@media (min-width: 1200px) { ... }
+*/
+
+.menu-items_dashside {
+  display: none;
+}
+@media (min-width: 768px) {
+  .menu-items_dashside {
+    display: flex;
+    height: 100vh;
+    width: 70px;
+    background-color: #242f72;
+    position: absolute;
+    left: 0;
+    top: 68px;
+  }
+}
