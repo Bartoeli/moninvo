@@ -1,4 +1,10 @@
 .dashboard {
   font-family: 'IBM Plex Sans', sans-serif;
   max-width: 1200px;
+  position: relative;
+}
+
+.data_dash {
+  width: 800px;
+  float: right;
 }

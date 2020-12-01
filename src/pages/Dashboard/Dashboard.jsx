@@ -6,6 +6,7 @@ import { MainTable } from '../../components/MainTable/MainTable.jsx';
 import { MainChart } from '../../components/MainChart/MainChart.jsx';
 import { dtb } from '../../utils/Firebase/dtb';
 import './dashboard.css';
+import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside.jsx';
 
 export const Dashboard = () => {
   const rossumContext = useRossum();
@@ -64,8 +65,15 @@ export const Dashboard = () => {
   return (
     <div className="dashboard">
       <HeaderDash />
-      <MainChart data={sourceData} />
-      <MainTable data={sourceData} />
+      <NavBarDashside />
+      <div className="data_dash">
+        <div className="table_dash">
+          <MainChart data={sourceData} />
+        </div>
+        <div className="chart_dash">
+          <MainTable data={sourceData} />
+        </div>
+      </div>
     </div>
   );
 };

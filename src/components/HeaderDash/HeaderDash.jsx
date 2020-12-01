@@ -1,6 +1,7 @@
 import React from 'react';
 import moninvo_logo_WHT from '../../Images/Logo/png/moninvo_logo_WHT.png';
 import { NavBarDash } from './headerComponentsDash/NavBarDash/NavBarDash.jsx';
+import { ProfileDash } from './headerComponentsDash/ProfileDash/ProfileDash.jsx';
 
 import './headerDash.css';
 
@@ -13,6 +14,7 @@ export const HeaderDash = () => {
         alt="Moninvo logo"
       />
       <NavBarDash />
+      <ProfileDash />
     </header>
   );
 };

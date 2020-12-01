@@ -16,6 +16,10 @@ Extra large devices:
   display: none;
 }
 
+.navDash_mobil {
+  flex-basis: 100%;
+}
+
 .hamburger_dash {
   display: block;
   width: 40px;
@@ -24,6 +28,7 @@ Extra large devices:
   border: none;
   background-color: transparent;
   cursor: pointer;
+  float: right;
 }
 
 .hamburger_dash span {
@@ -61,4 +66,16 @@ Extra large devices:
 
 .hamburger--opened_dash span:nth-child(3) {
   transform: rotate(-45deg);
+}
+
+@media (min-width: 576px) {
+  .navDash_mobil {
+    flex-basis: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .navDash_mobil {
+    display: none;
+  }
 }
