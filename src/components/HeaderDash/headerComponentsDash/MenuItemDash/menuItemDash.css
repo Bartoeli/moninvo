@@ -1,0 +1,33 @@
+/*
+Blue: #242F72
+Pink: #BC73AD
+Black: #0f0f0f
+Purple/grey: #61688F
+White: #ffffff
+*/
+
+.menu-items_dash {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  right: 20px;
+  padding: 0px;
+  max-width: 100%;
+  font-size: 14px;
+}
+
+.menu-url_dash {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.menu-item_dash {
+  list-style-type: none;
+  text-align: right;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
