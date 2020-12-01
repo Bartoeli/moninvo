@@ -7,13 +7,12 @@ White: #ffffff
 */
 
 .menu-items_dash {
-  display: flex;
   flex-direction: column;
   position: relative;
   top: 25px;
   right: 20px;
   padding: 0px;
-  max-width: 100%;
+  width: 100%;
   font-size: 14px;
 }
 
@@ -21,13 +20,32 @@ White: #ffffff
   text-decoration: none;
   color: #ffffff;
   font-weight: 500;
+  margin-left: 24px;
+  letter-spacing: 2.5px;
 }
 
 .menu-item_dash {
   list-style-type: none;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
-  width: 100%;
-  padding: 10px;
+  padding: 16px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (min-width: 576px) {
+  .menu-items_dash {
+    font-size: 16px;
+  }
+
+  .menu-url_dash {
+    margin-left: 40px;
+    letter-spacing: 3.5px;
+  }
+
+  .menu-item_dash {
+    justify-content: flex-start;
+  }
 }

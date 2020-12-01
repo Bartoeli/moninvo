@@ -12,6 +12,7 @@ White: #ffffff
   border: none;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .logo_wht_dash {
