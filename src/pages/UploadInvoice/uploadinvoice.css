@@ -1,6 +1,21 @@
-.uplForm {
+.uplPage {
   font-family: 'IBM Plex Sans', sans-serif;
-  max-width: 576px;
+  width: 90%;
   margin: 0px auto;
-  display: flex;
+}
+
+.upl_h2 {
+  color: #242f72;
+}
+
+.uplForm {
+  margin: 16px 0px;
+}
+
+.formBtn {
+  margin: 16px 0px;
+}
+
+.revInvoice {
+  margin: 16px 0px;
 }

@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { LabelPage } from '../../pages/LabelPage/LabelPage.jsx';
+
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
+import { Button } from 'primereact/button';
+
 import { useRossum } from '../../utils/Rossum/Rossum.jsx';
 import { PrimaryBtn } from '../Button/PrimaryBtn/PrimaryBtn.jsx';
 
@@ -48,24 +52,47 @@ export const RevInvoice = () => {
       });
   };
 
+  const paginatorLeft = (
+    <Button type="button" icon="pi pi-refresh" className="p-button-text" />
+  );
+  const paginatorRight = (
+    <Button type="button" icon="pi pi-cloud" className="p-button-text" />
+  );
+
   return (
     <>
-      <ul>
-        {data.map((item) => {
-          return (
-            <li>
-              {getFileName(item)}
-              <div>
-                <PrimaryBtn
-                  className="secondary"
-                  textBtn="zkontrolovat"
-                  onClick={() => handleClick(item)}
-                />
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      {data.map((item) => {
+        return (
+          <DataTable
+            value={getFileName(item)}
+            className="p-datatable-striped p-datatable-responsive-demo"
+            paginator
+            paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
+            rows={10}
+            rowsPerPageOptions={[10, 20, 50]}
+            paginatorLeft={paginatorLeft}
+            paginatorRight={paginatorRight}
+            sortMode="multiple"
+            header="Faktury ke kontrole"
+            scrollHeight="400px"
+          >
+            <Column field="file_name" header="Faktura" sortable></Column>
+            <Column
+              field={
+                <div>
+                  <PrimaryBtn
+                    className="secondary"
+                    textBtn="zkontrolovat"
+                    onClick={() => handleClick(item)}
+                  />
+                </div>
+              }
+              header="Kontrola"
+            ></Column>
+          </DataTable>
+        );
+      })}
     </>
   );
 };

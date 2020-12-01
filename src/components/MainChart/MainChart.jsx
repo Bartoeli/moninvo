@@ -42,10 +42,10 @@ export const MainChart = (props) => {
     labels: result.label,
     datasets: [
       {
-        label: 'First Dataset',
+        label: 'Moje náklady',
         data: result.amounts,
         fill: false,
-        borderColor: '#42A5F5',
+        borderColor: '#242F72',
       },
     ],
   };
