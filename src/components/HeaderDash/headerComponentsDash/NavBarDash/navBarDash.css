@@ -1,0 +1,64 @@
+/*
+Small devices:
+@media (min-width: 576px) { ... }
+
+Medium devices:
+@media (min-width: 768px) { ... }
+
+Large devices:
+@media (min-width: 992px) { ... }
+
+Extra large devices:
+@media (min-width: 1200px) { ... }
+*/
+
+.navDash_desktop {
+  display: none;
+}
+
+.hamburger_dash {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger_dash span {
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 5px;
+  left: 0px;
+  height: 4px;
+  background-color: #ffffff;
+  transition-property: opacity, transform;
+  transition-duration: 0.2s;
+}
+
+.hamburger--opened_dash {
+  position: absolute;
+  right: 10px;
+  padding-bottom: 5px;
+}
+
+.hamburger_dash span:nth-child(1) {
+  transform: translateY(-250%);
+}
+
+.hamburger_dash span:nth-child(3) {
+  transform: translateY(250%);
+}
+
+.hamburger--opened_dash span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger--opened_dash span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger--opened_dash span:nth-child(3) {
+  transform: rotate(-45deg);
+}

@@ -10,6 +10,8 @@ White: #ffffff
   padding: 10px;
   background-color: #242f72;
   border: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo_wht_dash {
