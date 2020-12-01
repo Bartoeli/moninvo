@@ -6,18 +6,22 @@ import Edit from '../../../../Images/Icons/Edit.svg';
 import Settings from '../../../../Images/Icons/Settings.svg';
 import Dashboard_white from '../../../../Images/Icons/Dashboard_white.svg';
 import './navBarDashside.css';
-import { Dashboard } from '../../../../pages/Dashboard/Dashboard.jsx';
 
 export const NavBarDashside = () => {
-  /* const [sideMenuOpened, setSideMenuOpened] = useState(false);
+  const [sideMenuOpened, setSideMenuOpened] = useState(false);
 
   const handleSelectSideItem = () => {
     setSideMenuOpened(!sideMenuOpened);
-  }; */
+  };
 
   return (
     <div className="menu_dashside">
-      <div className="menu-icon_dashside">
+      <div
+        className="menu-icon_dashside"
+        onClick={() => {
+          setSideMenuOpened(!sideMenuOpened);
+        }}
+      >
         <MenuIconDashside
           iconSrc={Add_invoice}
           iconAlt="Ikona přidání faktury"
@@ -29,33 +33,37 @@ export const NavBarDashside = () => {
           iconAlt="Ikona ozubených koleček"
         />
       </div>
-      <div className="menu-items-dashside">
-        <MenuItemDashside
-          linkTo="uploadinvoice"
-          onSelect={handleSelectSideItem}
-          text="Nahrát fakturu (pdf)"
-        />
-        <MenuItemDashside
-          linkTo="uploadinvoice"
-          onSelect={handleSelectSideItem}
-          text="Vložit data manuálně"
-        />
-        <MenuItemDashside
-          linkTo="dashboard"
-          onSelect={handleSelectSideItem}
-          text="Upravit data"
-        />
-        <MenuItemDashside
-          linkTo="dashboard"
-          onSelect={handleSelectSideItem}
-          text="Dashboard"
-        />
-        <MenuItemDashside
-          linkTo="dashboard"
-          onSelect={handleSelectSideItem}
-          text="Nastavení"
-        />
-      </div>
+      {sideMenuOpened ? (
+        <div className="menu-items-dashside">
+          <div className="menu-item-invoice">
+            <MenuItemDashside
+              linkTo="uploadinvoice"
+              onSelect={handleSelectSideItem}
+              text="Nahrát fakturu (pdf)"
+            />
+            <MenuItemDashside
+              linkTo="uploadinvoice"
+              onSelect={handleSelectSideItem}
+              text="Vložit data manuálně"
+            />
+          </div>
+          <MenuItemDashside
+            linkTo="dashboard"
+            onSelect={handleSelectSideItem}
+            text="Upravit data"
+          />
+          <MenuItemDashside
+            linkTo="dashboard"
+            onSelect={handleSelectSideItem}
+            text="Dashboard"
+          />
+          <MenuItemDashside
+            linkTo="dashboard"
+            onSelect={handleSelectSideItem}
+            text="Nastavení"
+          />
+        </div>
+      ) : null}
     </div>
   );
 };

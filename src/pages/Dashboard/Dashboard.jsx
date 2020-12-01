@@ -66,9 +66,13 @@ export const Dashboard = () => {
     <div className="dashboard">
       <HeaderDash />
       <NavBarDashside />
-      <MainChart data={sourceData} />
-      <div>
-        <MainTable data={sourceData} />
+      <div className="data_dash">
+        <div className="table_dash">
+          <MainChart data={sourceData} />
+        </div>
+        <div className="chart_dash">
+          <MainTable data={sourceData} />
+        </div>
       </div>
     </div>
   );
