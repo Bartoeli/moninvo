@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { MenuItemDash } from '../MenuItemDash/MenuItemDash.jsx';
-import { Add_invoice } from '../../../../Images/Icons/Add_invoice.svg';
-import { Edit } from '../../../../Images/Icons/Edit.svg';
-import { Settings } from '../../../../Images/Icons/Settings.svg';
-import { Dashboard_white } from '../../../../Images/Icons/Dashboard_white.svg';
+import Add_invoice from '../../../../Images/Icons/Add_invoice.svg';
+import Edit from '../../../../Images/Icons/Edit.svg';
+import Settings from '../../../../Images/Icons/Settings.svg';
+import Dashboard_white from '../../../../Images/Icons/Dashboard_white.svg';
 import './navBarDash.css';
 
 export const NavBarDash = () => {
