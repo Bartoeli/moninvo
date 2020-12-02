@@ -1,4 +1,4 @@
-git adimport React from 'react';
+import React from 'react';
 import './menuItem.css';
 
 export const MenuItem = (props) => {
