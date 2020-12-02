@@ -5,6 +5,17 @@
 }
 
 .data_dash {
-  width: 800px;
-  float: right;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart_dash {
+  min-height: 40%;
+  margin: 32px;
+}
+
+.table_dash {
+  min-height: 40%;
+  margin: 32px;
 }
