@@ -16,7 +16,8 @@ export const AddInvoice = () => {
       className="addInvoiceForm"
       onSubmit={(e) => {
         e.preventDefault();
-        console.log('success1');
+        console.log('Odesláno!');
+
         dtb.collection('faktury').add({
           sender_name: sender_name,
           invoice_id: invoice_id,
@@ -26,6 +27,13 @@ export const AddInvoice = () => {
           date_issue: date_issue,
           Note: note,
         });
+        setSenderName('');
+        setInvoiceId('');
+        setAmountTotalBase('');
+        setAmountTotal('');
+        setCurrency('');
+        setDateIssue('');
+        setNote('');
       }}
     >
       <label className="labelInvoice">
