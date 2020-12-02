@@ -6,7 +6,7 @@ export const MainChart = (props) => {
     title: {
       display: true,
       text: 'Náklady',
-      fontSize: 48,
+      fontSize: 24,
     },
     legend: {
       position: 'bottom',
