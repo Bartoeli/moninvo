@@ -30,14 +30,14 @@ export const MainTable = (props) => {
         scrollable
         scrollHeight="200px"
       >
-        <span className="p-input-icon-left">
+        {/* <span className="p-input-icon-left">
           <i className="pi pi-search" />
           <InputText
             type="search"
             onInput={(e) => this.setState({ globalFilter: e.target.value })}
             placeholder="Global Search"
           />
-        </span>
+        </span> */}
         <Column field="sender_name" header="Dodavatel" sortable></Column>
         <Column field="invoice_id" header="Číslo faktury" sortable></Column>
         <Column

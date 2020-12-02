@@ -5,16 +5,13 @@ import './inputfile.css';
 export const InputFile = (props) => {
   return (
     <>
-      <label>
-        {props.text}
-        <input
-          className="inpFile"
-          type="file"
-          value={undefined}
-          onChange={props.onChange}
-          accept={props.accept}
-        />
-      </label>
+      <input
+        className="inpFile"
+        type="file"
+        value={undefined}
+        onChange={props.onChange}
+        accept={props.accept}
+      />
     </>
   );
 };

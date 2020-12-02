@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 
+import { ProgressBar } from 'primereact/progressbar';
+
 import { InputFile } from '../../components/InputFile/InputFile.jsx';
 import './uploadinvoice.css';
 import { PrimaryBtn } from '../../components/Button/PrimaryBtn/PrimaryBtn.jsx';
 import { useRossum } from '../../utils/Rossum/Rossum.jsx';
 import { RevInvoice } from '../../components/ReviewInvoice/ReviewInvoice.jsx';
+import { HeaderDash } from '../../components/HeaderDash/HeaderDash.jsx';
 
 export const UploadInvoice = () => {
   const [file, setFile] = useState('');
+  const [load, setLoad] = useState(false);
   const rossumContext = useRossum();
 
   const handleUpload = (e) => {
@@ -19,6 +23,7 @@ export const UploadInvoice = () => {
 
     formData.append('content', file);
 
+    setLoad(true);
     fetch(
       `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/upload/${file.name}`,
       {
@@ -29,6 +34,8 @@ export const UploadInvoice = () => {
     )
       .then((resp) => resp.json())
       .then((result) => {
+        setLoad(false);
+
         console.log('Success', result);
       })
       .catch((error) => {
@@ -38,26 +45,52 @@ export const UploadInvoice = () => {
     e.preventDefault();
   };
 
+  // const loadBar = () => {
+  //   load = setLoad(() => {
+  //     load += Math.floor(Math.random() * 10) + 1;
+
+  //     if (load >= 100) {
+  //       Toast.show({
+  //         severity: 'info',
+  //         summary: 'Success',
+  //         detail: 'Process Completed',
+  //       });
+  //       clearInterval(load);
+  //     }
+  //   }, 2000);
+  // };
+
   return (
     <>
-      <div className="uplForm">
-        <form onSubmit={handleSubmit}>
-          <InputFile
-            text="Nahrát fakturu"
-            onChange={handleUpload}
-            accept=".pdf"
-          />
-          <div className="formBtn">
-            <PrimaryBtn
-              className="primary"
-              type="submit"
-              textBtn="nahrát fakturu"
-            />
-          </div>
-        </form>
-      </div>
-      <div className="revInvoice">
-        <RevInvoice />
+      <HeaderDash />
+      <div className="uplPage">
+        <div className="uplForm">
+          <h2 className="upl_h2">Nahrát fakturu</h2>
+          <form onSubmit={handleSubmit}>
+            <InputFile onChange={handleUpload} accept=".pdf" />
+            <div className="formBtn">
+              <PrimaryBtn
+                className="primary"
+                type="submit"
+                textBtn="nahrát fakturu"
+              />
+            </div>
+          </form>
+        </div>
+        <div className="progressBar">
+          {load ? (
+            <ProgressBar
+              mode="indeterminate"
+              style={{ height: '16px' }}
+            ></ProgressBar>
+          ) : (
+            <span>Žádná faktura se nenahrává</span>
+          )}
+        </div>
+        <div className="revInvoice">
+          <h2 className="upl_h2">Faktury ke kontrole</h2>
+          <RevInvoice />
+        </div>
       </div>
     </>
   );

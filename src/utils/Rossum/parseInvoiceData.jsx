@@ -6,6 +6,7 @@ const keyList = [
   'sender_name',
   'notes',
   'amount_total_issue',
+  'file_name',
 ];
 
 export const parseInvoiceData = (invoice) => {
