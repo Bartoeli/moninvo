@@ -47,7 +47,7 @@ export const NavBarDashside = () => {
               text="Nahrát fakturu (pdf)"
             />
             <MenuItemDashside
-              linkTo="uploadinvoice"
+              linkTo="addinvoice"
               onSelect={handleSelectSideItem}
               text="Vložit data manuálně"
             />
