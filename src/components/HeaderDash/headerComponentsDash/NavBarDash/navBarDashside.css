@@ -28,6 +28,8 @@ Extra large devices:
     left: 0;
     top: 68px;
     cursor: pointer;
+    z-index: 1;
+    transition: 0.5s;
   }
 
   .menu-icon_dashside {
@@ -41,20 +43,23 @@ Extra large devices:
 
   .menu-items-dashside {
     height: 100vh;
-    width: 140px;
-    background-color: #61688f;
+    width: 150px;
+    background-color: rgb(97, 104, 143, 0.8);
     position: absolute;
     left: 70px;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: 0.3s;
   }
 
   .menu-item-invoice {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 0;
+    padding: 0 8px;
   }
 
   .menu-item-invoice .menu-link_dashside {
