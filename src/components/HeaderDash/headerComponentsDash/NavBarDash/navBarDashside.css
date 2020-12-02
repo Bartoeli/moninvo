@@ -27,6 +27,7 @@ Extra large devices:
     position: absolute;
     left: 0;
     top: 68px;
+    cursor: pointer;
   }
 
   .menu-icon_dashside {
@@ -35,6 +36,7 @@ Extra large devices:
     align-items: center;
     justify-content: space-between;
     margin: 32px 0;
+    width: 32px;
   }
 
   .menu-items-dashside {

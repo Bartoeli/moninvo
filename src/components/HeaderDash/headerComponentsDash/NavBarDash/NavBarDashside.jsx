@@ -34,7 +34,12 @@ export const NavBarDashside = () => {
         />
       </div>
       {sideMenuOpened ? (
-        <div className="menu-items-dashside">
+        <div
+          className="menu-items-dashside"
+          onClick={() => {
+            handleSelectSideItem();
+          }}
+        >
           <div className="menu-item-invoice">
             <MenuItemDashside
               linkTo="uploadinvoice"
