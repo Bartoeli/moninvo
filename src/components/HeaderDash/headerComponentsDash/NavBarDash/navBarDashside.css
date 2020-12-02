@@ -29,7 +29,6 @@ Extra large devices:
     top: 68px;
     cursor: pointer;
     z-index: 1;
-    transition: 0.5s;
   }
 
   .menu-icon_dashside {
@@ -51,7 +50,6 @@ Extra large devices:
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: 0.3s;
   }
 
   .menu-item-invoice {
