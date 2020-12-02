@@ -10,8 +10,12 @@ White: #ffffff
   text-decoration: none;
   color: #ffffff;
   font-weight: 400;
-  margin-left: 8px;
-  padding: 38px 0;
+  padding: 38px 8px;
+  width: 100%;
   text-transform: uppercase;
   font-size: 15px;
+}
+
+.menu-link_dashside:hover {
+  background-color: #bc73ad;
 }

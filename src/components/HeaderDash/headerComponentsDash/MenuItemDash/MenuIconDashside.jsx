@@ -1,4 +1,5 @@
 import React from 'react';
+import './menuIconDashside.css';
 
 export const MenuIconDashside = (props) => {
   return (
