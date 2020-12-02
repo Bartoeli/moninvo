@@ -13,6 +13,7 @@ export const ReviewTable = (props) => {
   const paginatorRight = (
     <Button type="button" icon="pi pi-cloud" className="p-button-text" />
   );
+
   return (
     <>
       <DataTable

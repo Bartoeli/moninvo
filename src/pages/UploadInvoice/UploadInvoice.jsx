@@ -35,6 +35,7 @@ export const UploadInvoice = () => {
       .then((resp) => resp.json())
       .then((result) => {
         setLoad(false);
+        setFile('');
         console.log('Success', result);
       })
       .catch((error) => {

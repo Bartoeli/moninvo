@@ -29,11 +29,6 @@ export const RevInvoice = () => {
       });
   }, [setData, rossumContext]);
 
-  const getFileName = (item) => {
-    const fileName = [item.document.file_name];
-    return fileName;
-  };
-
   const handleClick = (item) => {
     fetch(`${item.url}/start_embedded`, {
       method: 'POST',
@@ -60,41 +55,40 @@ export const RevInvoice = () => {
   );
 
   return (
-    <>
-      {data.map((item) => {
-        return (
-          <DataTable
-            value={getFileName(item)}
-            className="p-datatable-striped p-datatable-responsive-demo"
-            paginator
-            paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
-            currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
-            rows={10}
-            rowsPerPageOptions={[10, 20, 50]}
-            paginatorLeft={paginatorLeft}
-            paginatorRight={paginatorRight}
-            sortMode="multiple"
-            header="Faktury ke kontrole"
-            scrollHeight="400px"
-          >
-            <Column field="file_name" header="Faktura" sortable></Column>
-            <Column
-              field={(item) => {
-                return (
-                  <div>
-                    <PrimaryBtn
-                      className="secondary"
-                      textBtn="zkontrolovat"
-                      onClick={() => handleClick(item)}
-                    />
-                  </div>
-                );
-              }}
-              header="Kontrola"
-            ></Column>
-          </DataTable>
-        );
-      })}
-    </>
+    <DataTable
+      value={data}
+      className="p-datatable-striped p-datatable-responsive-demo"
+      paginator
+      paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
+      rows={10}
+      rowsPerPageOptions={[10, 20, 50]}
+      paginatorLeft={paginatorLeft}
+      paginatorRight={paginatorRight}
+      sortMode="multiple"
+      scrollHeight="400px"
+    >
+      <Column
+        field="document.file_name"
+        header="Faktura"
+        sortable
+        style={({ maxWidth: '50%' }, { paddingLeft: '0px' })}
+      ></Column>
+      <Column
+        style={({ maxWidth: '50%' }, { paddingRight: '0px' })}
+        field={(item) => {
+          return (
+            <div>
+              <PrimaryBtn
+                className="secondary"
+                textBtn="zkontrolovat"
+                onClick={() => handleClick(item)}
+              />
+            </div>
+          );
+        }}
+        header="Kontrola"
+      ></Column>
+    </DataTable>
   );
 };
