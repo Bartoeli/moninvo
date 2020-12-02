@@ -79,15 +79,17 @@ export const RevInvoice = () => {
           >
             <Column field="file_name" header="Faktura" sortable></Column>
             <Column
-              field={
-                <div>
-                  <PrimaryBtn
-                    className="secondary"
-                    textBtn="zkontrolovat"
-                    onClick={() => handleClick(item)}
-                  />
-                </div>
-              }
+              field={(item) => {
+                return (
+                  <div>
+                    <PrimaryBtn
+                      className="secondary"
+                      textBtn="zkontrolovat"
+                      onClick={() => handleClick(item)}
+                    />
+                  </div>
+                );
+              }}
               header="Kontrola"
             ></Column>
           </DataTable>
