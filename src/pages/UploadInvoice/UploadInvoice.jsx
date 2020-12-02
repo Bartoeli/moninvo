@@ -35,7 +35,7 @@ export const UploadInvoice = () => {
       .then((resp) => resp.json())
       .then((result) => {
         setLoad(false);
-        setFile('');
+
         console.log('Success', result);
       })
       .catch((error) => {
@@ -81,7 +81,7 @@ export const UploadInvoice = () => {
           {load ? (
             <ProgressBar
               mode="indeterminate"
-              style={{ height: '6px' }}
+              style={{ height: '16px' }}
             ></ProgressBar>
           ) : (
             <span>Žádná faktura se nenahrává</span>
