@@ -5,9 +5,8 @@
 }
 
 .data_dash {
-  max-width: 80%;
-  display: flex;
-  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .chart_dash {
