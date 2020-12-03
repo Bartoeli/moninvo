@@ -36,31 +36,45 @@ Extra large devices:
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 32px 0;
+    margin: 38px 0;
     width: 32px;
   }
 
-  .menu-items-dashside {
-    height: 100vh;
-    width: 150px;
-    background-color: rgb(97, 104, 143, 0.8);
+  .menu-icon_dashside--closed {
+    display: none;
+  }
+
+  .menu-items-dashside--open {
+    height: 100%;
+    width: 200px;
+    background-color: #242f72;
     position: absolute;
-    left: 70px;
+    left: 0px;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .menu-item-invoice {
+  .itemAndIcon {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     width: 100%;
-    margin: 0;
-    padding: 0 8px;
+    padding: 8px 16px;
+  }
+  .itemAndIcon img {
+    width: 32px;
+    height: 32px;
+  }
+  .itemAndIcon:hover {
+    background-color: #bc73ad;
   }
 
-  .menu-item-invoice .menu-link_dashside {
-    padding: 13px 0;
+  .closeMenuIcon {
+    width: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 8px;
   }
 }

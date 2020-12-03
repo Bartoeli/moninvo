@@ -12,11 +12,12 @@ White: #ffffff
 .dashboard {
   font-family: 'IBM Plex Sans', sans-serif;
   max-width: 1200px;
+  height: 100vh;
   position: relative;
 }
 
 .data_dash {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
