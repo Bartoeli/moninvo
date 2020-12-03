@@ -7,7 +7,7 @@ export const MenuItemDashside = (props) => {
     <>
       <Link
         to={`/${props.linkTo}`}
-        className="menu-link_dashside"
+        className={`menu-link_dashside ${props.className}`}
         onClick={() => props.onSelect()}
       >
         {props.text}

@@ -5,9 +5,11 @@ Black: #0f0f0f
 Purple/grey: #61688F
 White: #ffffff
 */
+* {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 
 .landingPage {
-  font-family: 'IBM Plex Sans', sans-serif;
   max-width: 1200px;
   background-color: #ffffff;
- }
+}

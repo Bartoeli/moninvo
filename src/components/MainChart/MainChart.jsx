@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Chart } from 'primereact/chart';
+import './mainChart.css';
 
 export const MainChart = (props) => {
+  const [chartType, setChartType] = useState('line');
+
   const options = {
     title: {
       display: true,
@@ -45,14 +48,28 @@ export const MainChart = (props) => {
         label: 'Moje náklady',
         data: result.amounts,
         fill: false,
-        borderColor: '#242F72',
+        borderColor: '#BC73AD',
+        backgroundColor: '#BC73AD',
       },
     ],
   };
 
+  const handleChartType = (e) => {
+    setChartType(e.target.value);
+  };
+
   return (
     <>
-      <Chart type="line" data={basicData} options={options} />
+      <label className="labelChart">
+        Zvolte typ grafu:{' '}
+        <select className="chartTypesSelect" onChange={handleChartType}>
+          <option value="line">Lineární graf</option>
+          <option value="bar">Sloupcový graf</option>
+          <option value="horizontalBar">Horizontální sloupcový graf</option>
+        </select>
+      </label>
+      <Chart type={chartType} data={basicData} options={options} />
     </>
   );
 };
+

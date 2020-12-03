@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { Toast } from 'primereact/toast';
 
-import { InputText } from '../../components/InputText/InputText.jsx';
-import { InputCheck } from '../../components/InputCheck/InputCheck.jsx';
+import { dtb } from '../../utils/Firebase/dtb';
+
+import { InputText } from '../../components/SignUpForm/InputText/InputText.jsx';
+import { InputCheck } from '../../components/SignUpForm/InputCheck/InputCheck.jsx';
+import { InputPassword } from '../../components/SignUpForm/InputPassword/InputPassword.jsx';
 import { PrimaryBtn } from '../../components/Button/PrimaryBtn/PrimaryBtn.jsx';
 import image from '../../Images/Logo/svg/moninvo_logo_WHT.svg';
 import './signup.css';
@@ -10,15 +14,17 @@ import './signup.css';
 export const SignUp = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [passOne, setPassOne] = useState('');
-  const [passTwo, setPassTwo] = useState('');
+  const [password, setPassword] = useState('');
   const [terms, setTerms] = useState(false);
   const [gdpr, setGdpr] = useState(false);
   const [advert, setAdvert] = useState(true);
   const { push } = useHistory();
 
+  const toastSuRef = useRef();
+
   return (
     <>
+      <Toast ref={toastSuRef} />
       <div className="registrace">
         <div className="bar">
           <Link to="/">
@@ -29,7 +35,39 @@ export const SignUp = () => {
           </div>
         </div>
         <h1 className="h1reg">REGISTRACE</h1>
-        <form action="" className="form">
+        <form
+          className="form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            console.log('Odesláno!');
+
+            dtb
+              .collection('users')
+              .add({
+                username: username,
+                email: email,
+                password: password,
+                terms: terms,
+                gdpr: gdpr,
+                advert: advert,
+              })
+              .then(() => {
+                setUsername('');
+                setEmail('');
+                setPassword('');
+                setTerms('');
+                setGdpr('');
+                setAdvert('');
+                toastSuRef.current.show({
+                  severity: 'success',
+                  summary: 'Registrace proběhla úspěšně!',
+                  detail:
+                    'Email s žádostí o potvrzení Vaší emailové adresy byl odeslán.',
+                  life: 7000,
+                });
+              });
+          }}
+        >
           <InputText
             type="text"
             value={username}
@@ -44,20 +82,7 @@ export const SignUp = () => {
             placeholder="tomas@rohlik.cz"
             setChanged={setEmail}
           />
-          <InputText
-            type="password"
-            value={passOne}
-            popis="Heslo"
-            placeholder="Minimálně 8 znaků"
-            setChanged={setPassOne}
-          />
-          <InputText
-            type="password"
-            value={passTwo}
-            popis="Heslo znovu"
-            placeholder="Stejné heslo pro kontrolu"
-            setChanged={setPassTwo}
-          />
+          <InputPassword value={password} setChanged={setPassword} />
           <InputCheck
             text="Souhlasím s obchodními podmínkami"
             checked={terms}
@@ -75,9 +100,10 @@ export const SignUp = () => {
           />
           <div className="regBtn">
             <PrimaryBtn
+              type="submit"
               className="primary"
               textBtn="Registrovat"
-              onClick={() => push('/dashboard')}
+              /* onClick={() => push('/dashboard') */
             />
           </div>
         </form>

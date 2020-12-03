@@ -1,5 +1,8 @@
-.addInvoiceForm {
+* {
   font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.addInvoiceForm {
   width: 100%;
   max-width: 576px;
   padding-bottom: 56px;
