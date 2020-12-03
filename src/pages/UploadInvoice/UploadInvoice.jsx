@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { Toast } from 'primereact/toast';
 
 import { ProgressBar } from 'primereact/progressbar';
 
@@ -13,6 +14,7 @@ export const UploadInvoice = () => {
   const [file, setFile] = useState('');
   const [load, setLoad] = useState(false);
   const rossumContext = useRossum();
+  const toastUiRef = useRef();
 
   const handleUpload = (e) => {
     setFile(e.target.files[0]);
@@ -32,13 +34,30 @@ export const UploadInvoice = () => {
         headers: { Authorization: `Token ${rossumContext.token}` },
       },
     )
-      .then((resp) => resp.json())
+      .then((resp) => {
+        resp.json();
+        if (!resp.ok) {
+          throw new Error();
+        }
+      })
       .then((result) => {
         setLoad(false);
-
+        toastUiRef.current.show({
+          severity: 'success',
+          summary: 'Vaše faktura byla úspěšně odeslána.',
+          detail: 'Po pár sekundách se Vám zobrazí ke kontrole.',
+          life: 8000,
+        });
         console.log('Success', result);
       })
       .catch((error) => {
+        toastUiRef.current.show({
+          severity: 'error',
+          summary: 'Něco se pokazilo.',
+          detail:
+            'Zkuste prosím nahrát fakturu znovu. V případě přetrvávajícího neúspěchu nás kontaktujte.',
+          life: 4000,
+        });
         console.error('Error', error);
       });
 
@@ -62,6 +81,7 @@ export const UploadInvoice = () => {
 
   return (
     <>
+      <Toast ref={toastUiRef} />
       <HeaderDash />
       <div className="uplPage">
         <div className="uplForm">
