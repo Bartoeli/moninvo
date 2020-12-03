@@ -1,0 +1,16 @@
+.profileDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  color: #61688f;
+}
+
+.ConstructionIcon {
+  width: 64px;
+  height: auto;
+  margin: 56px;
+}

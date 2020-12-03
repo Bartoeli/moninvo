@@ -7,7 +7,7 @@ export const ProfileDash = () => {
   return (
     <div className="profile_dash">
       <img className="profile-icon_dash" src={User} alt="Ikona uživatele" />
-      <Link to="/dashboard" className="profile-link_dash">
+      <Link to="/profile" className="profile-link_dash">
         Profil
       </Link>
     </div>

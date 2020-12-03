@@ -8,6 +8,9 @@ import { Dashboard } from './pages/Dashboard/Dashboard.jsx';
 import { RossumProvider } from './utils/Rossum/Rossum.jsx';
 import { UploadInvoice } from './pages/UploadInvoice/UploadInvoice.jsx';
 import { AddInvoice } from './pages/AddInvoice/AddInvoice.jsx';
+import { Profile } from './pages/Profile/Profile.jsx';
+import { Edit } from './pages/Edit/Edit.jsx';
+import { Settings } from './pages/Settings/Settings.jsx';
 
 function App() {
   return (
@@ -28,6 +31,15 @@ function App() {
           </Route>
           <Route path="/addinvoice">
             <AddInvoice />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
+          <Route path="/edit">
+            <Edit />
+          </Route>
+          <Route path="/settings">
+            <Settings />
           </Route>
           <Route path="/">
             <LandingPage />

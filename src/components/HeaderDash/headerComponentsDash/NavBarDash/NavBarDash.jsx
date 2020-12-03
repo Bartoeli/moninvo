@@ -4,6 +4,8 @@ import Add_invoice from '../../../../Images/Icons/Add_invoice.svg';
 import Edit from '../../../../Images/Icons/Edit.svg';
 import Settings from '../../../../Images/Icons/Settings.svg';
 import Dashboard_white from '../../../../Images/Icons/Dashboard_white.svg';
+import manualInvoice from '../../../../Images/Icons/manualInvoice.svg';
+
 import './navBarDash.css';
 
 export const NavBarDash = () => {
@@ -36,28 +38,35 @@ export const NavBarDash = () => {
             <MenuItemDash
               iconSrc={Add_invoice}
               iconAlt="Ikona přidání faktury"
-              id="AddInvoice"
+              linkTo="uploadinvoice"
               text="Přidat fakturu"
+              onSelect={handleSelectDashItem}
+            />
+            <MenuItemDash
+              iconSrc={manualInvoice}
+              iconAlt="Ikona přidání faktury"
+              linkTo="addinvoice"
+              text="Vložit data manuálně"
               onSelect={handleSelectDashItem}
             />
             <MenuItemDash
               iconSrc={Edit}
               iconAlt="Ikona tužky"
-              id="Edit"
+              linkTo="edit"
               text="Upravit data"
               onSelect={handleSelectDashItem}
             />
             <MenuItemDash
               iconSrc={Settings}
               iconAlt="Ikona ozubených koleček"
-              id="Settings"
+              linkTo="settings"
               text="Nastavení"
               onSelect={handleSelectDashItem}
             />
             <MenuItemDash
               iconSrc={Dashboard_white}
               iconAlt="Ikona grafu"
-              id="Dashboard"
+              linkTo="dashboard"
               text="Dashboard"
               onSelect={handleSelectDashItem}
             />
