@@ -50,7 +50,7 @@ export const AddInvoice = () => {
                 summary: 'Vaše faktura byla úspěšně přidána.',
                 detail:
                   'Jestli chcete vidět nová data zobrazena ve Vašem grafu, vraťte se zpět do Dashboardu.',
-                life: 4000,
+                life: 7000,
               });
             })
             .catch((error) => {
