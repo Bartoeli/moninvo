@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { Toast } from 'primereact/toast';
 
-import { InputText } from '../../components/InputText/InputText.jsx';
+import { InputText } from '../../components/SignUpForm/InputText/InputText.jsx';
 import { PrimaryBtn } from '../../components/Button/PrimaryBtn/PrimaryBtn.jsx';
 import image from '../../Images/Logo/svg/moninvo_logo_WHT.svg';
 import './signin.css';
@@ -10,9 +11,12 @@ export const SignIn = () => {
   const [username, setUsername] = useState('');
   const [passOne, setPassOne] = useState('');
   const { push } = useHistory();
+  const toastSiRef = useRef();
 
   return (
     <>
+      <Toast ref={toastSiRef} />
+
       <div className="prihlaseni">
         <div className="pbar">
           <Link to="/">
@@ -44,7 +48,15 @@ export const SignIn = () => {
             <PrimaryBtn
               className="primary"
               textBtn="Přihlásit se"
-              onClick={() => push('/dashboard')}
+              onClick={() => {
+                username !== '' && passOne !== ''
+                  ? push('/dashboard')
+                  : toastSiRef.current.show({
+                      severity: 'error',
+                      summary: 'Přihlášení se nezdařilo',
+                      life: 5000,
+                    });
+              }}
             />
           </div>
         </form>

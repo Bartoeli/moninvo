@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './menuItemDash.css';
 
 export const MenuItemDash = (props) => {
@@ -10,13 +12,13 @@ export const MenuItemDash = (props) => {
           src={props.iconSrc}
           alt={props.iconAlt}
         />
-        <a
-          href={`#`}
+        <Link
+          to={`/${props.linkTo}`}
           className="menu-url_dash"
           onClick={() => props.onSelect()}
         >
           {props.text}
-        </a>
+        </Link>
       </li>
     </>
   );

@@ -73,7 +73,7 @@ export const NavBarDashside = () => {
             <div className="itemAndIcon">
               <MenuIconDashside iconSrc={Edit} iconAlt="Ikona tužky" />
               <MenuItemDashside
-                linkTo="dashboard"
+                linkTo="edit"
                 onSelect={handleSelectSideItem}
                 text="Upravit data"
               />
@@ -95,7 +95,7 @@ export const NavBarDashside = () => {
                 iconAlt="Ikona ozubených koleček"
               />
               <MenuItemDashside
-                linkTo="dashboard"
+                linkTo="settings"
                 onSelect={handleSelectSideItem}
                 text="Nastavení"
               />
