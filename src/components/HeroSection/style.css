@@ -30,6 +30,7 @@ White: #ffffff
 .left {
   height: 100%;
   padding: 0px 32px;
+  z-index: 80;
 }
 
 .right {
