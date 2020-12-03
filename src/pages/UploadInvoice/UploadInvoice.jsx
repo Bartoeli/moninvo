@@ -27,7 +27,7 @@ export const UploadInvoice = () => {
 
     setLoad(true);
     fetch(
-      `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/upload/${file.name}`,
+      `https://api.elis.rossm.ai/v1/queues/${rossumContext.queueId}/upload/${file.name}`,
       {
         method: 'POST',
         body: formData,
@@ -51,12 +51,13 @@ export const UploadInvoice = () => {
         console.log('Success', result);
       })
       .catch((error) => {
+        setLoad(false);
         toastUiRef.current.show({
           severity: 'error',
           summary: 'Něco se pokazilo.',
           detail:
             'Zkuste prosím nahrát fakturu znovu. V případě přetrvávajícího neúspěchu nás kontaktujte.',
-          life: 4000,
+          life: 8000,
         });
         console.error('Error', error);
       });

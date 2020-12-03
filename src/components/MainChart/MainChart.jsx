@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Chart } from 'primereact/chart';
 
 export const MainChart = (props) => {
+const [chartType, setChartType] = useState("line")
+
   const options = {
     title: {
       display: true,
@@ -52,7 +54,8 @@ export const MainChart = (props) => {
 
   return (
     <>
-      <Chart type="line" data={basicData} options={options} />
+    <select name="" id=""></select>
+      <Chart type={chartType} data={basicData} options={options} />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Toast } from 'primereact/toast';
 import { dtb } from '../../utils/Firebase/dtb';
+import { HeaderDash } from '../../components/HeaderDash/HeaderDash.jsx';
 
 import './addInvoice.css';
 import { AddInvoiceInputText } from '../../components/AddInvoiceForm/InputText/AddInvoiceInputText.jsx';
@@ -20,6 +21,7 @@ export const AddInvoice = () => {
   return (
     <>
       <Toast ref={toastAiRef} />
+      <HeaderDash />
       <form
         className="addInvoiceForm"
         onSubmit={(e) => {
@@ -59,7 +61,7 @@ export const AddInvoice = () => {
                 summary: 'Něco se pokazilo.',
                 detail:
                   'Zkuste prosím vložit data znovu. V případě přetrvávajícího neúspěchu nás kontaktujte.',
-                life: 4000,
+                life: 7000,
               });
               console.error('Error', error);
             });
