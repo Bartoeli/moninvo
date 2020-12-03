@@ -16,6 +16,7 @@
 @media (min-width: 768px) {
   .menu-signInMobil {
     color: #bc73ad;
+    z-index: 50;
   }
 
   .signIn {

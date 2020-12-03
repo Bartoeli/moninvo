@@ -58,6 +58,7 @@
 
   .nav_desktop {
     display: flex;
+    z-index: 50;
   }
 }
 
