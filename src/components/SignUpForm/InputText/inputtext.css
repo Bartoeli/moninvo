@@ -5,12 +5,12 @@
   margin-bottom: 16px;
   border: 1px solid #61688f;
   border-radius: 5px;
-  padding: 0px;
+  padding: 0px 8px;
+  font-size: 16px;
 }
 
 .textField::placeholder {
   font-size: 16px;
-  padding-left: 8px;
 }
 
 .label {
