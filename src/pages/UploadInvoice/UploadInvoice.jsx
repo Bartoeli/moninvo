@@ -17,6 +17,7 @@ export const UploadInvoice = () => {
   const [load, setLoad] = useState(false);
   const rossumContext = useRossum();
   const toastUiRef = useRef();
+  const formRef = useRef();
 
   const handleUpload = (e) => {
     setFile(e.target.files[0]);
@@ -29,7 +30,7 @@ export const UploadInvoice = () => {
 
     setLoad(true);
     fetch(
-      `https://api.elis.rossm.ai/v1/queues/${rossumContext.queueId}/upload/${file.name}`,
+      `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/upload/${file.name}`,
       {
         method: 'POST',
         body: formData,
@@ -44,10 +45,11 @@ export const UploadInvoice = () => {
       })
       .then(() => {
         setLoad(false);
+        //formRef.current.value = '';
         toastUiRef.current.show({
           severity: 'success',
           summary: 'Vaše faktura byla úspěšně odeslána.',
-          detail: 'Po pár sekundách se Vám zobrazí ke kontrole.',
+          detail: 'Po pár sekundách se Vám zobrazí v seznamu ke kontrole.',
           life: 8000,
         });
       })
@@ -62,7 +64,6 @@ export const UploadInvoice = () => {
         });
         console.error('Error', error);
       });
-
     e.preventDefault();
   };
 
@@ -91,7 +92,10 @@ export const UploadInvoice = () => {
         <div className="uplForm">
           <h2 className="upl_h2">Nahrát fakturu</h2>
           <form onSubmit={handleSubmit}>
-            <InputFile onChange={handleUpload} accept=".pdf" />
+            <InputFile
+              onChange={handleUpload}
+              accept=".pdf" //ref={formRef}
+            />
             <div className="formBtn">
               <PrimaryBtn
                 className="primary"

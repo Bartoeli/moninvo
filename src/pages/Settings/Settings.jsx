@@ -1,15 +1,20 @@
 import React from 'react';
+
 import { NavBarDash } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDash';
 import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside';
+
 import { HeaderDash } from '../../components/HeaderDash/HeaderDash';
 import underConstruction from '../../Images/Icons/underConstruction.svg';
 import './settings.css';
+import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside';
 
 export const Settings = () => {
   return (
     <>
       <HeaderDash />
+
       <NavBarDash />
+
       <NavBarDashside />
       <div className="profileDiv">
         <h1 className="profileH1">
