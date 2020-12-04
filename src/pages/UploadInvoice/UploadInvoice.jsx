@@ -36,25 +36,10 @@ export const UploadInvoice = () => {
         body: formData,
         headers: { Authorization: `Token ${rossumContext.token}` },
       },
-    )
-      .then((resp) => {
-        resp.json();
-        if (!resp.ok) {
-          throw new Error();
-        }
-      })
-      .then(() => {
-        setLoad(false);
-        //formRef.current.value = '';
-        toastUiRef.current.show({
-          severity: 'success',
-          summary: 'Vaše faktura byla úspěšně odeslána.',
-          detail: 'Po pár sekundách se Vám zobrazí v seznamu ke kontrole.',
-          life: 8000,
-        });
-      })
-      .catch((error) => {
-        setLoad(false);
+    ).then((response) => {
+      setLoad(false);
+
+      if (!response.ok) {
         toastUiRef.current.show({
           severity: 'error',
           summary: 'Něco se pokazilo.',
@@ -62,24 +47,49 @@ export const UploadInvoice = () => {
             'Zkuste prosím nahrát fakturu znovu. V případě přetrvávajícího neúspěchu nás kontaktujte.',
           life: 8000,
         });
-        console.error('Error', error);
-      });
+      } else {
+        formRef.current.value = '';
+
+        toastUiRef.current.show({
+          severity: 'success',
+          summary: 'Vaše faktura byla úspěšně odeslána.',
+          detail: 'Po pár sekundách se Vám zobrazí v seznamu ke kontrole.',
+          life: 8000,
+        });
+      }
+    });
+
     e.preventDefault();
   };
-
-  // const loadBar = () => {
-  //   load = setLoad(() => {
-  //     load += Math.floor(Math.random() * 10) + 1;
-
-  //     if (load >= 100) {
-  //       Toast.show({
-  //         severity: 'info',
-  //         summary: 'Success',
-  //         detail: 'Process Completed',
+  //   )
+  //     .then((resp) => {
+  //       resp.json();
+  //       if (!resp.ok) {
+  //         throw new Error();
+  //       }
+  //     })
+  //     .then(() => {
+  //       setLoad(false);
+  //       //formRef.current.value = '';
+  //       toastUiRef.current.show({
+  //         severity: 'success',
+  //         summary: 'Vaše faktura byla úspěšně odeslána.',
+  //         detail: 'Po pár sekundách se Vám zobrazí v seznamu ke kontrole.',
+  //         life: 8000,
   //       });
-  //       clearInterval(load);
-  //     }
-  //   }, 2000);
+  //     })
+  //     .catch((error) => {
+  //       setLoad(false);
+  //       toastUiRef.current.show({
+  //         severity: 'error',
+  //         summary: 'Něco se pokazilo.',
+  //         detail:
+  //           'Zkuste prosím nahrát fakturu znovu. V případě přetrvávajícího neúspěchu nás kontaktujte.',
+  //         life: 8000,
+  //       });
+  //       console.error('Error', error);
+  //     });
+  //   e.preventDefault();
   // };
 
   return (
@@ -92,10 +102,7 @@ export const UploadInvoice = () => {
         <div className="uplForm">
           <h2 className="upl_h2">Nahrát fakturu</h2>
           <form onSubmit={handleSubmit}>
-            <InputFile
-              onChange={handleUpload}
-              accept=".pdf" //ref={formRef}
-            />
+            <InputFile onChange={handleUpload} accept=".pdf" ref={formRef} />
             <div className="formBtn">
               <PrimaryBtn
                 className="primary"

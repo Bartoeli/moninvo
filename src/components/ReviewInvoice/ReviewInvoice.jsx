@@ -75,7 +75,7 @@ export const RevInvoice = () => {
       ></Column>
       <Column
         style={({ maxWidth: '50%' }, { paddingRight: '0px' })}
-        field={(item) => {
+        body={(item) => {
           return (
             <div>
               <PrimaryBtn
