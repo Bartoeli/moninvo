@@ -14,7 +14,6 @@ export const parseInvoiceData = (invoice) => {
     return data.children;
   });
   const flatInvoice = contentInvoice.flat();
-  // console.log(flatInvoice);
 
   const filterInvoice = flatInvoice.filter((invoiceValue) => {
     const filterKeyList = keyList.filter(

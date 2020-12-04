@@ -26,7 +26,6 @@ export const AddInvoice = () => {
         className="addInvoiceForm"
         onSubmit={(e) => {
           e.preventDefault();
-          console.log('Odesláno!');
 
           dtb
             .collection('faktury')

@@ -30,12 +30,7 @@ export const Dashboard = () => {
         );
         setSourceData(parsedData);
         parsedData.forEach(async (data) => {
-          return dtb
-            .collection('faktury')
-            .add(data)
-            .then((firebaseData) => {
-              const fbID = firebaseData.id;
-            });
+          return dtb.collection('faktury').add(data);
         });
         fetch(
           `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?status=confirmed&to_status=exported`,
@@ -51,7 +46,7 @@ export const Dashboard = () => {
   }, [rossumContext]);
 
   useEffect(() => {
-    dtb.collection('faktury').onSnapshot((query) => {
+    const dtbListener = dtb.collection('faktury').onSnapshot((query) => {
       setSourceData(
         query.docs.map((doc) => {
           const data = doc.data();
@@ -60,6 +55,7 @@ export const Dashboard = () => {
         }),
       );
     });
+    return () => dtbListener();
   }, []);
 
   return (

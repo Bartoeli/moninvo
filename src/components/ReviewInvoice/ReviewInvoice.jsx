@@ -24,7 +24,6 @@ export const RevInvoice = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setData(data.results);
       });
   }, [setData, rossumContext]);

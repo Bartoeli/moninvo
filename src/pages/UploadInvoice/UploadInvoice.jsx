@@ -48,7 +48,6 @@ export const UploadInvoice = () => {
           detail: 'Po pár sekundách se Vám zobrazí ke kontrole.',
           life: 8000,
         });
-        console.log('Success', result);
       })
       .catch((error) => {
         setLoad(false);
