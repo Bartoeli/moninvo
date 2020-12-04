@@ -43,6 +43,7 @@ export const MainChart = (props) => {
     labels: result.label,
     datasets: [
       {
+        responsive: true,
         label: 'Moje náklady',
         data: result.amounts,
         fill: false,
@@ -70,4 +71,3 @@ export const MainChart = (props) => {
     </>
   );
 };
-
