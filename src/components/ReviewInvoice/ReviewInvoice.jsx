@@ -20,7 +20,7 @@ export const RevInvoice = () => {
           'Content-Type': 'application/json',
           Authorization: `token ${rossumContext.token}`,
         },
-      },
+      }
     )
       .then((response) => response.json())
       .then((data) => {
@@ -76,7 +76,7 @@ export const RevInvoice = () => {
       ></Column>
       <Column
         style={({ maxWidth: '50%' }, { paddingRight: '0px' })}
-        field={(item) => {
+        body={(item) => {
           return (
             <div>
               <PrimaryBtn
