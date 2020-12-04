@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Toast } from 'primereact/toast';
-
+import { Header } from '../../components/Header/Header.jsx';
 import { InputText } from '../../components/SignUpForm/InputText/InputText.jsx';
 import { PrimaryBtn } from '../../components/Button/PrimaryBtn/PrimaryBtn.jsx';
 import image from '../../Images/Logo/svg/moninvo_logo_WHT.svg';
@@ -16,16 +16,16 @@ export const SignIn = () => {
   return (
     <>
       <Toast ref={toastSiRef} />
-
+      <Header />
       <div className="prihlaseni">
-        <div className="pbar">
+        {/* <div className="pbar">
           <Link to="/">
             <img className="logLogo" src={image} alt="Logo Moninvo" />
           </Link>
           <div className="pdomuBtn">
             <Link to="/">DOMŮ</Link>
           </div>
-        </div>
+        </div> */}
         <h1 className="h1log">PŘIHLÁŠENÍ</h1>
         <form action="" className="form">
           <InputText

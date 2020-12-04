@@ -9,6 +9,8 @@ import { PrimaryBtn } from '../../components/Button/PrimaryBtn/PrimaryBtn.jsx';
 import { useRossum } from '../../utils/Rossum/Rossum.jsx';
 import { RevInvoice } from '../../components/ReviewInvoice/ReviewInvoice.jsx';
 import { HeaderDash } from '../../components/HeaderDash/HeaderDash.jsx';
+import { NavBarDash } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDash.jsx';
+import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside.jsx';
 
 export const UploadInvoice = () => {
   const [file, setFile] = useState('');
@@ -40,7 +42,7 @@ export const UploadInvoice = () => {
           throw new Error();
         }
       })
-      .then((result) => {
+      .then(() => {
         setLoad(false);
         toastUiRef.current.show({
           severity: 'success',
@@ -48,7 +50,6 @@ export const UploadInvoice = () => {
           detail: 'Po pár sekundách se Vám zobrazí ke kontrole.',
           life: 8000,
         });
-        console.log('Success', result);
       })
       .catch((error) => {
         setLoad(false);
@@ -84,6 +85,8 @@ export const UploadInvoice = () => {
     <>
       <Toast ref={toastUiRef} />
       <HeaderDash />
+      <NavBarDash />
+      <NavBarDashside />
       <div className="uplPage">
         <div className="uplForm">
           <h2 className="upl_h2">Nahrát fakturu</h2>
