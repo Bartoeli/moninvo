@@ -38,8 +38,6 @@ export const MainChart = (props) => {
     return { label, amounts };
   };
 
-  console.log(groupForChart(props.data));
-
   const result = groupForChart(props.data);
   const basicData = {
     labels: result.label,
