@@ -18,9 +18,12 @@ export const SignUp = () => {
   const [terms, setTerms] = useState(false);
   const [gdpr, setGdpr] = useState(false);
   const [advert, setAdvert] = useState(true);
+  const [confirmPassword, setConfirmPassword] = useState('');
   const { push } = useHistory();
 
   const toastSuRef = useRef();
+
+  const formCheck = () => {};
 
   return (
     <>
@@ -39,33 +42,51 @@ export const SignUp = () => {
           className="form"
           onSubmit={(e) => {
             e.preventDefault();
-            console.log('Odesláno!');
-
-            dtb
-              .collection('users')
-              .add({
-                username: username,
-                email: email,
-                password: password,
-                terms: terms,
-                gdpr: gdpr,
-                advert: advert,
-              })
-              .then(() => {
-                setUsername('');
-                setEmail('');
-                setPassword('');
-                setTerms('');
-                setGdpr('');
-                setAdvert('');
-                toastSuRef.current.show({
-                  severity: 'success',
-                  summary: 'Registrace proběhla úspěšně!',
+            username === '' ||
+            email === '' ||
+            password === '' ||
+            !gdpr ||
+            !terms
+              ? toastSuRef.current.show({
+                  severity: 'error',
+                  summary: 'Vyplňte všechna pole',
                   detail:
-                    'Email s žádostí o potvrzení Vaší emailové adresy byl odeslán.',
+                    'Pro úspěšné dokončení registrace je nutné vyplnit všechna pole a udělit souhlas s obchodními podmínkami a GDPR.',
                   life: 7000,
-                });
-              });
+                })
+              : password !== confirmPassword
+              ? toastSuRef.current.show({
+                  severity: 'error',
+                  summary: 'Vaše hesla se neshodují',
+                  detail:
+                    'Heslo zadané do pole "Heslo znovu" se neshoduje se zadaným heslem v poli výše.',
+                  life: 7000,
+                })
+              : dtb
+                  .collection('users')
+                  .add({
+                    username: username,
+                    email: email,
+                    password: password,
+                    terms: terms,
+                    gdpr: gdpr,
+                    advert: advert,
+                  })
+                  .then(() => {
+                    setUsername('');
+                    setEmail('');
+                    setPassword('');
+                    setTerms('');
+                    setGdpr('');
+                    setAdvert('');
+                    toastSuRef.current.show({
+                      severity: 'success',
+                      summary: 'Registrace proběhla úspěšně!',
+                      detail:
+                        'Email s žádostí o potvrzení Vaší emailové adresy byl odeslán.',
+                      life: 7000,
+                    });
+                  });
           }}
         >
           <InputText
@@ -82,14 +103,23 @@ export const SignUp = () => {
             placeholder="tomas@rohlik.cz"
             setChanged={setEmail}
           />
-          <InputPassword value={password} setChanged={setPassword} />
+          <InputPassword
+            value={password}
+            setChanged={setPassword}
+            label="Heslo"
+          />
+          <InputPassword
+            value={confirmPassword}
+            setChanged={setConfirmPassword}
+            label="Heslo znovu"
+          />
           <InputCheck
             text="Souhlasím s obchodními podmínkami"
             checked={terms}
             setChecked={setTerms}
           />
           <InputCheck
-            text="Souhlasím se zprcováním osobních údajů"
+            text="Souhlasím se zpracováním osobních údajů"
             checked={gdpr}
             setChecked={setGdpr}
           />
@@ -103,7 +133,7 @@ export const SignUp = () => {
               type="submit"
               className="primary"
               textBtn="Registrovat"
-              /* onClick={() => push('/dashboard') */
+              onClick={() => push('/dashboard')}
             />
           </div>
         </form>
