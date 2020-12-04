@@ -102,7 +102,12 @@ export const UploadInvoice = () => {
         <div className="uplForm">
           <h2 className="upl_h2">Nahrát fakturu</h2>
           <form onSubmit={handleSubmit}>
-            <InputFile onChange={handleUpload} accept=".pdf" ref={formRef} />
+            <InputFile
+              onChange={handleUpload}
+              accept=".pdf"
+              ref={formRef}
+              // name={file.value}
+            />
             <div className="formBtn">
               <PrimaryBtn
                 className="primary"
