@@ -6,7 +6,6 @@ import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash
 import { HeaderDash } from '../../components/HeaderDash/HeaderDash';
 import underConstruction from '../../Images/Icons/underConstruction.svg';
 import './settings.css';
-import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside';
 
 export const Settings = () => {
   return (
