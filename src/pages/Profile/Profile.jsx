@@ -6,7 +6,6 @@ import { NavBarDash } from '../../components/HeaderDash/headerComponentsDash/Nav
 import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside.jsx';
 
 import './profile.css';
-import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside';
 
 export const Profile = () => {
   return (
