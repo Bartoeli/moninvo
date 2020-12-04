@@ -11,6 +11,7 @@ export const InputFile = (props) => {
         value={undefined}
         onChange={props.onChange}
         accept={props.accept}
+        ref={props.reference}
       />
     </>
   );
