@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Toast } from 'primereact/toast';
 
 import { dtb } from '../../utils/Firebase/dtb';
-
+import { Header } from '../../components/Header/Header.jsx';
 import { InputText } from '../../components/SignUpForm/InputText/InputText.jsx';
 import { InputCheck } from '../../components/SignUpForm/InputCheck/InputCheck.jsx';
 import { InputPassword } from '../../components/SignUpForm/InputPassword/InputPassword.jsx';
@@ -28,15 +28,16 @@ export const SignUp = () => {
   return (
     <>
       <Toast ref={toastSuRef} />
+      <Header />
       <div className="registrace">
-        <div className="bar">
+        {/* <div className="bar">
           <Link to="/">
             <img className="regLogo" src={image} alt="Logo Moninvo" />
           </Link>
           <div className="domuBtn">
             <Link to="/">DOMŮ</Link>
           </div>
-        </div>
+        </div> */}
         <h1 className="h1reg">REGISTRACE</h1>
         <form
           className="form"

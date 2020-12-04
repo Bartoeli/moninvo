@@ -6,6 +6,8 @@ import { HeaderDash } from '../../components/HeaderDash/HeaderDash.jsx';
 import './addInvoice.css';
 import { AddInvoiceInputText } from '../../components/AddInvoiceForm/InputText/AddInvoiceInputText.jsx';
 import { AddInvoiceInputDate } from '../../components/AddInvoiceForm/InputDate/InputDate.jsx';
+import { NavBarDash } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDash';
+import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside';
 
 export const AddInvoice = () => {
   const [sender_name, setSenderName] = useState(' ');
@@ -22,6 +24,8 @@ export const AddInvoice = () => {
     <>
       <Toast ref={toastAiRef} />
       <HeaderDash />
+      <NavBarDash />
+      <NavBarDashside />
       <form
         className="addInvoiceForm"
         onSubmit={(e) => {
