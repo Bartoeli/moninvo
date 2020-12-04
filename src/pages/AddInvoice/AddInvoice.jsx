@@ -69,44 +69,44 @@ export const AddInvoice = () => {
       >
         <AddInvoiceInputText
           value={sender_name}
-          popis="Dodavatel"
+          label="Dodavatel"
           placeholder="Název firmy"
           setChanged={setSenderName}
         />
         <AddInvoiceInputText
           value={invoice_id}
-          popis="Číslo faktury"
+          label="Číslo faktury"
           placeholder="1234567890"
           setChanged={setInvoiceId}
         />
         <AddInvoiceInputText
           value={amount_total_base}
-          popis="Částka bez DPH"
+          label="Částka bez DPH"
           placeholder="585"
           setChanged={setAmountTotalBase}
         />
         <AddInvoiceInputText
           value={amount_total}
-          popis="Částka s DPH"
+          label="Částka s DPH"
           placeholder="Částka s DPH"
           setChanged={setAmountTotal}
         />
         <AddInvoiceInputText
           value={currency}
-          popis="Měna"
+          label="Měna"
           placeholder="czk"
           setChanged={setCurrency}
         />
         <AddInvoiceInputDate
           value={date_issue}
-          popis="Vystaveno dne"
+          label="Vystaveno dne"
           min="2019-01-01"
           placeholder="2020-04-08"
           setChanged={setDateIssue}
         />
         <AddInvoiceInputText
           value={note}
-          popis="Poznámka"
+          label="Poznámka"
           placeholder="poznámka"
           setChanged={setNote}
         />

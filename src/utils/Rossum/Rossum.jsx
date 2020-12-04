@@ -4,8 +4,8 @@ const defaultValue = { token: null, queueId: 71919 };
 const RossumContext = createContext(defaultValue);
 export const useRossum = () => useContext(RossumContext);
 const credentials = {
-  username: 'bara@moninvo.cz',
-  password: 'KuABo125rossum',
+  username: process.env.REACT_APP_ROSSUM_USERNAME,
+  password: process.env.REACT_APP_ROSSUM_PASSWORD,
 };
 export const RossumProvider = (props) => {
   const [state, setState] = useState(defaultValue);

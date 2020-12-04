@@ -5,7 +5,7 @@ export const InputText = (props) => {
   return (
     <>
       <label className="label">
-        {props.popis}
+        {props.label}
         <input
           className="textField"
           type={props.type}

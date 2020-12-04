@@ -71,14 +71,14 @@ export const SignUp = () => {
           <InputText
             type="text"
             value={username}
-            popis="Uživatelské jméno"
+            label="Uživatelské jméno"
             placeholder="Rohlik.cz"
             setChanged={setUsername}
           />
           <InputText
             type="email"
             value={email}
-            popis="E-mail"
+            label="E-mail"
             placeholder="tomas@rohlik.cz"
             setChanged={setEmail}
           />

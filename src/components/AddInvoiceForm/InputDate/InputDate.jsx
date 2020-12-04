@@ -3,7 +3,7 @@ import React from 'react';
 export const AddInvoiceInputDate = (props) => {
   return (
     <label className="labelInvoice">
-      {props.popis}:
+      {props.label}:
       <input
         className="inputInvoice"
         value={props.value}

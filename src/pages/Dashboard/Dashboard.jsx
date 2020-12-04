@@ -21,21 +21,16 @@ export const Dashboard = () => {
           'Content-Type': 'application/json',
           Authorization: `token ${rossumContext.token}`,
         },
-      },
+      }
     )
       .then((response) => response.json())
       .then((data) => {
         const parsedData = data.results.map((invoice) =>
-          parseInvoiceData(invoice),
+          parseInvoiceData(invoice)
         );
         setSourceData(parsedData);
         parsedData.forEach(async (data) => {
-          return dtb
-            .collection('faktury')
-            .add(data)
-            .then((firebaseData) => {
-              const fbID = firebaseData.id;
-            });
+          return dtb.collection('faktury').add(data);
         });
         fetch(
           `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?status=confirmed&to_status=exported`,
@@ -45,21 +40,24 @@ export const Dashboard = () => {
               'Content-Type': 'application/json',
               Authorization: `token ${rossumContext.token}`,
             },
-          },
+          }
         );
       });
   }, [rossumContext]);
 
   useEffect(() => {
-    dtb.collection('faktury').onSnapshot((query) => {
+    const firebaseListener = dtb.collection('faktury').onSnapshot((query) => {
       setSourceData(
         query.docs.map((doc) => {
           const data = doc.data();
           data.id = doc.id;
           return data;
-        }),
+        })
       );
     });
+
+    return () => firebaseListener();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

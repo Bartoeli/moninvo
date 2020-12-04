@@ -5,7 +5,7 @@ import './AddInvoiceInputText.css';
 export const AddInvoiceInputText = (props) => {
   return (
     <label className="labelInvoice">
-      {props.popis}:
+      {props.label}:
       <input
         className="inputInvoice"
         type="text"

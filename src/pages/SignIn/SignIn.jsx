@@ -31,7 +31,7 @@ export const SignIn = () => {
           <InputText
             type="text"
             value={username}
-            popis="Uživatelské jméno"
+            label="Uživatelské jméno"
             placeholder="Rohlik.cz"
             setChanged={setUsername}
           />
@@ -39,7 +39,7 @@ export const SignIn = () => {
           <InputText
             type="password"
             value={passOne}
-            popis="Heslo"
+            label="Heslo"
             placeholder="Minimálně 8 znaků"
             setChanged={setPassOne}
           />

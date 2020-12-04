@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import './inputfile.css';
 
-export const InputFile = (props) => {
+export const InputFile = forwardRef((props, ref) => {
   return (
     <>
       <input
@@ -11,8 +11,8 @@ export const InputFile = (props) => {
         value={undefined}
         onChange={props.onChange}
         accept={props.accept}
-        ref={props.reference}
+        ref={ref}
       />
     </>
   );
-};
+});

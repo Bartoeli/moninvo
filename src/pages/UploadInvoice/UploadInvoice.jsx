@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, createRef, useRef } from 'react';
 import { Toast } from 'primereact/toast';
 
 import { ProgressBar } from 'primereact/progressbar';
@@ -14,8 +14,8 @@ export const UploadInvoice = () => {
   const [file, setFile] = useState('');
   const [load, setLoad] = useState(false);
   const rossumContext = useRossum();
-  const toastUiRef = useRef();
-  const formRef = useRef();
+  const toastUiRef = useRef(null);
+  const formRef = createRef(null);
 
   const handleUpload = (e) => {
     setFile(e.target.files[0]);
@@ -33,7 +33,7 @@ export const UploadInvoice = () => {
         method: 'POST',
         body: formData,
         headers: { Authorization: `Token ${rossumContext.token}` },
-      },
+      }
     )
       .then((resp) => {
         resp.json();
@@ -43,7 +43,8 @@ export const UploadInvoice = () => {
       })
       .then((result) => {
         setLoad(false);
-        //formRef.current.value = '';
+        // TODO fix reference with forward Ref
+        // formRef.current.value = '';
         toastUiRef.current.show({
           severity: 'success',
           summary: 'Vaše faktura byla úspěšně odeslána.',
@@ -66,21 +67,6 @@ export const UploadInvoice = () => {
     e.preventDefault();
   };
 
-  // const loadBar = () => {
-  //   load = setLoad(() => {
-  //     load += Math.floor(Math.random() * 10) + 1;
-
-  //     if (load >= 100) {
-  //       Toast.show({
-  //         severity: 'info',
-  //         summary: 'Success',
-  //         detail: 'Process Completed',
-  //       });
-  //       clearInterval(load);
-  //     }
-  //   }, 2000);
-  // };
-
   return (
     <>
       <Toast ref={toastUiRef} />
@@ -89,10 +75,7 @@ export const UploadInvoice = () => {
         <div className="uplForm">
           <h2 className="upl_h2">Nahrát fakturu</h2>
           <form onSubmit={handleSubmit}>
-            <InputFile
-              onChange={handleUpload}
-              accept=".pdf" //ref={formRef}
-            />
+            <InputFile onChange={handleUpload} accept=".pdf" ref={formRef} />
             <div className="formBtn">
               <PrimaryBtn
                 className="primary"
