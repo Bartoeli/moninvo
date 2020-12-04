@@ -1,3 +1,30 @@
+/* .inpFileLabel {
+  display: inline-block;
+  position: relative;
+  height: 48px;
+  width: 200px;
+}
+
 .inpFile {
   width: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
+
+.inpFileBtn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ccc;
+  border: 3px dotted #bebebe;
+  border-radius: 10px;
+} */

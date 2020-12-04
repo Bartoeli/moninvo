@@ -4,7 +4,7 @@ import './inputcheck.css';
 export const InputCheck = (props) => {
   return (
     <>
-      <label className="label labelCheck">
+      <label className="labelCheck">
         <input
           className="checkbox"
           type="checkbox"
