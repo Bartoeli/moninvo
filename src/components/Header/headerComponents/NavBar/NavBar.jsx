@@ -26,9 +26,17 @@ export const NavBar = () => {
         </button>
         {menuOpened ? (
           <ul className="menu-items">
-            <MenuItem id="WhySection"text="Proč Moninvo?" onSelect={handleSelectItem} />
+            <MenuItem
+              id="WhySection"
+              text="Proč Moninvo?"
+              onSelect={handleSelectItem}
+            />
             <MenuItem id="Pricing" text="Ceník" onSelect={handleSelectItem} />
-            <MenuItem id="Contacts" text="Kontakty" onSelect={handleSelectItem} />
+            <MenuItem
+              id="Contacts"
+              text="Kontakty"
+              onSelect={handleSelectItem}
+            />
             <MenuSignIn />
           </ul>
         ) : null}
@@ -36,9 +44,13 @@ export const NavBar = () => {
 
       <nav className="nav_desktop">
         <ul className="menu-items">
-          <MenuItem text="Proč Moninvo?" onSelect={handleSelectItem} />
-          <MenuItem text="Ceník" onSelect={handleSelectItem} />
-          <MenuItem text="Kontakty" onSelect={handleSelectItem} />
+          <MenuItem
+            id="WhySection"
+            text="Proč Moninvo?"
+            onSelect={handleSelectItem}
+          />
+          <MenuItem id="Pricing" text="Ceník" onSelect={handleSelectItem} />
+          <MenuItem id="Contacts" text="Kontakty" onSelect={handleSelectItem} />
           <MenuSignIn />
         </ul>
       </nav>

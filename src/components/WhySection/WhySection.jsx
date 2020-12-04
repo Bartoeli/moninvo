@@ -8,7 +8,7 @@ import './whySection.css';
 
 export const WhySection = () => {
   return (
-    <section className="whySection">
+    <section id="WhySection" className="whySection">
       <WhyArgument
         className="whyArgument"
         iconSrc={upload}

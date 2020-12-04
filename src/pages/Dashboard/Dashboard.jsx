@@ -7,6 +7,7 @@ import { MainChart } from '../../components/MainChart/MainChart.jsx';
 import { dtb } from '../../utils/Firebase/dtb';
 import './dashboard.css';
 import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside.jsx';
+import { Insights } from '../../components/Insights/Insights.jsx';
 
 export const Dashboard = () => {
   const rossumContext = useRossum();
@@ -62,6 +63,9 @@ export const Dashboard = () => {
     <div className="dashboard">
       <HeaderDash />
       <NavBarDashside />
+      <div className="insightsDiv">
+        <Insights data={sourceData}/>
+      </div>
       <div className="data_dash">
         <div className="table_dash">
           <MainChart data={sourceData} />
