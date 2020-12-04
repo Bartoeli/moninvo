@@ -17,16 +17,23 @@ White: #ffffff
 }
 
 .data_dash {
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 24px auto;
 }
 
-.chart_dash {
-  min-height: 40%;
-  margin: 32px;
-}
+@media (min-width: 768px) {
+  .data_dash {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
-.table_dash {
-  min-height: 40%;
-  margin: 32px;
+  .chart_dash {
+    min-height: 40%;
+    margin: 32px;
+  }
+
+  .table_dash {
+    min-height: 40%;
+    margin: 32px;
+  }
 }

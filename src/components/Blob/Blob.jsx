@@ -5,6 +5,6 @@ export const Blob = (props) => {
   return (
     <div
       className={props.className !== 'undefined' ? props.className : 'justBlob'}
-    ></div>
+    />
   );
 };

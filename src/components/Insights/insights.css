@@ -1,0 +1,40 @@
+/*
+Blue: #242F72
+Pink: #BC73AD
+Black: #0f0f0f
+Purple/grey: #61688F
+White: #ffffff
+*/
+
+.insights {
+  display: flex;
+  width: 80%;
+  margin: 16px auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.insights li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.7rem;
+  color: #242f72;
+  padding: 16px;
+  flex: 1;
+}
+
+.insights div {
+  font-size: 1.8rem;
+  order: -1;
+  font-weight: 600;
+  color: #61688f;
+}
+
+.totalExpenses,
+.countOfExpenses {
+  background-color: rgb(188, 115, 173, 0.5);
+  border-radius: 8px;
+}

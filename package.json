@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@gooddata/sdk-backend-bear": "^8.1.0",
+    "@gooddata/sdk-model": "^8.1.0",
+    "@gooddata/sdk-ui": "^8.1.0",
+    "@gooddata/sdk-ui-charts": "^8.1.0",
+    "@gooddata/sdk-ui-ext": "^8.1.0",
+    "@gooddata/sdk-ui-geo": "^8.1.0",
+    "@gooddata/sdk-ui-pivot": "^8.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

@@ -5,7 +5,7 @@ import image from '../../Images/Logo/png/moninvo_logo_BLU.png';
 export const Footer = () => {
   return (
     <>
-      <div className="footer">
+      <div id="Contacts" className="footer">
         <div className="flogo">
           <img className="logoObr" src={image} alt="logo Moninvo" />
         </div>
