@@ -1,4 +1,4 @@
-import React, { useState, createRef, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Toast } from 'primereact/toast';
 
 import { ProgressBar } from 'primereact/progressbar';
@@ -15,7 +15,7 @@ export const UploadInvoice = () => {
   const [load, setLoad] = useState(false);
   const rossumContext = useRossum();
   const toastUiRef = useRef(null);
-  const formRef = createRef(null);
+  const formRef = useRef(null);
 
   const handleUpload = (e) => {
     setFile(e.target.files[0]);
@@ -34,27 +34,10 @@ export const UploadInvoice = () => {
         body: formData,
         headers: { Authorization: `Token ${rossumContext.token}` },
       }
-    )
-      .then((resp) => {
-        resp.json();
-        if (!resp.ok) {
-          throw new Error();
-        }
-      })
-      .then((result) => {
-        setLoad(false);
-        // TODO fix reference with forward Ref
-        // formRef.current.value = '';
-        toastUiRef.current.show({
-          severity: 'success',
-          summary: 'Vaše faktura byla úspěšně odeslána.',
-          detail: 'Po pár sekundách se Vám zobrazí v seznamu ke kontrole.',
-          life: 8000,
-        });
-        console.log('Success', result);
-      })
-      .catch((error) => {
-        setLoad(false);
+    ).then((response) => {
+      setLoad(false);
+
+      if (!response.ok) {
         toastUiRef.current.show({
           severity: 'error',
           summary: 'Něco se pokazilo.',
@@ -62,8 +45,18 @@ export const UploadInvoice = () => {
             'Zkuste prosím nahrát fakturu znovu. V případě přetrvávajícího neúspěchu nás kontaktujte.',
           life: 8000,
         });
-        console.error('Error', error);
-      });
+      } else {
+        formRef.current.value = '';
+
+        toastUiRef.current.show({
+          severity: 'success',
+          summary: 'Vaše faktura byla úspěšně odeslána.',
+          detail: 'Po pár sekundách se Vám zobrazí v seznamu ke kontrole.',
+          life: 8000,
+        });
+      }
+    });
+
     e.preventDefault();
   };
 
