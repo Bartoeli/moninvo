@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Toast } from 'primereact/toast';
 import { Header } from '../../components/Header/Header.jsx';
 import { InputText } from '../../components/SignUpForm/InputText/InputText.jsx';
