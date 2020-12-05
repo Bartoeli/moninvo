@@ -97,6 +97,7 @@ export const Pricing = () => {
         </div>
       </div>
 
+
       <div className="pricingBtn">
       <PrimaryBtn textBtn="Vyzkoušet"/>
       </div>
