@@ -12,6 +12,7 @@ import { Insights } from '../../components/Insights/Insights.jsx';
 export const Dashboard = () => {
   const rossumContext = useRossum();
   const [sourceData, setSourceData] = useState([]);
+  const [load, setLoad] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -30,6 +31,7 @@ export const Dashboard = () => {
           parseInvoiceData(invoice),
         );
         setSourceData(parsedData);
+        setLoad(true);
         parsedData.forEach(async (data) => {
           return dtb.collection('faktury').add(data);
         });
@@ -64,7 +66,11 @@ export const Dashboard = () => {
       <HeaderDash />
       <NavBarDashside />
       <div className="insightsDiv">
-        <Insights data={sourceData}/>
+        {load ? (
+          <Insights data={sourceData} />
+        ) : (
+          <span>Žádná data nejsou k dispozici</span>
+        )}
       </div>
       <div className="data_dash">
         <div className="table_dash">
