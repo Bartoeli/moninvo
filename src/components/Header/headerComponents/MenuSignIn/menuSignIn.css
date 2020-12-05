@@ -11,6 +11,26 @@
   color: #242f72;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
+}
+
+.menu-signInMobil::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #242f72;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.menu-signInMobil:hover::before,
+.menu-signInMobil:focus::before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 @media (min-width: 768px) {
@@ -31,8 +51,28 @@
 
   .menu-signInDesktop {
     display: block;
+    position: relative;
     text-decoration: none;
     color: #bc73ad;
     flex-basis: 50%;
+  }
+
+  .menu-signInDesktop::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #bc73ad;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .menu-signInDesktop:hover::before,
+  .menu-signInDesktop:focus::before {
+    visibility: visible;
+    transform: scaleX(1);
   }
 }
