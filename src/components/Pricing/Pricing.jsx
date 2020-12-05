@@ -3,6 +3,7 @@ import './pricing.css';
 import { PricingModelFunction } from './PricingComponents/PricingModelFunction.jsx';
 import checked from '../../Images/Icons/checked.svg';
 import unchecked from '../../Images/Icons/unchecked.svg';
+import { PrimaryBtn } from '../Button/PrimaryBtn/PrimaryBtn';
 
 export const Pricing = () => {
   return (
@@ -94,6 +95,9 @@ export const Pricing = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="pricingBtn">
+      <PrimaryBtn textBtn="Vyzkoušet"/>
       </div>
     </div>
   );

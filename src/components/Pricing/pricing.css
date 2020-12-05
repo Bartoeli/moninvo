@@ -60,3 +60,8 @@ White: #ffffff
   background-color: rgb(97, 104, 143, 0.3);
   border-radius: 8px;
 }
+
+.pricingBtn {
+  margin: 24px auto;
+  width: 50%;
+}

@@ -4,11 +4,13 @@
 
 html {
   max-width: 1200px;
+  border-right: 0.5px solid rgb(97, 104, 143, 0.3);
 }
 
 .uploadInvoice {
   max-width: 100%;
   position: relative;
+  background-color: #ffffff;
 }
 
 .uplPage {

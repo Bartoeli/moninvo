@@ -1,3 +1,9 @@
+.profilePage {
+  position: relative;
+  background-color: #ffffff;
+  height: 100%;
+}
+
 .profileDiv {
   display: flex;
   flex-direction: column;
@@ -5,6 +11,7 @@
   align-items: center;
   text-align: center;
   width: 60%;
+  height: 600px;
   margin: 0 auto;
   color: #61688f;
 }

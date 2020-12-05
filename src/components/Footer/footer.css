@@ -3,8 +3,9 @@
 }
 .footer {
   background-image: linear-gradient(
-    rgb(97, 104, 143, 0.9),
-    rgb(97, 104, 143, 0.9)
+    to right,
+    rgb(97, 104, 143, 1),
+    rgb(97, 104, 143, 0.75)
   );
   /*     url('../../Images/HomePage/mapa.png');
  */
@@ -27,7 +28,7 @@
 .contact {
   display: flex;
   flex-direction: column;
-  margin: 24px;
+  margin: 0 24px;
   color: #ffffff;
 }
 
@@ -123,7 +124,7 @@
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 24px 96px;
+    padding: 0 96px;
   }
   .contact_wep {
     padding-left: 24px;

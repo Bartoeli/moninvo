@@ -63,25 +63,27 @@ export const Dashboard = () => {
   }, []);
 
   return (
-    <div className="dashboard">
-      <HeaderDash />
-      <NavBarDashside />
-      <div className="insightsDiv">
-        {load ? (
-          <Insights data={sourceData} />
-        ) : (
-          <span>Žádná data nejsou k dispozici</span>
-        )}
-      </div>
-      <div className="data_dash">
-        <div className="table_dash">
-          <MainChart data={sourceData} />
+    <>
+      <div className="dashboard">
+        <HeaderDash />
+        <NavBarDashside />
+        <div className="insightsDiv">
+          {load ? (
+            <Insights data={sourceData} />
+          ) : (
+            <span>Žádná data nejsou k dispozici</span>
+          )}
         </div>
-        <div className="chart_dash">
-          <MainTable data={sourceData} />
+        <div className="data_dash">
+          <div className="table_dash">
+            <MainChart data={sourceData} />
+          </div>
+          <div className="chart_dash">
+            <MainTable data={sourceData} />
+          </div>
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
