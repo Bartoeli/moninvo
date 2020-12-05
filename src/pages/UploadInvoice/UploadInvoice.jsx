@@ -62,75 +62,47 @@ export const UploadInvoice = () => {
 
     e.preventDefault();
   };
-  //   )
-  //     .then((resp) => {
-  //       resp.json();
-  //       if (!resp.ok) {
-  //         throw new Error();
-  //       }
-  //     })
-  //     .then(() => {
-  //       setLoad(false);
-  //       //formRef.current.value = '';
-  //       toastUiRef.current.show({
-  //         severity: 'success',
-  //         summary: 'Vaše faktura byla úspěšně odeslána.',
-  //         detail: 'Po pár sekundách se Vám zobrazí v seznamu ke kontrole.',
-  //         life: 8000,
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       setLoad(false);
-  //       toastUiRef.current.show({
-  //         severity: 'error',
-  //         summary: 'Něco se pokazilo.',
-  //         detail:
-  //           'Zkuste prosím nahrát fakturu znovu. V případě přetrvávajícího neúspěchu nás kontaktujte.',
-  //         life: 8000,
-  //       });
-  //       console.error('Error', error);
-  //     });
-  //   e.preventDefault();
-  // };
 
   return (
     <>
-      <Toast ref={toastUiRef} />
-      <HeaderDash />
-      <NavBarDash />
-      <NavBarDashside />
-      <div className="uplPage">
-        <div className="uplForm">
-          <h2 className="upl_h2">Nahrát fakturu</h2>
-          <form onSubmit={handleSubmit}>
-            <InputFile
-              onChange={handleUpload}
-              accept=".pdf"
-              ref={formRef}
-              // name={file.value}
-            />
-            <div className="formBtn">
-              <PrimaryBtn
-                className="primary"
-                type="submit"
-                textBtn="nahrát fakturu"
+      <div className="uploadInvoice">
+        <Toast ref={toastUiRef} />
+        <HeaderDash />
+        <NavBarDash />
+        <NavBarDashside />
+        <div className="uplPage">
+          <div className="uplForm">
+            <h2 className="upl_h2">Nahrát fakturu</h2>
+            <form className="uplForm_form" onSubmit={handleSubmit}>
+              <InputFile
+                onChange={handleUpload}
+                accept=".pdf"
+                ref={formRef}
+                // name={file.value}
               />
-            </div>
-          </form>
-        </div>
-        <div className="progressBar">
-          {load ? (
-            <ProgressBar
-              mode="indeterminate"
-              style={{ height: '16px' }}
-            ></ProgressBar>
-          ) : (
-            <span>Žádná faktura se nenahrává</span>
-          )}
-        </div>
-        <div className="revInvoice">
-          <h2 className="upl_h2">Faktury ke kontrole</h2>
-          <RevInvoice />
+              <div className="formBtn">
+                <PrimaryBtn
+                  className="primary"
+                  type="submit"
+                  textBtn="nahrát fakturu"
+                />
+              </div>
+            </form>
+          </div>
+          <div className="progressBar">
+            {load ? (
+              <ProgressBar
+                mode="indeterminate"
+                style={{ height: '16px' }}
+              ></ProgressBar>
+            ) : (
+              <span>Žádná faktura se nenahrává</span>
+            )}
+          </div>
+          <div className="revInvoice">
+            <h2 className="upl_h2">Faktury ke kontrole</h2>
+            <RevInvoice />
+          </div>
         </div>
       </div>
       <Footer />
