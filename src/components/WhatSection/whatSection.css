@@ -15,3 +15,16 @@
 .whatSection h2 {
   color: #242f72;
 }
+
+.videoWhatSection {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .videoWhatSection {
+    display: inline-block;
+  }
+  .dashboard-scrn {
+    display: none;
+  }
+}

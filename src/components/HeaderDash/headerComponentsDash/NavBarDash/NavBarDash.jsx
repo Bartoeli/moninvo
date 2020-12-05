@@ -5,6 +5,7 @@ import Edit from '../../../../Images/Icons/Edit.svg';
 import Settings from '../../../../Images/Icons/Settings.svg';
 import Dashboard_white from '../../../../Images/Icons/Dashboard_white.svg';
 import manualInvoice from '../../../../Images/Icons/manualInvoice.svg';
+import User from '../../../../Images/Icons/User.svg';
 
 import './navBarDash.css';
 
@@ -68,6 +69,13 @@ export const NavBarDash = () => {
               iconAlt="Ikona grafu"
               linkTo="dashboard"
               text="Dashboard"
+              onSelect={handleSelectDashItem}
+            />
+            <MenuItemDash
+              iconSrc={User}
+              iconAlt="Ikona uživatele"
+              linkTo="profil"
+              text="Profil"
               onSelect={handleSelectDashItem}
             />
           </ul>
