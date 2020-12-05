@@ -6,7 +6,7 @@ import unchecked from '../../Images/Icons/unchecked.svg';
 
 export const Pricing = () => {
   return (
-    <div className="pricing">
+    <div id="pricing" className="pricing">
       <h2>Ceník</h2>
 
       <div className="pricingModels">
@@ -87,10 +87,7 @@ export const Pricing = () => {
               functionName="Vlastní kategorie a štítky v grafu"
               check={checked}
             />
-            <PricingModelFunction
-              functionName="Export dat"
-              check={checked}
-            />
+            <PricingModelFunction functionName="Export dat" check={checked} />
             <PricingModelFunction
               functionName="Telefonická podpora 24/7"
               check={checked}

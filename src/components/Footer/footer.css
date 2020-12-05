@@ -1,83 +1,140 @@
+* {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 .footer {
   background-image: linear-gradient(
-      rgb(97, 104, 143, 0.9),
-      rgb(97, 104, 143, 0.9)
-    ),
-    url('../../Images/HomePage/mapa.png');
+    rgb(97, 104, 143, 0.9),
+    rgb(97, 104, 143, 0.9)
+  );
+  /*     url('../../Images/HomePage/mapa.png');
+ */
   background-position: center center;
   z-index: 30;
   position: relative;
 }
 
-.flogo {
-  padding: 32px;
+.logoImg {
+  width: 50px;
 }
 
-.logoObr {
-  width: 150px;
+.footer_logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 24px;
 }
 
-.kontakt {
-  padding-left: 32px;
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+  color: #ffffff;
 }
 
-.socky {
+.contact h3,
+.contacts_label,
+.copyright {
+  color: #242f72;
+}
+
+.webEmailPhone {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  flex-wrap: wrap;
+  border-bottom: 0.2px solid rgb(255, 255, 255, 0.3);
+  padding-bottom: 8px;
+}
+
+.contact_wep {
+  margin: 0 16px 0 0;
+}
+
+.address {
+  border-bottom: 0.2px solid rgb(255, 255, 255, 0.3);
+  padding-bottom: 8px;
+}
+
+.webEmailPhone a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.socialMedia {
   display: flex;
   list-style-type: none;
   padding: 0px;
 }
 
-.socka {
+.some {
   margin-right: 16px;
 }
 
-.odkazy ul {
+.GDT_GDPR ul {
   list-style-type: none;
-  padding-left: 32px;
-  margin-top: 48px;
-  margin-bottom: 0px;
-  padding-bottom: 16px;
 }
 
-.liOdkazy {
-  height: 1.5rem;
-}
-
-.podminky,
+.gdt,
 .gdpr {
   text-decoration: none;
-  color: black;
+  color: #242f72;
 }
 
 @media screen and (min-width: 576px) {
-  .footer {
+  .footerTop {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
+    /*     flex-wrap: wrap;
+ */
+  }
+  .webEmailPhone {
+    flex-wrap: nowrap;
+    border-bottom: none;
+  }
+  .address {
+    border-bottom: none;
+    margin: 0 8px 0 0;
+    padding: 0;
   }
 
-  .kontakt {
-    padding: 0px;
+  .contact_wep {
+    margin-right: 8px;
+    border-left: 0.2px solid rgb(255, 255, 255, 0.3);
+    padding-left: 8px;
   }
-
-  .odkazy ul {
-    margin: 0px;
-    margin-top: 16px;
-    padding: 0px;
+  .footerBottomLeft {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: flex-end;
   }
-
-  .logoObr {
-    padding: 0px;
-    padding-top: 16px;
-  }
-
-  .flogo {
-    padding: 0px;
+  .socialMedia {
+    order: 1;
   }
 }
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 32px 96px;
+    padding: 24px 96px;
+  }
+  .contact_wep {
+    padding-left: 24px;
+    margin-right: 24px;
+  }
+  .address {
+    margin-right: 24px;
+  }
+
+  .footer_logo {
+    margin-right: 96px;
+    margin-top: 32px;
   }
 }
