@@ -30,7 +30,6 @@ export const ProfileDash = () => {
           </Link>
         </>
       ) : null}
-      )
     </div>
   );
 };

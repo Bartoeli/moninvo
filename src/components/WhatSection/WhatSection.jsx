@@ -1,7 +1,7 @@
 import React from 'react';
 import dashboard_scrn from '../../Images/HomePage/dashboard_scrn.png';
 
-import video from '../../Images/Video/medium.mp4';
+import video from '../../Images/Video/medium2.mp4';
 import './whatSection.css';
 
 export const WhatSection = () => {
