@@ -4,8 +4,10 @@ import { PricingModelFunction } from './PricingComponents/PricingModelFunction.j
 import checked from '../../Images/Icons/checked.svg';
 import unchecked from '../../Images/Icons/unchecked.svg';
 import { PrimaryBtn } from '../Button/PrimaryBtn/PrimaryBtn';
+import { useHistory } from 'react-router-dom';
 
 export const Pricing = () => {
+  const { push } = useHistory();
   return (
     <section id="pricing" className="pricing">
       <h2>Ceník</h2>
@@ -98,7 +100,12 @@ export const Pricing = () => {
       </div>
 
       <div className="pricingBtn">
-        <PrimaryBtn textBtn="Vyzkoušet" />
+        <PrimaryBtn
+          className="primary"
+          textBtn="Vyzkoušet"
+          type="button"
+          onClick={() => push('/signup')}
+        />
       </div>
     </section>
   );

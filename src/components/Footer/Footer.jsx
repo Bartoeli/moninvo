@@ -12,8 +12,6 @@ export const Footer = () => {
         <div className="contact">
           <h3>Kontakty</h3>
           <div className="footerTop">
-
-
             <div className="address">
               <p className="contacts_label">Adresa: </p>
               Rohanské Nábřeží 23 <br /> 180 00 Praha
@@ -24,11 +22,11 @@ export const Footer = () => {
                 789
               </span>
               <span className="contact_wep">
-                <p className="contacts_label">Email:</p>info@moninvo.cz
+                <p className="contacts_label">Email:</p>
+                <a href="mailto:info@moninvo.cz">info@moninvo.cz</a>
               </span>
 
-
-              <a className="contact_wep" href="https.moninvo.cz">
+              <a className="contact_wep" href="https://www.moninvo.cz">
                 <p className="contacts_label">Web:</p>www.moninvo.cz
               </a>
             </div>
