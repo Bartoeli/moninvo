@@ -17,13 +17,18 @@ export const MainChart = (props) => {
   };
 
   const groupBy = (data) => {
-    return data.reduce((acc, current) => {
-      return {
-        ...acc,
-        [current.date_issue]:
-          (+acc[current.date_issue] || 0) + +current.amount_total,
-      };
-    }, {});
+    return data
+      .map(({ date_issue, ...item }) => ({
+        ...item,
+        date_issue: date_issue.substring(5, 7),
+      }))
+      .reduce((acc, current) => {
+        return {
+          ...acc,
+          [current.date_issue]:
+            (+acc[current.date_issue] || 0) + +current.amount_total,
+        };
+      }, {});
   };
 
   const groupForChart = (input) => {

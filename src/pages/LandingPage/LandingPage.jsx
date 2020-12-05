@@ -12,7 +12,7 @@ export const LandingPage = () => {
   return (
     <>
       <div className="landingPage">
-        <Header />
+        <Header showLPLinks={true} />
         <HeroSection />
         <WhySection />
         <WhatSection />
