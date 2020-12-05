@@ -66,6 +66,9 @@ export const Dashboard = () => {
   }, []);
 
   return (
+
+    <>
+      
     <div className="dashboard">
       <HeaderDash />
       <NavBarDashside />
@@ -87,6 +90,6 @@ export const Dashboard = () => {
         </>
       )}
       <Footer />
-    </div>
+    </>
   );
 };

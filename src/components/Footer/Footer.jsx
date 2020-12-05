@@ -12,22 +12,24 @@ export const Footer = () => {
         <div className="contact">
           <h3>Kontakty</h3>
           <div className="footerTop">
-            <p className="address">
-              <span className="contacts_label">Adresa: </span>
+
+            <div className="address">
+              <p className="contacts_label">Adresa: </p>
               Rohanské Nábřeží 23 <br /> 180 00 Praha
-            </p>
-            <span className="webEmailPhone">
-              <p className="contact_wep">
-                <span className="contacts_label">Telefonní číslo:</span> +420
-                123 456 789
-              </p>
-              <p className="contact_wep">
-                <span className="contacts_label">Email:</span>info@moninvo.cz
-              </p>
+            </div>
+            <div className="webEmailPhone">
+              <span className="contact_wep">
+                <p className="contacts_label">Telefonní číslo:</p> +420 123 456
+                789
+              </span>
+              <span className="contact_wep">
+                <p className="contacts_label">Email:</p>info@moninvo.cz
+              </span>
+
               <a className="contact_wep" href="https.moninvo.cz">
                 <p className="contacts_label">Web:</p>www.moninvo.cz
               </a>
-            </span>
+            </div>
           </div>
           <div className="footerBottom">
             <div className="footerBottomLeft">

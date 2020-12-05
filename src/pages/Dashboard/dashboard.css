@@ -25,13 +25,16 @@ Extra large devices:
 .dashboard {
   font-family: 'IBM Plex Sans', sans-serif;
   max-width: 1200px;
-  height: 100vh;
+  margin: 0 auto;
+  height: 100%;
   position: relative;
+  background-color: #ffffff;
 }
 
 .data_dash {
   max-width: 100%;
   margin: 24px auto;
+  background-color: #ffffff;
 }
 
 @media (min-width: 768px) {

@@ -3,8 +3,9 @@
 }
 .footer {
   background-image: linear-gradient(
-    rgb(97, 104, 143, 0.9),
-    rgb(97, 104, 143, 0.9)
+    to right,
+    rgb(97, 104, 143, 1),
+    rgb(97, 104, 143, 0.75)
   );
   /*     url('../../Images/HomePage/mapa.png');
  */
@@ -27,7 +28,7 @@
 .contact {
   display: flex;
   flex-direction: column;
-  margin: 24px;
+  margin: 0 24px;
   color: #ffffff;
 }
 
@@ -90,14 +91,13 @@
 @media screen and (min-width: 576px) {
   .footerTop {
     display: flex;
-    align-items: flex-start;
+    align-content: flex-start;
     justify-content: center;
-    /*     flex-wrap: wrap;
- */
   }
   .webEmailPhone {
     flex-wrap: nowrap;
     border-bottom: none;
+    align-items: flex-start;
   }
   .address {
     border-bottom: none;
@@ -123,7 +123,7 @@
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 24px 96px;
+    padding: 0 96px;
   }
   .contact_wep {
     padding-left: 24px;

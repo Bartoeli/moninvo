@@ -9,7 +9,7 @@ import './profile.css';
 
 export const Profile = () => {
   return (
-    <>
+    <><div className="profilePage">
       <HeaderDash />
       <NavBarDash />
 
@@ -23,7 +23,7 @@ export const Profile = () => {
           src={underConstruction}
           alt="Ikona stavby"
         />
-      </div>
+      </div></div>
       <Footer />
     </>
   );

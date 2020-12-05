@@ -10,20 +10,22 @@ import './edit.css';
 export const Edit = () => {
   return (
     <>
-      <HeaderDash />
-      <NavBarDashside />
+      <div className="editDiv">
+        <HeaderDash />
+        <NavBarDashside />
 
-      <NavBarDash />
+        <NavBarDash />
 
-      <div className="profileDiv">
-        <h1 className="profileH1">
-          Zde brzy naleznete možnost upravit si své kategorie a štítky.
-        </h1>
-        <img
-          className="ConstructionIcon"
-          src={underConstruction}
-          alt="Ikona stavby"
-        />
+        <div className="profileDiv">
+          <h1 className="profileH1">
+            Zde brzy naleznete možnost upravit si své kategorie a štítky.
+          </h1>
+          <img
+            className="ConstructionIcon"
+            src={underConstruction}
+            alt="Ikona stavby"
+          />
+        </div>
       </div>
       <Footer />
     </>

@@ -9,7 +9,7 @@ import './settings.css';
 
 export const Settings = () => {
   return (
-    <>
+    <><div className="settingsPage">
       <HeaderDash />
 
       <NavBarDash />
@@ -24,7 +24,7 @@ export const Settings = () => {
           src={underConstruction}
           alt="Ikona stavby"
         />
-      </div>
+      </div></div>
       <Footer />
     </>
   );
