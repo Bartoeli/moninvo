@@ -40,6 +40,10 @@ Extra large devices:
     width: 32px;
   }
 
+  .menu-icon_dashside:hover {
+    width: 40px;
+  }
+
   .menu-icon_dashside--closed {
     display: none;
   }
