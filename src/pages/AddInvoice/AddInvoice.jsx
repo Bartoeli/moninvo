@@ -9,6 +9,7 @@ import { AddInvoiceInputDate } from '../../components/AddInvoiceForm/InputDate/I
 import { NavBarDash } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDash';
 import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside';
 import { Footer } from '../../components/Footer/Footer.jsx';
+import { PrimaryBtn } from '../../components/Button/PrimaryBtn/PrimaryBtn';
 
 export const AddInvoice = () => {
   const [sender_name, setSenderName] = useState(' ');
@@ -115,9 +116,9 @@ export const AddInvoice = () => {
             placeholder="poznámka"
             setChanged={setNote}
           />
-          <button className="primary sendBtn" type="submit">
-            Odeslat
-          </button>
+          <div className="sendBtn">
+            <PrimaryBtn className="primary" type="submit" textBtn="Odeslat" />
+          </div>
         </form>
       </div>
       <Footer />
