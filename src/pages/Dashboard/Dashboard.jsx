@@ -9,13 +9,15 @@ import './dashboard.css';
 import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside.jsx';
 import { Insights } from '../../components/Insights/Insights.jsx';
 import { Footer } from '../../components/Footer/Footer.jsx';
+import { ProgressBar } from 'primereact/progressbar';
 
 export const Dashboard = () => {
   const rossumContext = useRossum();
   const [sourceData, setSourceData] = useState([]);
-  const [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
+    setLoad(true);
     fetch(
       `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?format=json&status=confirmed`,
       {
@@ -32,10 +34,11 @@ export const Dashboard = () => {
           parseInvoiceData(invoice),
         );
         setSourceData(parsedData);
-        setLoad(true);
+
         parsedData.forEach(async (data) => {
           return dtb.collection('faktury').add(data);
         });
+        setLoad(false);
         fetch(
           `https://api.elis.rossum.ai/v1/queues/${rossumContext.queueId}/export?status=confirmed&to_status=exported`,
           {
@@ -66,21 +69,23 @@ export const Dashboard = () => {
     <div className="dashboard">
       <HeaderDash />
       <NavBarDashside />
-      <div className="insightsDiv">
-        {load ? (
-          <Insights data={sourceData} />
-        ) : (
-          <span>Žádná data nejsou k dispozici</span>
-        )}
-      </div>
-      <div className="data_dash">
-        <div className="table_dash">
-          <MainChart data={sourceData} />
-        </div>
-        <div className="chart_dash">
-          <MainTable data={sourceData} />
-        </div>
-      </div>
+      {load ? (
+        <ProgressBar mode="indeterminate" style={{ height: '16px' }} />
+      ) : (
+        <>
+          <div className="insightsDiv">
+            <Insights data={sourceData} />
+          </div>
+          <div className="data_dash">
+            <div className="table_dash">
+              <MainChart data={sourceData} />
+            </div>
+            <div className="chart_dash">
+              <MainTable data={sourceData} />
+            </div>
+          </div>
+        </>
+      )}
       <Footer />
     </div>
   );
