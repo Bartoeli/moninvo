@@ -3,12 +3,14 @@ import { MenuSignIn } from '../../headerComponents/MenuSignIn/menuSignIn.jsx';
 import { MenuItem } from '../MenuItem/MenuItem.jsx';
 import './navbar.css';
 
-export const NavBar = () => {
+export const NavBar = (props) => {
   const [menuOpened, setMenuOpened] = useState(false);
 
   const handleSelectItem = () => {
     setMenuOpened(!menuOpened);
   };
+
+  console.log('funguje to', props.showLPLinks);
 
   return (
     <>
@@ -24,33 +26,49 @@ export const NavBar = () => {
           <span></span>
           <span></span>
         </button>
-        {menuOpened ? (
+        {menuOpened && (
           <ul className="menu-items">
-            <MenuItem
-              id="WhySection"
-              text="Proč Moninvo?"
-              onSelect={handleSelectItem}
-            />
-            <MenuItem id="Pricing" text="Ceník" onSelect={handleSelectItem} />
-            <MenuItem
-              id="Contacts"
-              text="Kontakty"
-              onSelect={handleSelectItem}
-            />
+            {props.showLPLinks && (
+              <>
+                <MenuItem
+                  id="WhySection"
+                  text="Proč Moninvo?"
+                  onSelect={handleSelectItem}
+                />
+                <MenuItem
+                  id="pricing"
+                  text="Ceník"
+                  onSelect={handleSelectItem}
+                />
+                <MenuItem
+                  id="Contacts"
+                  text="Kontakty"
+                  onSelect={handleSelectItem}
+                />
+              </>
+            )}
             <MenuSignIn />
           </ul>
-        ) : null}
+        )}
       </nav>
 
       <nav className="nav_desktop">
         <ul className="menu-items">
-          <MenuItem
-            id="WhySection"
-            text="Proč Moninvo?"
-            onSelect={handleSelectItem}
-          />
-          <MenuItem id="Pricing" text="Ceník" onSelect={handleSelectItem} />
-          <MenuItem id="Contacts" text="Kontakty" onSelect={handleSelectItem} />
+          {props.showLPLinks && (
+            <>
+              <MenuItem
+                id="WhySection"
+                text="Proč Moninvo?"
+                onSelect={handleSelectItem}
+              />
+              <MenuItem id="pricing" text="Ceník" onSelect={handleSelectItem} />
+              <MenuItem
+                id="Contacts"
+                text="Kontakty"
+                onSelect={handleSelectItem}
+              />
+            </>
+          )}
           <MenuSignIn />
         </ul>
       </nav>

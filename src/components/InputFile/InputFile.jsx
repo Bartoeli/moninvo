@@ -6,7 +6,6 @@ export const InputFile = forwardRef((props, ref) => {
   return (
     <>
       <label className="inpFileLabel">
-        {/* <div className="inpFileBtn">Vybrat fakturu</div> */}
         <input
           className="inpFile"
           type="file"
@@ -15,7 +14,6 @@ export const InputFile = forwardRef((props, ref) => {
           accept={props.accept}
           ref={ref}
         />
-        {/* {props.name} */}
       </label>
     </>
   );

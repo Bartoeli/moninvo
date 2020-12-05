@@ -6,7 +6,7 @@ import unchecked from '../../Images/Icons/unchecked.svg';
 
 export const Pricing = () => {
   return (
-    <div id="pricing" className="pricing">
+    <section id="pricing" className="pricing">
       <h2>Ceník</h2>
 
       <div className="pricingModels">
@@ -95,6 +95,6 @@ export const Pricing = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

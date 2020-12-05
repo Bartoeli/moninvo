@@ -74,12 +74,7 @@ export const UploadInvoice = () => {
           <div className="uplForm">
             <h2 className="upl_h2">Nahrát fakturu</h2>
             <form className="uplForm_form" onSubmit={handleSubmit}>
-              <InputFile
-                onChange={handleUpload}
-                accept=".pdf"
-                ref={formRef}
-                // name={file.value}
-              />
+              <InputFile onChange={handleUpload} accept=".pdf" ref={formRef} />
               <div className="formBtn">
                 <PrimaryBtn
                   className="primary"
@@ -91,10 +86,7 @@ export const UploadInvoice = () => {
           </div>
           <div className="progressBar">
             {load ? (
-              <ProgressBar
-                mode="indeterminate"
-                style={{ height: '16px' }}
-              ></ProgressBar>
+              <ProgressBar mode="indeterminate" style={{ height: '16px' }} />
             ) : (
               <span>Žádná faktura se nenahrává</span>
             )}
