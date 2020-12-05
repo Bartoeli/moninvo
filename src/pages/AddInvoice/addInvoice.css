@@ -1,12 +1,15 @@
 * {
   font-family: 'IBM Plex Sans', sans-serif;
 }
-
+.addInvDiv {
+  position: relative;
+  background-color: #ffffff;
+}
 .addInvoiceForm {
   width: 100%;
   max-width: 576px;
   padding-bottom: 56px;
-  margin: 24px auto;
+  margin: 24px auto 0 auto;
 }
 
 .sendBtn {

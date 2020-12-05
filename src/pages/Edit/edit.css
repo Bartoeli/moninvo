@@ -1,3 +1,9 @@
+
+.editDiv {
+  position: relative;
+  background-color: #ffffff;
+  height: 100%;
+}
 .profileDiv {
   display: flex;
   flex-direction: column;
