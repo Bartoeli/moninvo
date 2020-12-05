@@ -9,9 +9,14 @@ White: #ffffff
 .insights {
   display: flex;
   width: 80%;
-  margin: 16px auto;
+  margin: 8px auto;
   align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul.insights {
+  padding: 0;
 }
 
 .insights li {
@@ -23,11 +28,12 @@ White: #ffffff
   font-size: 0.7rem;
   color: #242f72;
   padding: 16px;
-  flex: 1;
+  flex: 1 0 33%;
+  margin: 8px;
 }
 
 .insights div {
-  font-size: 1.8rem;
+  font-size: 1rem;
   order: -1;
   font-weight: 600;
   color: #61688f;
@@ -37,4 +43,31 @@ White: #ffffff
 .countOfExpenses {
   background-color: rgb(188, 115, 173, 0.5);
   border-radius: 8px;
+}
+
+@media (min-width: 576px) {
+  .insights {
+    flex-wrap: nowrap;
+  }
+  .insights div {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .insights {
+    width: 70%;
+  }
+  .insights div {
+    font-size: 1.3rem;
+  }
+  .insights li {
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .insights div {
+    font-size: 1.7rem;
+  }
 }

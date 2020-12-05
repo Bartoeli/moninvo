@@ -11,6 +11,7 @@ export const Pricing = () => {
           modelName="Donald"
           price="150Kč"
           priceDetail="měsíční platba"
+
         />
         <PricingModel
           modelName="McQuack"
