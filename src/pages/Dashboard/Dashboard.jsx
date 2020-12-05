@@ -66,27 +66,29 @@ export const Dashboard = () => {
   }, []);
 
   return (
-    <div className="dashboard">
-      <HeaderDash />
-      <NavBarDashside />
-      {load ? (
-        <ProgressBar mode="indeterminate" style={{ height: '16px' }} />
-      ) : (
-        <>
-          <div className="insightsDiv">
-            <Insights data={sourceData} />
-          </div>
-          <div className="data_dash">
-            <div className="table_dash">
-              <MainChart data={sourceData} />
+    <>
+      <div className="dashboard">
+        <HeaderDash />
+        <NavBarDashside />
+        {load ? (
+          <ProgressBar mode="indeterminate" style={{ height: '16px' }} />
+        ) : (
+          <>
+            <div className="insightsDiv">
+              <Insights data={sourceData} />
             </div>
-            <div className="chart_dash">
-              <MainTable data={sourceData} />
+            <div className="data_dash">
+              <div className="table_dash">
+                <MainChart data={sourceData} />
+              </div>
+              <div className="chart_dash">
+                <MainTable data={sourceData} />
+              </div>
             </div>
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
