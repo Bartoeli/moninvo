@@ -29,7 +29,7 @@ export const WhySection = () => {
         whyText="Přehledné zobrazení výsledků"
         whyInfo="Zobrazte své náklady v přehledných grafech, jejichž zobrazení si můžete přizpůsobit vlastními kategoriemi a štítky."
       />
-      <Blob className="whyBlob" />
+      {/* <Blob className="whyBlob" /> */}
     </section>
   );
 };
