@@ -1,6 +1,6 @@
 .profilePage {
   position: relative;
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
   height: 100%;
 }
 
@@ -11,7 +11,7 @@
   align-items: center;
   text-align: center;
   width: 60%;
-  height: 600px;
+  height: 400px;
   margin: 0 auto;
   color: #61688f;
 }
@@ -20,4 +20,10 @@
   width: 64px;
   height: auto;
   margin: 56px;
+}
+
+@media (min-width: 992px) {
+  .profileDiv {
+    height: 600px;
+  }
 }

@@ -6,7 +6,7 @@
   background-color: #ffffff;
 }
 .addInvoiceForm {
-  width: 100%;
+  width: 80%;
   max-width: 576px;
   padding-bottom: 56px;
   margin: 24px auto 0 auto;
@@ -15,4 +15,10 @@
 .sendBtn {
   width: 90%;
   margin: 0px auto;
+}
+
+@media (min-width: 768px) {
+  .addInvoiceForm {
+    width: 100%;
+  }
 }

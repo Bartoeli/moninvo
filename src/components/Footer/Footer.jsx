@@ -48,7 +48,7 @@ export const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com">
+                  <a href="https://www.linkedin.com/company/moninvo">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
