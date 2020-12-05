@@ -74,7 +74,7 @@ export const NavBarDash = () => {
             <MenuItemDash
               iconSrc={User}
               iconAlt="Ikona uživatele"
-              linkTo="profil"
+              linkTo="profile"
               text="Profil"
               onSelect={handleSelectDashItem}
             />

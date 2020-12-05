@@ -10,8 +10,6 @@ export const NavBar = (props) => {
     setMenuOpened(!menuOpened);
   };
 
-  console.log('funguje to', props.showLPLinks);
-
   return (
     <>
       <nav className="nav_mobil">
