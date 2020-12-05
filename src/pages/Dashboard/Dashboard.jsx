@@ -8,6 +8,7 @@ import { dtb } from '../../utils/Firebase/dtb';
 import './dashboard.css';
 import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside.jsx';
 import { Insights } from '../../components/Insights/Insights.jsx';
+import { Footer } from '../../components/Footer/Footer.jsx';
 
 export const Dashboard = () => {
   const rossumContext = useRossum();
@@ -64,7 +65,7 @@ export const Dashboard = () => {
       <HeaderDash />
       <NavBarDashside />
       <div className="insightsDiv">
-        <Insights data={sourceData}/>
+        <Insights data={sourceData} />
       </div>
       <div className="data_dash">
         <div className="table_dash">
@@ -74,6 +75,7 @@ export const Dashboard = () => {
           <MainTable data={sourceData} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

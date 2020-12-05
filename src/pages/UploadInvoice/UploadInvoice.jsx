@@ -11,6 +11,7 @@ import { RevInvoice } from '../../components/ReviewInvoice/ReviewInvoice.jsx';
 import { HeaderDash } from '../../components/HeaderDash/HeaderDash.jsx';
 import { NavBarDash } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDash.jsx';
 import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside.jsx';
+import { Footer } from '../../components/Footer/Footer.jsx';
 
 export const UploadInvoice = () => {
   const [file, setFile] = useState('');
@@ -132,6 +133,7 @@ export const UploadInvoice = () => {
           <RevInvoice />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -8,6 +8,7 @@ import { AddInvoiceInputText } from '../../components/AddInvoiceForm/InputText/A
 import { AddInvoiceInputDate } from '../../components/AddInvoiceForm/InputDate/InputDate.jsx';
 import { NavBarDash } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDash';
 import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside';
+import { Footer } from '../../components/Footer/Footer.jsx';
 
 export const AddInvoice = () => {
   const [sender_name, setSenderName] = useState(' ');
@@ -117,6 +118,7 @@ export const AddInvoice = () => {
           Odeslat
         </button>
       </form>
+      <Footer />
     </>
   );
 };

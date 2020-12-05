@@ -4,7 +4,7 @@ import { HeaderDash } from '../../components/HeaderDash/HeaderDash';
 import underConstruction from '../../Images/Icons/underConstruction.svg';
 import { NavBarDash } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDash.jsx';
 import { NavBarDashside } from '../../components/HeaderDash/headerComponentsDash/NavBarDash/NavBarDashside.jsx';
-
+import { Footer } from '../../components/Footer/Footer.jsx';
 import './profile.css';
 
 export const Profile = () => {
@@ -24,6 +24,7 @@ export const Profile = () => {
           alt="Ikona stavby"
         />
       </div>
+      <Footer />
     </>
   );
 };

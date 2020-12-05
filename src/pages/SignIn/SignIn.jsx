@@ -3,8 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { Toast } from 'primereact/toast';
 import { Header } from '../../components/Header/Header.jsx';
 import { InputText } from '../../components/SignUpForm/InputText/InputText.jsx';
+import { Footer } from '../../components/Footer/Footer.jsx';
 import { PrimaryBtn } from '../../components/Button/PrimaryBtn/PrimaryBtn.jsx';
-import image from '../../Images/Logo/svg/moninvo_logo_WHT.svg';
 import './signin.css';
 
 export const SignIn = () => {
@@ -68,6 +68,7 @@ export const SignIn = () => {
           />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

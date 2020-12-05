@@ -1,14 +1,13 @@
 import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Toast } from 'primereact/toast';
-
+import { Footer } from '../../components/Footer/Footer.jsx';
 import { dtb } from '../../utils/Firebase/dtb';
 import { Header } from '../../components/Header/Header.jsx';
 import { InputText } from '../../components/SignUpForm/InputText/InputText.jsx';
 import { InputCheck } from '../../components/SignUpForm/InputCheck/InputCheck.jsx';
 import { InputPassword } from '../../components/SignUpForm/InputPassword/InputPassword.jsx';
 import { PrimaryBtn } from '../../components/Button/PrimaryBtn/PrimaryBtn.jsx';
-import image from '../../Images/Logo/svg/moninvo_logo_WHT.svg';
 import './signup.css';
 
 export const SignUp = () => {
@@ -146,6 +145,7 @@ export const SignUp = () => {
           />
         </div>
       </div>
+      <Footer />
     </>
   );
 };
