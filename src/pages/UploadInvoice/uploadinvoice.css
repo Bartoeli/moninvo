@@ -2,6 +2,15 @@
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
+html {
+  max-width: 1200px;
+}
+
+.uploadInvoice {
+  max-width: 100%;
+  position: relative;
+}
+
 .uplPage {
   font-family: 'IBM Plex Sans', sans-serif;
   width: 80%;
@@ -22,4 +31,21 @@
 
 .revInvoice {
   margin: 64px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .uplForm_form {
+    display: flex;
+    align-items: center;
+  }
+
+  .formBtn {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .formBtn {
+    width: 50%;
+  }
 }

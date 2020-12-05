@@ -28,3 +28,19 @@
   border: 3px dotted #bebebe;
   border-radius: 10px;
 } */
+@media screen and (min-width: 768px) {
+  .inpFileLabel {
+    height: 100%;
+    width: 60%;
+  }
+
+  .inpFile {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .inpFileLabel {
+    width: 50%;
+  }
+}

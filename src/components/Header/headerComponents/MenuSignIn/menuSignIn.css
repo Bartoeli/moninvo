@@ -35,17 +35,4 @@
     color: #bc73ad;
     flex-basis: 50%;
   }
-
-  .secondary {
-    font-family: 'IBM Plex Sans';
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #242f72;
-  }
-}
-
-@media (min-width: 1200px) {
-  .secondary {
-    font-size: 18px;
-  }
 }
