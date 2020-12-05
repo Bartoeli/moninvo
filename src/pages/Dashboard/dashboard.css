@@ -5,6 +5,19 @@ Black: #0f0f0f
 Purple/grey: #61688F
 White: #ffffff
 */
+/*
+Small devices:
+@media (min-width: 576px) { ... }
+
+Medium devices:
+@media (min-width: 768px) { ... }
+
+Large devices:
+@media (min-width: 992px) { ... }
+
+Extra large devices:
+@media (min-width: 1200px) { ... }
+*/
 
 * {
   font-family: 'IBM Plex Sans', sans-serif;

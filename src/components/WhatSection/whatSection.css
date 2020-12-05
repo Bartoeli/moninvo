@@ -3,14 +3,7 @@
 }
 
 .dashboard-scrn {
-  width: 60%;
-  height: auto;
-  order: 1;
-  margin: 64px;
-}
-
-.whatSection-descrp {
-  font-size: 14px;
-  padding: 48px;
-  flex: 1;
+  width: 80%;
+  margin: 16px auto;
+  border-radius: 8px;
 }
