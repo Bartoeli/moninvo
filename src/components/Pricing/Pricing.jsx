@@ -7,7 +7,7 @@ import { PrimaryBtn } from '../Button/PrimaryBtn/PrimaryBtn';
 
 export const Pricing = () => {
   return (
-    <div id="pricing" className="pricing">
+    <section id="pricing" className="pricing">
       <h2>Ceník</h2>
 
       <div className="pricingModels">
@@ -96,9 +96,11 @@ export const Pricing = () => {
           </div>
         </div>
       </div>
+
       <div className="pricingBtn">
       <PrimaryBtn textBtn="Vyzkoušet"/>
       </div>
     </div>
+ </section>
   );
 };

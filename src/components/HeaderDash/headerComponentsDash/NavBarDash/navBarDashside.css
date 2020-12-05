@@ -39,6 +39,11 @@ Extra large devices:
     width: 32px;
   }
 
+  .menu-icon_dashside:hover,
+  .menu-icon_dashside:focus {
+    width: 40px;
+  }
+
   .menu-icon_dashside--closed {
     display: none;
   }
