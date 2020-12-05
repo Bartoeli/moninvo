@@ -32,9 +32,21 @@ Extra large devices:
 }
 
 .data_dash {
-  max-width: 100%;
+  max-width: 90%;
   margin: 24px auto;
   background-color: #ffffff;
+}
+
+.dashLoadBar {
+  width: 80%;
+  margin: 48px auto;
+  margin-bottom: 300px;
+}
+
+.dash_h2 {
+  color: #242f72;
+
+  margin-top: 32px;
 }
 
 @media (min-width: 768px) {
@@ -43,13 +55,17 @@ Extra large devices:
     margin: 0 auto;
   }
 
+  .table_dash {
+    min-height: 40%;
+    margin: 32px;
+  }
+
   .chart_dash {
     min-height: 40%;
     margin: 32px;
   }
 
-  .table_dash {
-    min-height: 40%;
-    margin: 32px;
+  .dash_h2 {
+    margin-left: 32px;
   }
 }
