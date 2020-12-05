@@ -91,14 +91,13 @@
 @media screen and (min-width: 576px) {
   .footerTop {
     display: flex;
-    align-items: flex-start;
+    align-content: flex-start;
     justify-content: center;
-    /*     flex-wrap: wrap;
- */
   }
   .webEmailPhone {
     flex-wrap: nowrap;
     border-bottom: none;
+    align-items: flex-start;
   }
   .address {
     border-bottom: none;
