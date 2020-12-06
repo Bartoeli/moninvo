@@ -27,7 +27,6 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className="right">
-          <div className="blobik"></div>
           <img className="ilustrace" src={image} alt="invoice ilustrace" />
         </div>
       </div>

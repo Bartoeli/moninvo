@@ -8,7 +8,7 @@ export const MainChart = (props) => {
   const options = {
     title: {
       display: true,
-      text: 'Náklady',
+
       fontSize: 24,
     },
     legend: {

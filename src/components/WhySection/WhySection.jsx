@@ -1,6 +1,6 @@
 import React from 'react';
 import { WhyArgument } from './whySectionComponents/WhyArgument.jsx/WhyArgument';
-import { Blob } from '../Blob/Blob.jsx';
+
 import easy from '../../Images/Icons/easy.svg';
 import graph from '../../Images/Icons/graph.svg';
 import upload from '../../Images/Icons/upload.svg';
@@ -29,7 +29,6 @@ export const WhySection = () => {
         whyText="Přehledné zobrazení výsledků"
         whyInfo="Zobrazte své náklady v přehledných grafech, jejichž zobrazení si můžete přizpůsobit vlastními kategoriemi a štítky."
       />
-      <Blob className="whyBlob" />
     </section>
   );
 };

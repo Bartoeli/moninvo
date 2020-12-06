@@ -33,7 +33,6 @@ export const Dashboard = () => {
         const parsedData = data.results.map((invoice) =>
           parseInvoiceData(invoice),
         );
-        setSourceData(parsedData);
 
         parsedData.forEach(async (data) => {
           return dtb.collection('faktury').add(data);
@@ -71,17 +70,21 @@ export const Dashboard = () => {
         <HeaderDash />
         <NavBarDashside />
         {load ? (
-          <ProgressBar mode="indeterminate" style={{ height: '16px' }} />
+          <div className="dashLoadBar">
+            <ProgressBar mode="indeterminate" style={{ height: '16px' }} />
+          </div>
         ) : (
           <>
             <div className="insightsDiv">
               <Insights data={sourceData} />
             </div>
             <div className="data_dash">
-              <div className="table_dash">
+              <h2 className="dash_h2">Měsíční náklady</h2>
+              <div className="chart_dash">
                 <MainChart data={sourceData} />
               </div>
-              <div className="chart_dash">
+              <h2 className="dash_h2">Nahrané faktury</h2>
+              <div className="table_dash">
                 <MainTable data={sourceData} />
               </div>
             </div>

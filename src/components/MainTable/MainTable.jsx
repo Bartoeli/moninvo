@@ -26,7 +26,6 @@ export const MainTable = (props) => {
         paginatorLeft={paginatorLeft}
         paginatorRight={paginatorRight}
         sortMode="multiple"
-        header="Moje nahrané faktury"
         scrollable
       >
         {/* <span className="p-input-icon-left">

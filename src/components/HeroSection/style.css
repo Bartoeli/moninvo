@@ -70,33 +70,17 @@ White: #ffffff
 
   .right {
     display: block;
-    /* background-image: url(../../Images/HomePage/hero-01.svg);
+    background-image: url(../../Images/HomePage/blob.svg);
     background-repeat: no-repeat;
-    background-position: left center; */
-    background-size: 80%;
+    background-position: left center;
+    background-size: 120%;
     width: 50%;
-    position: relative;
   }
 
   .ilustrace {
     width: 80%;
     margin-top: 170px;
     z-index: 50;
-    position: relative;
-  }
-
-  .blobik {
-    display: block;
-    height: 550px;
-    width: 440px;
-    background-image: url(../../Images/HomePage/blob.svg);
-    background-repeat: no-repeat;
-    background-position: 0% 0%;
-    background-size: 120%;
-    position: absolute;
-    right: 0px;
-    bottom: -90px;
-    z-index: 10;
   }
 }
 
