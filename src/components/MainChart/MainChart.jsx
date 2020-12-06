@@ -20,7 +20,7 @@ export const MainChart = (props) => {
     return data
       .map(({ date_issue, ...item }) => ({
         ...item,
-        date_issue: date_issue.substring(5, 7),
+        date_issue: date_issue.substring(0, 7),
       }))
       .reduce((acc, current) => {
         return {
