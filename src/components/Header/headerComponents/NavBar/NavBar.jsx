@@ -51,7 +51,7 @@ export const NavBar = (props) => {
       </nav>
 
       <nav className="nav_desktop">
-        <ul className="menu-items">
+        <ul className="menu-items menu-items-desktop">
           {props.showLPLinks && (
             <>
               <MenuItem

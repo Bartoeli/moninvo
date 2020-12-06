@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin: 24px;
+  margin-bottom: 80px;
 }
 
 .dashboard-scrn {
@@ -18,6 +19,7 @@
 
 .videoWhatSection {
   display: none;
+  margin-top: 40px;
 }
 
 @media (min-width: 768px) {

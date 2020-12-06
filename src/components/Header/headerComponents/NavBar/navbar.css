@@ -2,6 +2,17 @@
   display: none;
 }
 
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  right: 20px;
+  padding: 0px;
+  max-width: 100%;
+  font-size: 14px;
+}
+
 .hamburger {
   display: block;
   width: 40px;
@@ -56,6 +67,11 @@
     display: none;
   }
 
+  .menu-items {
+    flex-direction: row;
+    top: 0;
+  }
+
   .nav_desktop {
     display: flex;
     z-index: 50;
@@ -65,7 +81,16 @@
 @media (min-width: 1030px) {
   .nav_desktop {
     flex-basis: 65%;
-    justify-content: center;
+  }
+
+  .menu-items {
+    flex-basis: 100%;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .menu-items-desktop {
+    justify-content: flex-end;
   }
 }
 

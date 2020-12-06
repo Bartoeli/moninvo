@@ -13,6 +13,7 @@ export const LandingPage = () => {
     <>
       <div className="landingPage">
         <Header showLPLinks={true} />
+
         <HeroSection />
         <div className="blob2">
           <WhySection />

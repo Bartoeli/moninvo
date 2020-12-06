@@ -5,7 +5,7 @@ const keyList = [
   'date_issue',
   'sender_name',
   'notes',
-  'amount_total_issue',
+  'amount_total_base',
   'file_name',
 ];
 

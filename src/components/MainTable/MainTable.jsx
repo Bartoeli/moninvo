@@ -28,14 +28,6 @@ export const MainTable = (props) => {
         sortMode="multiple"
         scrollable
       >
-        {/* <span className="p-input-icon-left">
-          <i className="pi pi-search" />
-          <InputText
-            type="search"
-            onInput={(e) => this.setState({ globalFilter: e.target.value })}
-            placeholder="Global Search"
-          />
-        </span> */}
         <Column
           className="sloupecFont"
           field="sender_name"
@@ -70,12 +62,6 @@ export const MainTable = (props) => {
         <Column
           field="date_issue"
           header="Vystaveno"
-          sortable
-          headerStyle={{ width: '250px' }}
-        ></Column>
-        <Column
-          field="Note"
-          header="Poznámka"
           sortable
           headerStyle={{ width: '250px' }}
         ></Column>

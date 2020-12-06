@@ -22,21 +22,11 @@ export const SignUp = () => {
 
   const toastSuRef = useRef();
 
-  const formCheck = () => {};
-
   return (
     <>
       <Toast ref={toastSuRef} />
       <Header />
       <div className="registrace">
-        {/* <div className="bar">
-          <Link to="/">
-            <img className="regLogo" src={image} alt="Logo Moninvo" />
-          </Link>
-          <div className="domuBtn">
-            <Link to="/">DOMŮ</Link>
-          </div>
-        </div> */}
         <h1 className="h1reg">REGISTRACE</h1>
         <form
           className="form"
@@ -86,6 +76,7 @@ export const SignUp = () => {
                         'Email s žádostí o potvrzení Vaší emailové adresy byl odeslán.',
                       life: 7000,
                     });
+                    push('/dashboard');
                   });
           }}
         >
@@ -133,7 +124,7 @@ export const SignUp = () => {
               type="submit"
               className="primary"
               textBtn="Registrovat"
-              onClick={() => push('/dashboard')}
+              onClick={() => {}}
             />
           </div>
         </form>

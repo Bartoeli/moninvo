@@ -38,6 +38,7 @@ White: #ffffff
   width: 100%;
   overflow: auto;
   white-space: nowrap;
+  margin: 64px 0px;
 }
 
 .pricingModel {
@@ -62,6 +63,6 @@ White: #ffffff
 }
 
 .pricingBtn {
-  margin: 24px auto;
+  margin: 64px auto;
   width: 50%;
 }
