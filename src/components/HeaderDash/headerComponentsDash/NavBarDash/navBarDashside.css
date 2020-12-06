@@ -23,7 +23,7 @@ Extra large devices:
     justify-content: space-between;
     height: 100%;
     width: 70px;
-    background-color: #242F72;
+    background-color: #242f72;
     position: absolute;
     left: 0;
     cursor: pointer;
@@ -64,7 +64,7 @@ Extra large devices:
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 8px 16px;
+    padding: 0 16px;
   }
   .itemAndIcon img {
     width: 32px;
