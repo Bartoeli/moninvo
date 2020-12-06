@@ -6,17 +6,6 @@ Purple/grey: #61688F
 White: #ffffff
 */
 
-.menu-items {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 25px;
-  right: 20px;
-  padding: 0px;
-  max-width: 100%;
-  font-size: 14px;
-}
-
 .menu-url {
   text-decoration: none;
   color: #ffffff;
@@ -63,23 +52,12 @@ White: #ffffff
     color: #bc73ad;
   }
 
-  .menu-items {
-    flex-direction: row;
-    top: 0;
-  }
-
   .menu-item {
     text-align: center;
   }
 }
 
 @media (min-width: 1030px) {
-  .menu-items {
-    flex-basis: 100%;
-    align-items: center;
-    font-size: 16px;
-  }
-
   .menu-item {
     padding: 20px;
   }
