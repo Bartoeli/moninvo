@@ -26,3 +26,10 @@ Extra large devices:
   max-width: 1200px;
   background-color: #ffffff;
 }
+
+.blob2 {
+  background-image: url(../../Images/HomePage/blob.svg);
+  background-repeat: no-repeat;
+  background-position: -30% center;
+  background-size: 70%;
+}
