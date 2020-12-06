@@ -35,10 +35,12 @@ export const MainChart = (props) => {
     const data = groupBy(input);
     const label = [];
     const amounts = [];
-    for (let prop in data) {
-      label.push(prop);
-      amounts.push(data[prop]);
-    }
+    Object.keys(data)
+      .sort((item1, item2) => item1.localeCompare(item2))
+      .forEach((key) => {
+        label.push(key);
+        amounts.push(data[key]);
+      });
 
     return { label, amounts };
   };
