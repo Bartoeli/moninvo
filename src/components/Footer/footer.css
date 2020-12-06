@@ -1,0 +1,140 @@
+* {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.footer {
+  background-image: linear-gradient(
+    to right,
+    rgb(97, 104, 143, 1),
+    rgb(97, 104, 143, 0.75)
+  );
+  /*     url('../../Images/HomePage/mapa.png');
+ */
+  background-position: center center;
+  z-index: 30;
+  position: relative;
+}
+
+.logoImg {
+  width: 50px;
+}
+
+.footer_logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 24px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 0 24px;
+  color: #ffffff;
+}
+
+.contact h3,
+.contacts_label,
+.copyright {
+  color: #242f72;
+}
+
+.webEmailPhone {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  flex-wrap: wrap;
+  border-bottom: 0.2px solid rgb(255, 255, 255, 0.3);
+  padding-bottom: 8px;
+}
+
+.contact_wep {
+  margin: 0 16px 0 0;
+}
+
+.address {
+  border-bottom: 0.2px solid rgb(255, 255, 255, 0.3);
+  padding-bottom: 8px;
+}
+
+.webEmailPhone a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.socialMedia {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.some {
+  margin-right: 16px;
+}
+
+.GDT_GDPR ul {
+  list-style-type: none;
+}
+
+.gdt,
+.gdpr {
+  text-decoration: none;
+  color: #242f72;
+}
+
+@media screen and (min-width: 576px) {
+  .footerTop {
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+  }
+  .webEmailPhone {
+    flex-wrap: nowrap;
+    border-bottom: none;
+    align-items: flex-start;
+  }
+  .address {
+    border-bottom: none;
+    margin: 0 8px 0 0;
+    padding: 0;
+  }
+
+  .contact_wep {
+    margin-right: 8px;
+    border-left: 0.2px solid rgb(255, 255, 255, 0.3);
+    padding-left: 8px;
+  }
+  .footerBottomLeft {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: flex-end;
+  }
+  .socialMedia {
+    order: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 0 96px;
+  }
+  .contact_wep {
+    padding-left: 24px;
+    margin-right: 24px;
+  }
+  .address {
+    margin-right: 24px;
+  }
+
+  .footer_logo {
+    margin-right: 96px;
+    margin-top: 32px;
+  }
+}

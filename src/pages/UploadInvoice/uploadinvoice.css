@@ -1,0 +1,53 @@
+* {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html {
+  max-width: 1200px;
+  border-right: 0.5px solid rgb(97, 104, 143, 0.3);
+}
+
+.uploadInvoice {
+  max-width: 100%;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.uplPage {
+  font-family: 'IBM Plex Sans', sans-serif;
+  width: 80%;
+  margin: 0px auto;
+}
+
+.upl_h2 {
+  color: #242f72;
+}
+
+.uplForm {
+  margin: 16px 0px;
+}
+
+.formBtn {
+  margin: 16px 0px;
+}
+
+.revInvoice {
+  margin: 64px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .uplForm_form {
+    display: flex;
+    align-items: center;
+  }
+
+  .formBtn {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .formBtn {
+    width: 50%;
+  }
+}

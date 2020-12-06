@@ -1,0 +1,18 @@
+.textField {
+  width: 100%;
+  height: 56px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #61688f;
+  border-radius: 5px;
+  padding: 0px 8px;
+  font-size: 16px;
+}
+
+.textField::placeholder {
+  font-size: 16px;
+}
+
+.label {
+  font-size: 20px;
+}

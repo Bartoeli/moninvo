@@ -1,0 +1,43 @@
+.logoSpan {
+  margin: 0;
+  padding: 0;
+}
+
+.smallLogo_wht {
+  width: 40px;
+  height: 40px;
+}
+
+.bigLogo_wht {
+  display: none;
+}
+
+.bigLogo_blu {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .smallLogo_wht {
+    display: none;
+  }
+  .bigLogo_wht {
+    display: inline;
+    height: 40px;
+    width: auto;
+    justify-self: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .bigLogo_wht {
+    display: none;
+  }
+
+  .bigLogo_blu {
+    display: inline;
+    height: 40px;
+    margin: 25px;
+    width: auto;
+    justify-self: flex-start;
+  }
+}

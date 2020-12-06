@@ -1,0 +1,31 @@
+.blob {
+  height: 33.3%;
+  background-image: url(../../../Images/HomePage/pink-blob-turn.svg);
+  background-position: 50% 100%;
+  background-size: 200%;
+}
+
+.ilustration {
+  background-image: url(../../../Images/HomePage/hero-01.svg);
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media screen and (min-width: 576px) {
+  .ilustration {
+    display: none;
+  }
+
+  .blob {
+    height: 15%;
+    background-image: url(../../../Images/HomePage/blob.svg);
+    background-position: 65% 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .blob {
+    display: none;
+  }
+}

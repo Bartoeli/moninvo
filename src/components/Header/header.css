@@ -1,0 +1,28 @@
+/*
+Small devices:
+@media (min-width: 576px) { ... }
+
+Medium devices:
+@media (min-width: 768px) { ... }
+
+Large devices:
+@media (min-width: 992px) { ... }
+
+Extra large devices:
+@media (min-width: 1200px) { ... }
+*/
+
+.header {
+  padding: 10px;
+  background-color: #bc73ad;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-color: #ffffff;
+    align-items: center;
+  }
+}

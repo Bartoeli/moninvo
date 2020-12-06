@@ -1,0 +1,104 @@
+/*
+Small devices:
+@media (min-width: 576px) { ... }
+
+Medium devices:
+@media (min-width: 768px) { ... }
+
+Large devices:
+@media (min-width: 992px) { ... }
+
+Extra large devices:
+@media (min-width: 1200px) { ... }
+*/
+
+/*
+Blue: #242F72
+Pink: #BC73AD
+Black: #0f0f0f
+Purple/grey: #61688F
+White: #ffffff
+*/
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh;
+}
+
+.left {
+  height: 100%;
+  padding: 0px 32px;
+  z-index: 80;
+}
+
+.right {
+  display: none;
+}
+
+.blobik {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .hero-section {
+    height: 60vh;
+  }
+
+  .left {
+    margin: 0px auto;
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left {
+    width: 50%;
+    padding-left: 96px;
+  }
+
+  .heroCta {
+    width: 80%;
+  }
+
+  .right {
+    display: block;
+    background-image: url(../../Images/HomePage/blob.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 120%;
+    width: 50%;
+  }
+
+  .ilustrace {
+    width: 80%;
+    margin-top: 170px;
+    z-index: 50;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-section {
+    max-width: 1200px;
+  }
+
+  .ilustrace {
+    margin-top: 100px;
+  }
+
+  .blobik {
+    bottom: -20px;
+    width: 500px;
+  }
+
+  .left {
+    padding-left: 144px;
+  }
+}

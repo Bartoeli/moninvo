@@ -1,0 +1,32 @@
+.whatSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px;
+  margin-bottom: 80px;
+}
+
+.dashboard-scrn {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 0.5px solid rgb(97, 104, 143, 0.3);
+}
+
+.whatSection h2 {
+  color: #242f72;
+}
+
+.videoWhatSection {
+  display: none;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .videoWhatSection {
+    display: inline-block;
+  }
+  .dashboard-scrn {
+    display: none;
+  }
+}

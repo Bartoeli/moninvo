@@ -1,0 +1,84 @@
+/*
+Small devices:
+@media (min-width: 576px) { ... }
+
+Medium devices:
+@media (min-width: 768px) { ... }
+
+Large devices:
+@media (min-width: 992px) { ... }
+
+Extra large devices:
+@media (min-width: 1200px) { ... }
+*/
+
+.menu-items_dashside {
+  display: none;
+}
+@media (min-width: 768px) {
+  .menu_dashside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 70px;
+    background-color: #242f72;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .menu-icon_dashside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 38px 0;
+    width: 32px;
+  }
+
+  .menu-icon_dashside:hover,
+  .menu-icon_dashside:focus {
+    width: 40px;
+  }
+
+  .menu-icon_dashside--closed {
+    display: none;
+  }
+
+  .menu-items-dashside--open {
+    height: 100%;
+    width: 210px;
+    background-color: rgb(36, 47, 114, 0.8);
+    position: absolute;
+    left: 0px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .itemAndIcon {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+  }
+  .itemAndIcon img {
+    width: 32px;
+    height: 32px;
+  }
+  .itemAndIcon:hover {
+    background-color: #bc73ad;
+  }
+
+  .closeMenuIcon {
+    width: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 8px;
+  }
+}

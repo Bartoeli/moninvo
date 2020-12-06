@@ -1,0 +1,17 @@
+/*
+Blue: #242F72
+Pink: #BC73AD
+Black: #0f0f0f
+Purple/grey: #61688F
+White: #ffffff
+*/
+
+.menu-link_dashside {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 24px 16px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 15px;
+}

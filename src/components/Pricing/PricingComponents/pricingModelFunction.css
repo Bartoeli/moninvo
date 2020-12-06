@@ -1,0 +1,11 @@
+.pricingModelFunction {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.pricingModelFunction_name {
+  font-size: 12px;
+}
